@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Main.cpp">
+      <Filter>Lesson\01. 프로그래밍 입문</Filter>
+    </ClCompile>
+    <ClCompile Include="Example_01.cpp">
+      <Filter>Lesson\01. 프로그래밍 입문</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Lesson">
+      <UniqueIdentifier>{f4c3d6bb-064d-4b32-ad53-fcce16ed4727}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Lesson\01. 프로그래밍 입문">
+      <UniqueIdentifier>{df807111-7628-491a-82a6-52aafc37d33f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
