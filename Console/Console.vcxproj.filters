@@ -4,6 +4,12 @@
     <ClCompile Include="Example_01.cpp">
       <Filter>Lesson\01. 프로그래밍 입문</Filter>
     </ClCompile>
+    <ClCompile Include="변수.cpp">
+      <Filter>Lesson\02. 자료형 + 변수 + 난수%28C++ 11%29</Filter>
+    </ClCompile>
+    <ClCompile Include="23.05.03 과제.cpp">
+      <Filter>Lesson\과제</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Lesson">
@@ -11,6 +17,12 @@
     </Filter>
     <Filter Include="Lesson\01. 프로그래밍 입문">
       <UniqueIdentifier>{df807111-7628-491a-82a6-52aafc37d33f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Lesson\02. 자료형 + 변수 + 난수%28C++ 11%29">
+      <UniqueIdentifier>{fc5d3543-3b6b-4c5b-adde-f0c48d6c4a09}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Lesson\과제">
+      <UniqueIdentifier>{512ec176-7a69-48ff-bbc1-14d045b166ad}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
