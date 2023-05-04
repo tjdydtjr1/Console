@@ -7,8 +7,14 @@
     <ClCompile Include="변수.cpp">
       <Filter>Lesson\02. 자료형 + 변수 + 난수%28C++ 11%29</Filter>
     </ClCompile>
-    <ClCompile Include="23.05.03 과제.cpp">
-      <Filter>Lesson\과제</Filter>
+    <ClCompile Include="23.05.03_나머지연산자 + 도트아트.cpp">
+      <Filter>과제</Filter>
+    </ClCompile>
+    <ClCompile Include="반복문.cpp">
+      <Filter>Lesson\03. 반복문</Filter>
+    </ClCompile>
+    <ClCompile Include="23.05.04_반복문.cpp">
+      <Filter>과제</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -21,8 +27,11 @@
     <Filter Include="Lesson\02. 자료형 + 변수 + 난수%28C++ 11%29">
       <UniqueIdentifier>{fc5d3543-3b6b-4c5b-adde-f0c48d6c4a09}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Lesson\과제">
+    <Filter Include="과제">
       <UniqueIdentifier>{512ec176-7a69-48ff-bbc1-14d045b166ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Lesson\03. 반복문">
+      <UniqueIdentifier>{84e4adda-05be-47d7-a77d-56646fc9d9a4}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
