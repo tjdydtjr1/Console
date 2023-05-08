@@ -16,6 +16,15 @@
     <ClCompile Include="23.05.04_반복문.cpp">
       <Filter>과제</Filter>
     </ClCompile>
+    <ClCompile Include="Example_04.cpp">
+      <Filter>Lesson\04. 조건문</Filter>
+    </ClCompile>
+    <ClCompile Include="Example_05.cpp">
+      <Filter>Lesson\04. 조건문</Filter>
+    </ClCompile>
+    <ClCompile Include="23.05.08_반복문 + 조건문 + 연산자 게임만들기.cpp">
+      <Filter>과제</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Lesson">
@@ -32,6 +41,9 @@
     </Filter>
     <Filter Include="Lesson\03. 반복문">
       <UniqueIdentifier>{84e4adda-05be-47d7-a77d-56646fc9d9a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Lesson\04. 조건문">
+      <UniqueIdentifier>{5fe92475-37ae-42f2-87e6-74c83bf30a6d}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

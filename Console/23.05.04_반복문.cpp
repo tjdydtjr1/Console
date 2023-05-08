@@ -59,55 +59,60 @@ void main()
 	int tempA = 0;
 	int tempB = 0;
 	int tempC = 0;
-//
-//	cout << "첫번째 정수 입력 : " << endl;
-//	cin >> numA;
-//	cout << "두번째 정수 입력 : " << endl;
-//	cin >> numB;
-//	
-//	
-//	cout << "첫번째 정수와 두번째 정수의 덧셈 : " << numA + numB << endl;
-//	cout << "첫번째 정수와 두번째 정수의 뺄셈 : " << numA - numB << endl;
-//
+//	과제 1
+	printf("과제 1-1\n");
+	cout << "첫번째 정수 입력 : " << endl;
+	cin >> numA;
+	cout << "두번째 정수 입력 : " << endl;
+	cin >> numB;
+	
+	
+	cout << "첫번째 정수와 두번째 정수의 덧셈 : " << numA + numB << endl;
+	cout << "첫번째 정수와 두번째 정수의 뺄셈 : " << numA - numB << endl;
+
 //// =================================================================================================
 //
 ////	- 3개의 정수(num1, num2, num3)를 받아서 다음 연산의 결과를 출력하는 프로그램 작성
 //
 ////	EX) (num1 + num2)* (num3 + num1) % num1 = ?
-//
-//	int num1 = 0;
-//	int num2 = 0;
-//	int num3 = 0;
-//
-//	cout << "첫번째 정수 입력 : ";
-//	cin >> num1;
-//	cout << '\n';
-//	cout << "두번째 정수 입력 : ";
-//	cin >> num2;
-//	cout << '\n';
-//	cout << "세번째 정수 입력 : ";
-//	cin >> num3;
-//	cout << '\n';
-//
-//	cout << "(num1 + num2) * (num3 + num1) % num1 = " << (num1 + num2) * (num3 + num1) % num1 << endl;;
-//
+//	
+
+	int num1 = 0;
+	int num2 = 0;
+	int num3 = 0;
+	printf("과제 1-2\n");
+
+	cout << "첫번째 정수 입력 : ";
+	cin >> num1;
+	cout << '\n';
+	cout << "두번째 정수 입력 : ";
+	cin >> num2;
+	cout << '\n';
+	cout << "세번째 정수 입력 : ";
+	cin >> num3;
+	cout << '\n';
+
+	cout << "(num1 + num2) * (num3 + num1) % num1 = " << (num1 + num2) * (num3 + num1) % num1 << endl;;
+
 //// =================================================================================================
 //
 ////	-입력 받은 두 정수를 나누었을 때 얻게 되는 몫과 나머지를 출력하는 프로그램 작성
 ////	EX) 7과 2가 입력 되면 몫으로 3, 나머지 1이 출력되면 OK
 //	
-//
-//	cout << "첫번째 정수 입력 : ";
-//	cin >> tempA;
-//	cout << '\n';
-//	cout << "두번째 정수 입력 : ";
-//	cin >> tempB;
-//
-//	printf("두수의 몫 : %d\n", tempA / tempB);
-//	printf("두수를 나눈 나머지 : %d", tempA % tempB);
-//
-//	tempA = 0;
-//	tempB = 0;
+//	
+	printf("과제 1-3\n");
+
+	cout << "첫번째 정수 입력 : ";
+	cin >> tempA;
+	cout << '\n';
+	cout << "두번째 정수 입력 : ";
+	cin >> tempB;
+
+	printf("두수의 몫 : %d\n", tempA / tempB);
+	printf("두수를 나눈 나머지 : %d", tempA % tempB);
+
+	tempA = 0;
+	tempB = 0;
 // =================================================================================================
 
 /*과제 2. 반복문 출력
@@ -117,26 +122,40 @@ void main()
 ㄴ 1부터 20까지 출력->단, 짝수만
 ㄴ 배운것 이외에는 사용금지*/	
 
+	
 // 1. for문
-	//for (int i = 20; i >= 1; i -= 2)
-	//{
-	//	printf("20에서 1까지 출력 : %d\n", i);
-	//}
+	cout << '\n';
+
+	printf("과제 2-1\n");
+
+	for (int i = 20; i >= 1; i -= 2)
+	{
+		printf("20에서 1까지 출력 : %d\n", i);
+	}
 
 	// 2. while문
+	cout << '\n';
+
 	int temp = 20;
-	/*while (temp > 0)
+	printf("과제 2-2\n");
+
+	while (temp > 0)
 	{
 		printf("20에서 1까지 출력 : %d\n", temp);
 		temp -= 2;
-	}*/
+	}
 
 	// 3. do ~ while문
-	/*do
+	cout << '\n';
+
+	printf("과제 2-3\n");
+
+	temp = 20;
+	do
 	{
 		printf("20에서 1까지 출력 : %d\n", temp);
 		temp -= 2;
-	} while (temp > 0);*/
+	} while (temp > 0);
 
 
 // =================================================================================================
@@ -149,43 +168,55 @@ void main()
 //	ㄴ 조건 : 입력 받은 값은 - 10 ~10사이의 숫자여야 하고 이외의 값 입력시 그냥 종료 시킨다.
 //	EX) cin >> num(-10 ~10)
 //	= > 조건식과 논리 연산자를 잘 보고 조건식을 만들어 while문이 돌아가게 만든다.
+	cout << '\n';
 
-	//cout << "정수를 입력하세요 : ";
-	//cin >> temp;
+	printf("과제 3\n");
 
-	//while (-10 <= temp && 10 >= temp)
-	//{
-	//	while (temp >= -15)
-	//	{
-	//		printf("현재 정수 값 : %d\n", temp);
-	//		temp -= 5;
-	//	}
-	//}
-	//
-	//cout << "프로그램 종료";
+	cout << "정수를 입력하세요 : ";
+	cin >> temp;
+
+	while (-10 <= temp && 10 >= temp)
+	{
+		while (temp >= -15)
+		{
+			printf("현재 정수 값 : %d\n", temp);
+			temp -= 5;
+		}
+	}
+	
+	cout << "프로그램 종료";
 	
 	temp = 0;
 // =================================================================================================
 //과제 4. 마름모 찍기 카톡에 사진보내준거 5개
 	 // 1.
-	//for (int i = 0; i < 6; ++i)
-	//{
-	//	for (int j = i + 1; j < 6; ++j)
-	//	{
-	//		printf("*");
-	//	}
-	//	cout << '\n';
-	//}
+	cout << '\n';
+
+	printf("과제 4-1\n");
+
+
+	for (int i = 0; i < 6; ++i)
+	{
+		for (int j = i + 1; j < 6; ++j)
+		{
+			printf("*");
+		}
+		cout << '\n';
+	}
 
 	//// 2.
-	//for (int i = 0; i < 5; ++i)
-	//{
-	//	for (int j = i + 1; j > 0; --j)
-	//	{
-	//		printf("*");
-	//	}
-	//	cout << '\n';
-	//}
+	cout << '\n';
+
+	printf("과제 4-2\n");
+
+	for (int i = 0; i < 5; ++i)
+	{
+		for (int j = i + 1; j > 0; --j)
+		{
+			printf("*");
+		}
+		cout << '\n';
+	}
 
 	//// 3.
 	////     *   4 + *
@@ -193,19 +224,23 @@ void main()
 	////   ***   2 + ***
 	////  ****
 	//// *****
-	//for (int i = 0; i < 5; ++i)
-	//{
-	//	for (int j = i + 1; j < 5; ++j)
-	//	{
-	//		printf(" ");
-	//	}
-	//	
-	//	for (int k = -1; k < i; ++k)
-	//	{
-	//		printf("*");
-	//	}
-	//	cout << '\n';
-	//}
+	cout << '\n';
+
+	printf("과제 4-3\n");
+
+	for (int i = 0; i < 5; ++i)
+	{
+		for (int j = i + 1; j < 5; ++j)
+		{
+			printf(" ");
+		}
+		
+		for (int k = -1; k < i; ++k)
+		{
+			printf("*");
+		}
+		cout << '\n';
+	}
 
 	//// 4. 
 	////*****
@@ -213,21 +248,26 @@ void main()
 	////  ***
 	////   **
 	////    *
-	//for (int i = 0; i < 5; ++i)
-	//{
-	//	for (int j = i + 1; j < 6; ++j)
-	//	{
-	//		printf("*");
-	//	}
+	cout << '\n';
 
-	//	for (int k = 0; k < i; ++k)
-	//	{
-	//		printf(" ");
-	//	}
-	//	cout << '\n';
-	//}
-	//
-	//cout << '\n';
+	printf("과제 4-4\n");
+
+	for (int i = 0; i < 5; ++i)
+	{
+		for (int j = i + 1; j < 6; ++j)
+		{
+			printf("*");
+		}
+
+		for (int k = 0; k < i; ++k)
+		{
+			printf(" ");
+		}
+		cout << '\n';
+	}
+	
+	cout << '\n';
+
 	//5.
 	//     **		5	? % ? = 2
 	//    ****		4	? % ? = 4
@@ -240,6 +280,9 @@ void main()
 	//   ******		3			6
 	//    ****		4			4
 	//     **		5			2
+	cout << '\n';
+
+	printf("과제 4-5\n");
 
 	for (int i = 0; i < 7; ++i)
 	{
