@@ -207,7 +207,7 @@ void main()
 
 	cout << endl;*/
 
-	printf("long : %ld\nlong long : %ld\nfloat : %f\ndouble : %f", ValueC, ValueD, fValueA, dbValueB);
+//	printf("long : %ld\nlong long : %ld\nfloat : %f\ndouble : %f", ValueC, ValueD, fValueA, dbValueB);
 
 	cout << endl;
 	
@@ -255,7 +255,7 @@ void main()
 
 	- 앞글자를 대문자로
 
-	int PlayerSelectNumber
+	int PlayerSelectNumbers
 
 
 	4. 스네이크

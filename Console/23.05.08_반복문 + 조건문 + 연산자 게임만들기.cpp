@@ -189,67 +189,72 @@ void main()
 
 	// 도전 과제
 	//Function(paNum,ppbNum,pppcNum);
+	// 
 // =============================================================
-	
+	Sleep(2000);
+	system("cls");
 
 	//과제1.가위바위보 게임
 	// 0 ~ 2 
-	/*int randNum;
+	int randNum;
 	int myNum;
-	int temp = 0;*/
+	int temp = 0;
 
-	//// 난수
-	//srand(time(NULL));
+	// 난수
+	srand(time(NULL));
 
-	//while (temp < 5)
-	//{
-	//	randNum = rand() % 3;
-	//	cout << "치트 : " << randNum << endl;
-	//	cout << endl << endl;
-
-	//	cout << "가위바위보 게임 시작" << endl;
-	//	cout << "내고 싶은 수를 고르세요." << endl;
-	//	printf("주먹 = 0, 가위 = 1, 보 = 2\n");
-	//	cin >> myNum;
-	//	cout << endl;
-
-	/*if (myNum > 2)
+	while (temp < 5)
 	{
-		cout << "해당하는 카드는 없습니다." << endl;
-		--temp;
+		randNum = rand() % 3;
+		cout << "치트 : " << randNum << endl;
+		cout << endl << endl;
+
+		cout << "가위바위보 게임 시작" << endl;
+		cout << "내고 싶은 수를 고르세요." << endl;
+		printf("주먹 = 0, 가위 = 1, 보 = 2\n");
+		cin >> myNum;
+		cout << endl;
+
+		if (myNum > 2)
+		{
+			cout << "해당하는 카드는 없습니다." << endl;
+			--temp;
+			Sleep(2000);
+			system("cls");
+			continue;
+		}
+
+		if (randNum == myNum)
+		{
+			cout << "비겼다" << endl;
+		}
+		else if(randNum == 0 && myNum == 2)
+		{
+			cout << "이겼다" << endl;
+		}
+		else if (randNum == 1 && myNum == 0)
+		{
+			cout << "이겼다" << endl;
+		}
+		else if (randNum == 2 && myNum == 1)
+		{
+			cout << "이겼다" << endl;
+		}
+		else
+		{
+			cout << "졌다" << endl;
+		}
+		
 		Sleep(2000);
 		system("cls");
-		continue;
-	}*/
 
-	//	if (randNum == myNum)
-	//	{
-	//		cout << "비겼다" << endl;
-	//	}
-	//	else if(randNum == 0 && myNum == 2)
-	//	{
-	//		cout << "이겼다" << endl;
-	//	}
-	//	else if (randNum == 1 && myNum == 0)
-	//	{
-	//		cout << "이겼다" << endl;
-	//	}
-	//	else if (randNum == 2 && myNum == 1)
-	//	{
-	//		cout << "이겼다" << endl;
-	//	}
-	//	else
-	//	{
-	//		cout << "졌다" << endl;
-	//	}
-	//	
-	//	Sleep(2000);
-	//	system("cls");
+		++temp;
+	}
 
-	//	++temp;
-	//}
-
-	//cout << "게임 종료" << endl;
+	cout << "게임 종료" << endl;
+	
+	Sleep(2000);
+	system("cls");
 
 
 // =============================================================
@@ -257,64 +262,64 @@ void main()
 
 	//과제2.일수 출력기
 
-	//temp = 0;
-	//int monthNum = 0;
+	temp = 0;
+	int monthNum = 0;
 
-	//while (temp < 5)
-	//{
-	//	cout << "일수 출력기" << endl;
-	//	cout << "일수 확인할 월 : ";
-	//	cin >> monthNum;
+	while (temp < 5)
+	{
+		cout << "일수 출력기" << endl;
+		cout << "일수 확인할 월 : ";
+		cin >> monthNum;
 
-	//	switch (monthNum)
-	//	{
-	//	case 1:
-	//		cout << "1월 31일 입니다." << endl;
-	//		break;
-	//	case 2:
-	//		cout << "2월 28일 입니다." << endl;
-	//		break;
-	//	case 3:
-	//		cout << "3월 31일 입니다." << endl;
-	//		break;
-	//	case 4:
-	//		cout << "4월 30일 입니다." << endl;
-	//		break;
-	//	case 5:
-	//		cout << "5월 31일 입니다." << endl;
-	//		break;
-	//	case 6:
-	//		cout << "6월 30일 입니다." << endl;
-	//		break;
-	//	case 7:
-	//		cout << "7월 31일 입니다." << endl;
-	//		break;
-	//	case 8:
-	//		cout << "8월 30일 입니다." << endl;
-	//		break;
-	//	case 9:
-	//		cout << "9월 31일 입니다." << endl;
-	//		break;
-	//	case 10:
-	//		cout << "10월 30일 입니다." << endl;
-	//		break;
-	//	case 11:
-	//		cout << "11월 31일 입니다." << endl;
-	//		break;
-	//	case 12:
-	//		cout << "12월 30일 입니다." << endl;
-	//		break;
-	//	default:
-	//	{
-	//		cout << "해당하는 월이 없습니다." << endl;
-	//		cout << "다시 입력하세요." << endl;
-	//	}
-	//		break;
-	//	}
-	//	Sleep(1000);
-	//	system("cls");
-	//	++temp;
-	//}
+		switch (monthNum)
+		{
+		case 1:
+			cout << "1월 31일 입니다." << endl;
+			break;
+		case 2:
+			cout << "2월 28일 입니다." << endl;
+			break;
+		case 3:
+			cout << "3월 31일 입니다." << endl;
+			break;
+		case 4:
+			cout << "4월 30일 입니다." << endl;
+			break;
+		case 5:
+			cout << "5월 31일 입니다." << endl;
+			break;
+		case 6:
+			cout << "6월 30일 입니다." << endl;
+			break;
+		case 7:
+			cout << "7월 31일 입니다." << endl;
+			break;
+		case 8:
+			cout << "8월 30일 입니다." << endl;
+			break;
+		case 9:
+			cout << "9월 31일 입니다." << endl;
+			break;
+		case 10:
+			cout << "10월 30일 입니다." << endl;
+			break;
+		case 11:
+			cout << "11월 31일 입니다." << endl;
+			break;
+		case 12:
+			cout << "12월 30일 입니다." << endl;
+			break;
+		default:
+		{
+			cout << "해당하는 월이 없습니다." << endl;
+			cout << "다시 입력하세요." << endl;
+		}
+			break;
+		}
+		Sleep(1000);
+		system("cls");
+		++temp;
+	}
 
 }
 

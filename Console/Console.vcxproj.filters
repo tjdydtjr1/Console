@@ -25,6 +25,21 @@
     <ClCompile Include="23.05.08_반복문 + 조건문 + 연산자 게임만들기.cpp">
       <Filter>과제</Filter>
     </ClCompile>
+    <ClCompile Include="Example_06.cpp">
+      <Filter>Lesson\05. 함수 + 변/상수 + 전처리기</Filter>
+    </ClCompile>
+    <ClCompile Include="Example_07.cpp">
+      <Filter>Lesson\05. 함수 + 변/상수 + 전처리기</Filter>
+    </ClCompile>
+    <ClCompile Include="23.05.09_배운 것 복습 + 가위바위보.cpp">
+      <Filter>과제</Filter>
+    </ClCompile>
+    <ClCompile Include="23.05.09_타임어택 연.cpp">
+      <Filter>과제</Filter>
+    </ClCompile>
+    <ClCompile Include="23.05.09_복습구현화.cpp">
+      <Filter>과제</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Lesson">
@@ -44,6 +59,9 @@
     </Filter>
     <Filter Include="Lesson\04. 조건문">
       <UniqueIdentifier>{5fe92475-37ae-42f2-87e6-74c83bf30a6d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Lesson\05. 함수 + 변/상수 + 전처리기">
+      <UniqueIdentifier>{efd8de7b-3259-4b6b-a344-f911ba791452}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

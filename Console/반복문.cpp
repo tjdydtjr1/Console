@@ -64,7 +64,7 @@ C 스타일
 EX) int num = 0;					->	(float)num;
 
 C++ 스타일
-EX) static_case<int>(obj)			->	obj를 type으로 바꾼다.
+EX) static_cast<int>(obj)			->	obj를 type으로 바꾼다.
 ㄴ 원형 : static_cast<type>(obj)		-> 데이터 손실 유무를 검증해줌 (단, 메모리를 많이 사용함)
 
 C++ 타입 캐스팅 연산자
