@@ -53,14 +53,13 @@ void main()
 	int userNum1 = 0;
 	int userNum2 = 0;
 	int userNum3 = 0;
-
+	
 	int playCount = 1;
 
 	while (true)
 	{
 		printf("치트 번호 확인 : ");
 		printf("%d %d %d\n\n", firstNum, secondNum, thirdNum);
-
 
 		printf("숫자 야구 게임 시작\n");
 		printf("숫자 3자리를 입력하세요.\n");
@@ -113,14 +112,12 @@ void main()
 				// 1b
 				printf("1B ");
 				Sleep(1000);
-
 			}
 			else
 			{
 				// out
 				printf("1 Out ");
 				Sleep(1000);
-
 			}
 			// 3번째 번호
 			if (userNum3 == thirdNum)
@@ -128,7 +125,6 @@ void main()
 				// 1s
 				printf("1S ");
 				Sleep(1000);
-
 			}
 			else if (userNum3 == secondNum || userNum3 == firstNum)
 			{
@@ -141,14 +137,12 @@ void main()
 				// out
 				printf("1 Out ");
 				Sleep(1000);
-
 			}
 		}
 		else
 		{
 			printf("0 ~ 9 에 해당하는 숫자만 입력하세요\n");
 			Sleep(1000);
-			
 		}
 
 		++playCount;
