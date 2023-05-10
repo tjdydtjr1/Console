@@ -18,22 +18,23 @@ void TextColor(int font, int backGround);
 
 namespace DOT
 {
-	void PrintDot(int num);
+	void PrintCard(int num);
 	void PrintVS();
 }
 //
 void main()
 {
-	system("mode con:cols=500 lines=600");
+	system("mode con:cols=300 lines=600");
+	
 	TextColor(15, 0);
 
 	int userNum = 0;
 	int randNum = 0;
 	int count = 0;
-	const int endGame = 5;
+	const int endPlay = 5;
 
 
-	while (count < endGame)
+	while (count < endPlay)
 	{
 		srand(time(NULL));
 		randNum = rand() % 3;
@@ -47,6 +48,9 @@ void main()
 
 		cin >> userNum;
 
+		cout << '\n' << '\n';
+		
+
 		if (userNum > 2 || userNum < 0)
 		{
 			printf("해당하는 카드가 없습니다. \n");
@@ -57,9 +61,17 @@ void main()
 		{
 			if (userNum == 0)
 			{
-				DOT::PrintDot(userNum);
+				printf("Player 카드\n\n");
+				DOT::PrintCard(userNum);
+				cout << '\n';
+
 				DOT::PrintVS();
-				DOT::PrintDot(randNum);
+				Sleep(1000);
+				cout << '\n';
+				printf("상대방 카드\n");
+				DOT::PrintCard(randNum);
+				
+				cout << '\n';
 				
 				if (userNum == randNum)
 				{
@@ -76,9 +88,15 @@ void main()
 			}
 			else if (userNum == 1)
 			{
-				DOT::PrintDot(userNum);
+				printf("Player 카드\n");
+				DOT::PrintCard(userNum);
+				cout << '\n';
+
 				DOT::PrintVS();
-				DOT::PrintDot(randNum);
+				Sleep(1000);
+				cout << '\n';
+				printf("상대방 카드\n");
+				DOT::PrintCard(randNum);
 
 				if (userNum == randNum)
 				{
@@ -95,9 +113,15 @@ void main()
 			}
 			else
 			{
-				DOT::PrintDot(userNum);
+				printf("Player 카드\n");
+				DOT::PrintCard(userNum);
+				cout << '\n';
+
 				DOT::PrintVS();
-				DOT::PrintDot(randNum);
+				Sleep(1000);
+				cout << '\n';
+				printf("상대방 카드\n");
+				DOT::PrintCard(randNum);
 
 				if (userNum == randNum)
 				{
@@ -114,49 +138,13 @@ void main()
 			}
 		}
 
-		Sleep(2000);
+		Sleep(5000);
 		system("cls");
 		++count;
 	}
 
 	printf("게임 종료 \n");
-	
-	
-	
-	// 보
-	/*TextColor(0, 0);
-	cout << "○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○" << endl;
-	cout << "○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○○" << endl;
-	cout << "○○○○○○○○○○○○○"; TextColor(15, 0); cout << "●●"; TextColor(0, 0); cout << "○○○○○○○○○○○○○○○○○○○○○" << endl;
-	cout << "○○○○○○○○○○○○"; TextColor(15, 0); cout << "●"; TextColor(0, 0); cout << "○○"; TextColor(15, 0); cout << "●"; TextColor(0, 0); cout << "○○○○○○○○○○○○○○○○○○○○" << endl;
-	cout << "○○○○○○○"; TextColor(15, 0); cout << "●●"; TextColor(0, 0); cout << "○○○"; TextColor(15, 0); cout << "●"; TextColor(0, 0); cout << "○○"; TextColor(15, 0); cout << "●"; TextColor(0, 0); cout << "○○○"; TextColor(15, 0); cout << "●●"; TextColor(0, 0); cout << "○○○○○○○○○○○○○○○○○○○" << endl;
-	cout << "○○○○○○"; TextColor(15, 0); cout << "●"; TextColor(0, 0); cout << "○○"; TextColor(15, 0); cout << "●"; TextColor(0, 0); cout << "○○"; TextColor(15, 0); cout << "●"; TextColor(0, 0); cout << "○○"; TextColor(15, 0); cout << "●"; TextColor(0, 0); cout << "○○"; TextColor(15, 0); cout << "●"; TextColor(0, 0); cout << "○○"; TextColor(15, 0); cout << "●"; TextColor(0, 0); cout << "○○○○○○○○○○○○○○○○○○" << endl;
-	cout << "○○○○○○"; TextColor(15, 0); cout << "●"; TextColor(0, 0); cout << "○○"; TextColor(15, 0); cout << "●"; TextColor(0, 0); cout << "○○"; TextColor(15, 0); cout << "●"; TextColor(0, 0); cout << "○○"; TextColor(15, 0); cout << "●"; TextColor(0, 0); cout << "○○"; TextColor(15, 0); cout << "●"; TextColor(0, 0); cout << "○○"; TextColor(15, 0); cout << "●"; TextColor(0, 0); cout << "○○○"; TextColor(15, 0); cout << "●●"; TextColor(0, 0); cout << "○○○○○○○○○○○○○○○" << endl;
-	cout << "○"; TextColor(15, 0); cout << "●●"; TextColor(0, 0); cout << "○○○"; TextColor(15, 0); cout << "●"; TextColor(0, 0); cout << "○○"; TextColor(15, 0); cout << "●"; TextColor(0, 0); cout << "○○"; TextColor(15, 0); cout << "●"; TextColor(0, 0); cout << "○○"; TextColor(15, 0); cout << "●"; TextColor(0, 0); cout << "○○"; TextColor(15, 0); cout << "●"; TextColor(0, 0); cout << "○○"; TextColor(15, 0); cout << "●"; TextColor(0, 0); cout << "○○"; TextColor(15, 0); cout << "●"; TextColor(0, 0); cout << "○○"; TextColor(15, 0); cout << "●"; TextColor(0, 0); cout << "○○○○○○○○○○○○○○○" << endl;
-	TextColor(15, 0);	cout << "●"; TextColor(0, 0); cout << "○○"; TextColor(15, 0); cout << "●"; TextColor(0, 0); cout << "○○"; TextColor(15, 0); cout << "●"; TextColor(0, 0); cout << "○○"; TextColor(15, 0); cout << "●"; TextColor(0, 0); cout << "○○"; TextColor(15, 0); cout << "●"; TextColor(0, 0); cout << "○○"; TextColor(15, 0); cout << "●"; TextColor(0, 0); cout << "○○"; TextColor(15, 0); cout << "●"; TextColor(0, 0); cout << "○○"; TextColor(15, 0); cout << "●"; TextColor(0, 0); cout << "○○"; TextColor(15, 0); cout << "●"; TextColor(0, 0); cout << "○○"; TextColor(15, 0); cout << "●"; TextColor(0, 0); cout << "○○○○○○○○○○○○○○○○" << endl;
-	TextColor(15, 0); cout << "●"; TextColor(0, 0); cout << "○○"; TextColor(15, 0); cout << "●"; TextColor(0, 0); cout << "○○"; TextColor(15, 0); cout << "●"; TextColor(0, 0); cout << "○○"; TextColor(15, 0); cout << "●"; TextColor(0, 0); cout << "○○"; TextColor(15, 0); cout << "●"; TextColor(0, 0); cout << "○○"; TextColor(15, 0); cout << "●"; TextColor(0, 0); cout << "○○"; TextColor(15, 0); cout << "●"; TextColor(0, 0); cout << "○○"; TextColor(15, 0); cout << "●"; TextColor(0, 0); cout << "○○"; TextColor(15, 0); cout << "●"; TextColor(0, 0); cout << "○○"; TextColor(15, 0); cout << "●"; TextColor(0, 0); cout << "○○○○○○○○○○○○○○○" << endl;
-	cout << "○"; TextColor(15, 0); cout << "●●"; TextColor(0, 0); cout << "○"; TextColor(15, 0); cout << "●●"; TextColor(0, 0); cout << "○○○○"; TextColor(15, 0); cout << "●●"; TextColor(0, 0); cout << "○○○○"; TextColor(15, 0); cout << "●●"; TextColor(0, 0); cout << "○○○○"; TextColor(15, 0); cout << "●●"; TextColor(0, 0); cout << "○○"; TextColor(15, 0); cout << "●●"; TextColor(0, 0); cout << "○○○○○○○○○○○○○○○" << endl;
-	cout << "○○"; TextColor(15, 0); cout << "●"; TextColor(0, 0); cout << "○○○○○○○○○○○○○○○○○○○○○○○"; TextColor(15, 0); cout << "●●"; TextColor(0, 0); cout << "○○○○○○○○" << endl;
-	cout << "○○○"; TextColor(15, 0); cout << "●●"; TextColor(0, 0); cout << "○○○○○○○○○○○○○○○○○○○○"; TextColor(15, 0); cout << "●●"; TextColor(0, 0); cout << "○○○○○○○○○" << endl;
-	cout << "○○○○"; TextColor(15, 0); cout << "●●"; TextColor(0, 0); cout << "○○○○○○○○○○○○○○○○○○"; TextColor(15, 0); cout << "●●"; TextColor(0, 0); cout << "○○○○○○○○○○" << endl;
-	cout << "○○○○○"; TextColor(15, 0); cout << "●●"; TextColor(0, 0); cout << "○○○○○○○○○○○○○○○○"; TextColor(15, 0); cout << "●●"; TextColor(0, 0); cout << "○○○○○○○○○○○" << endl;
-	cout << "○○○○○○"; TextColor(15, 0); cout << "●●"; TextColor(0, 0); cout << "○○○○○○○○○○○○○○"; TextColor(15, 0); cout << "●●"; TextColor(0, 0); cout << "○○○○○○○○○○○○○○○○" << endl;
-	cout << "○○○○○○"; TextColor(15, 0); cout << "●●"; TextColor(0, 0); cout << "○○○○○○○○○○○○○○"; TextColor(15, 0); cout << "●●"; TextColor(0, 0); cout << "○○○○○○○○○○○○○○○○" << endl;
-	cout << "○○○○○○"; TextColor(15, 0); cout << "●●"; TextColor(0, 0); cout << "○○○○○○○○○○○○○○"; TextColor(15, 0); cout << "●●"; TextColor(0, 0); cout << "○○○○○○○○○○○○○○○○" << endl;*/
-
-//// VS
-//TextColor(4, 0);
-//	cout << "●●"; TextColor(0, 0); cout << "○○○○○○○○○○○○○"; TextColor(4, 0); cout << "●●"; TextColor(0, 0); cout << "○○○○○○○○○"; TextColor(4, 0); cout << "●●●●●●" << endl;
-//	TextColor(0, 0); cout << "○"; TextColor(4, 0); cout << "●●"; TextColor(0, 0); cout << "○○○○○○○○○○○"; TextColor(4, 0); cout << "●●"; TextColor(0, 0); cout << "○○○○○○○"; TextColor(4, 0); cout << "●●●●●"; TextColor(0, 0); cout << "○○○○" << endl;
-//	TextColor(0, 0); cout << "○○"; TextColor(4, 0); cout << "●●"; TextColor(0, 0); cout << "○○○○○○○○○"; TextColor(4, 0); cout << "●●"; TextColor(0, 0); cout << "○○○○○○○"; TextColor(4, 0); cout << "●●●●●"; TextColor(0, 0); cout << "○○○○○" << endl;
-//	TextColor(0, 0); cout << "○○○"; TextColor(4, 0); cout << "●●"; TextColor(0, 0); cout << "○○○○○○○"; TextColor(4, 0); cout << "●●"; TextColor(0, 0); cout << "○○○○○○○○○○"; TextColor(4, 0); cout << "●●●●●●●"; TextColor(0, 0); cout << "○" << endl;
-//	TextColor(0, 0); cout << "○○○○"; TextColor(4, 0); cout << "●●"; TextColor(0, 0); cout << "○○○○○"; TextColor(4, 0); cout << "●●"; TextColor(0, 0); cout << "○○○○○○○○○○○○○"; TextColor(4, 0); cout << "●●●●●●" << endl;
-//	TextColor(0, 0); cout << "○○○○○"; TextColor(4, 0); cout << "●●"; TextColor(0, 0); cout << "○○○"; TextColor(4, 0); cout << "●●"; TextColor(0, 0); cout << "○○○○○○○○○○○○○○"; TextColor(4, 0); cout << "●●●●●" << endl;
-//	TextColor(0, 0); cout << "○○○○○○"; TextColor(4, 0); cout << "●●"; TextColor(0, 0); cout << "○"; TextColor(4, 0); cout << "●●"; TextColor(0, 0); cout << "○○○○○○○○○○○○○○"; TextColor(4, 0); cout << "●●●●●"; TextColor(0, 0); cout << "○○" << endl;
-//	TextColor(0, 0); cout << "○○○○○○○"; TextColor(4, 0); cout << "●●"; TextColor(0, 0); cout << "○○○○○○○○○○○○○○"; TextColor(4, 0); cout << "●●●●●"; TextColor(0, 0); cout << "○○○○" << endl;
-
-
-
+		
 }
 
 void TextColor(int font, int backGround)
@@ -166,7 +154,7 @@ void TextColor(int font, int backGround)
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), Color);
 }
 
-void DOT::PrintDot(int num)
+void DOT::PrintCard(int num)
 {
 	switch (num)
 	{
@@ -246,9 +234,9 @@ void DOT::PrintDot(int num)
 	break;
 
 	default:
-	{
+	/*{
 		printf("해당하는 카드가 없습니다.\n");
-	}
+	}*/
 		break;
 	}
 }
