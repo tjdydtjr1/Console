@@ -35,11 +35,13 @@ namespace DOT
 	void RandomNum();
 	void DotNumber(int num);
 	void DotSuc(int num);
+	void TimeRandNum(int num);
+
 }
 
 void main()
 {
-	system("mode con:cols=400 lines=600");
+	system("mode con:cols=300 lines=400");
 	
 	srand(time(NULL));
 	int firstNum = rand() % 10;
@@ -86,25 +88,33 @@ void main()
 		printf("세번째 숫자 : %d\n", userNum3);
 		DOT::DotNumber(userNum3);
 		Sleep(1000);
+		system("cls");
 		
-		// 룰렛 돌리기
-		DOT::RandomNum();
+		// 룰렛 돌리기 : 조건 + 네임스페이스
+		//DOT::RandomNum();
 		//
-
+		
 		if (userNum1 == 100 || userNum2 == 100 || userNum3 == 100)
 		{
 			printf(" 치트 입력 : ");
 			cin >> firstNum >> secondNum >> thirdNum;
+			
+			printf("\n\n");
 			printf("변경된 번호 : %d %d %d", firstNum, secondNum, thirdNum);
+			printf("\n");
 			DOT::DotNumber(firstNum);
 			cout << '\n';
 			DOT::DotNumber(secondNum);
 			cout << '\n';
 			DOT::DotNumber(thirdNum);
 			cout << '\n';
+
+			
 			if (firstNum == secondNum == thirdNum)
 			{
-				DOT::DotSuc(firstNum);
+				DOT::TimeRandNum(firstNum);
+				Sleep(1000);
+				continue;
 			}
 		}
 
@@ -132,6 +142,7 @@ void main()
 		}
 		else if (userNum1 == firstNum && userNum2 == secondNum || userNum1 == firstNum && userNum3 == thirdNum || userNum2 == secondNum && thirdNum == thirdNum)
 		{
+			system("cls");
 			printf("동일한 숫자 2개\n");
 			DOT::DotNumber(firstNum);
 			cout << '\n';
@@ -143,6 +154,7 @@ void main()
 		}
 		else
 		{
+			system("cls");
 			printf("동일 번호 없음 꽝\n");
 			money -= bat;
 			printf("현재 금액 : %d\n", money);
@@ -153,6 +165,7 @@ void main()
 	}
 }
 
+
 void TextColor(int font, int backGround)
 {
 	int Color = font + backGround * 16;
@@ -160,6 +173,7 @@ void TextColor(int font, int backGround)
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), Color);
 }
 
+// 원하는 숫자 하나 띄우기
 void DOT::DotNumber(int num)
 {
 	switch (num)
@@ -291,6 +305,7 @@ void DOT::DotNumber(int num)
 
 }
 
+// 룰렛 계속 돌리기
 void DOT::RandomNum()
 {
 	int randNum = -1;
@@ -315,7 +330,7 @@ void DOT::RandomNum()
 			cout << "●"; TextColor(0, 0); cout << "○○○"; TextColor(15, 0); cout << "●"; TextColor(0, 0); cout << "○○○"; TextColor(15, 0); cout << "●"; cout << "●"; TextColor(0, 0); cout << "○○○○"; TextColor(15, 0); cout << "●" << endl;
 			cout << "●"; TextColor(0, 0); cout << "○○○"; TextColor(15, 0); cout << "●"; TextColor(0, 0); cout << "○○○"; TextColor(15, 0); cout << "●"; cout << "●"; TextColor(0, 0); cout << "○○○○"; TextColor(15, 0); cout << "●" << endl;
 			cout << "●●●●●"; cout << "●●●●●"; cout << "●●●●●" << endl;
-			Sleep(200);
+			Sleep(150);
 			system("cls");
 		}
 		break;
@@ -336,7 +351,7 @@ void DOT::RandomNum()
 			TextColor(15, 0);	cout << "●●●●●"; TextColor(15, 0);	cout << "●●●●●"; TextColor(15, 0);	cout << "●●●●●" << endl;
 
 			
-			Sleep(200);
+			Sleep(150);
 			system("cls");
 		}
 		break;
@@ -357,7 +372,7 @@ void DOT::RandomNum()
 			TextColor(15, 0); cout << "●●●●●"; TextColor(15, 0); cout << "●●●●●"; TextColor(15, 0); cout << "●●●●●" << endl;
 
 
-			Sleep(200);
+			Sleep(150);
 			system("cls");
 			
 		}
@@ -379,7 +394,7 @@ void DOT::RandomNum()
 			cout << "●●●●●"; cout << "●●●●●"; cout << "●●●●●" << endl;
 
 			
-			Sleep(200);
+			Sleep(150);
 			system("cls");
 		}
 		break;
@@ -392,7 +407,7 @@ void DOT::RandomNum()
 			TextColor(0, 0); cout << "○○"; TextColor(15, 0); cout << "●"; TextColor(0, 0); cout << "○○"; TextColor(0, 0); cout << "○○"; TextColor(15, 0); cout << "●"; TextColor(0, 0); cout << "○○"; TextColor(0, 0); cout << "○○"; TextColor(15, 0); cout << "●"; TextColor(0, 0); cout << "○○" << endl;
 			cout << "○○"; TextColor(15, 0); cout << "●"; TextColor(0, 0); cout << "○○"; cout << "○○"; TextColor(15, 0); cout << "●"; TextColor(0, 0); cout << "○○"; cout << "○○"; TextColor(15, 0); cout << "●"; TextColor(0, 0); cout << "○○" << endl;
 			TextColor(15, 0);
-			Sleep(200);
+			Sleep(150);
 			system("cls");
 		}
 		break;
@@ -413,7 +428,7 @@ void DOT::RandomNum()
 			TextColor(0, 0); cout << "○○○"; TextColor(15, 0); cout << "●●"; TextColor(0, 0); cout << "○○○"; TextColor(15, 0); cout << "●●"; TextColor(0, 0); cout << "○○○"; TextColor(15, 0); cout << "●●" << endl;
 			cout << "●●●●●"; cout << "●●●●●"; cout << "●●●●●" << endl;
 			
-			Sleep(200);
+			Sleep(150);
 			system("cls");
 
 		}
@@ -435,7 +450,7 @@ void DOT::RandomNum()
 			TextColor(0, 0); cout << "○"; TextColor(15, 0); cout << "●●●"; TextColor(0, 0); cout << "○"; TextColor(0, 0); cout << "○"; TextColor(15, 0); cout << "●●●"; TextColor(0, 0); cout << "○"; TextColor(0, 0); cout << "○"; TextColor(15, 0); cout << "●●●"; TextColor(0, 0); cout << "○" << endl;
 			TextColor(15, 0);
 
-			Sleep(200);
+			Sleep(150);
 			system("cls");
 		}
 		break;
@@ -457,7 +472,7 @@ void DOT::RandomNum()
 			TextColor(15, 0);
 
 
-			Sleep(200);
+			Sleep(150);
 			system("cls");
 		}
 		break;
@@ -479,7 +494,7 @@ void DOT::RandomNum()
 			TextColor(15, 0);
 
 
-			Sleep(200);
+			Sleep(150);
 			system("cls");
 		}
 		break;
@@ -501,7 +516,7 @@ void DOT::RandomNum()
 			TextColor(15, 0);
 
 
-			Sleep(200);
+			Sleep(150);
 			system("cls");
 		}
 		break;
@@ -511,6 +526,7 @@ void DOT::RandomNum()
 	}	
 }
 
+// 정해진 숫자 바로 띄우기
 void DOT::DotSuc(int num)
 {
 	switch (num)
@@ -724,4 +740,221 @@ void DOT::DotSuc(int num)
 	default:
 		break;
 	}
+}
+
+
+// 숫자올라간후 정해진 숫자띄우기
+void DOT::TimeRandNum(int num)
+{
+	int rand = -1;
+
+	while (rand < 10)
+	{
+		rand += 1;
+
+		switch (rand)
+		{
+		case 0:
+		{
+			TextColor(15, 0);
+			// 0	
+			cout << "●●●●●"; cout << "●●●●●"; cout << "●●●●●" << endl;
+			cout << "●"; TextColor(0, 0); cout << "○○○"; TextColor(15, 0); cout << "●"; TextColor(0, 0); cout << "○○○"; TextColor(15, 0); cout << "●"; cout << "●"; TextColor(0, 0); cout << "○○○○"; TextColor(15, 0); cout << "●" << endl;
+			cout << "●"; TextColor(0, 0); cout << "○○○"; TextColor(15, 0); cout << "●"; TextColor(0, 0); cout << "○○○"; TextColor(15, 0); cout << "●"; cout << "●"; TextColor(0, 0); cout << "○○○○"; TextColor(15, 0); cout << "●" << endl;
+			cout << "●●●●●"; cout << "●●●●●"; cout << "●●●●●" << endl;
+			Sleep(200);
+			system("cls");
+		}
+		break;
+		case 1:
+		{
+			// 1
+			/*TextColor(0, 0); cout << "○○"; TextColor(15, 0); cout << "●"; TextColor(0, 0); cout << "○○" << endl;
+			cout << "○"; TextColor(15, 0); cout << "●●"; TextColor(0, 0); cout << "○○" << endl;
+			TextColor(0, 0); cout << "●"; TextColor(0, 0); cout << "○"; TextColor(15, 0); cout << "●"; TextColor(0, 0); cout << "○○" << endl;
+			cout << "○○"; TextColor(15, 0); cout << "●"; TextColor(0, 0); cout << "○○" << endl;
+			TextColor(15, 0);	cout << "●●●●●" << endl;
+			*/
+			// 1
+			TextColor(0, 0); cout << "○○"; TextColor(15, 0); cout << "●"; TextColor(0, 0); cout << "○○"; TextColor(0, 0); cout << "○○"; TextColor(15, 0); cout << "●"; TextColor(0, 0); cout << "○○"; TextColor(0, 0); cout << "○○"; TextColor(15, 0); cout << "●"; TextColor(0, 0); cout << "○○" << endl;
+			cout << "○"; TextColor(15, 0); cout << "●●"; TextColor(0, 0); cout << "○○"; cout << "○"; TextColor(15, 0); cout << "●●"; TextColor(0, 0); cout << "○○"; cout << "○"; TextColor(15, 0); cout << "●●"; TextColor(0, 0); cout << "○○" << endl;
+			TextColor(0, 0); cout << "●"; TextColor(0, 0); cout << "○"; TextColor(15, 0); cout << "●"; TextColor(0, 0); cout << "○○"; TextColor(0, 0); cout << "●"; TextColor(0, 0); cout << "○"; TextColor(15, 0); cout << "●"; TextColor(0, 0); cout << "○○"; TextColor(0, 0); cout << "●"; TextColor(0, 0); cout << "○"; TextColor(15, 0); cout << "●"; TextColor(0, 0); cout << "○○" << endl;
+			cout << "○○"; TextColor(15, 0); cout << "●"; TextColor(0, 0); cout << "○○"; cout << "○○"; TextColor(15, 0); cout << "●"; TextColor(0, 0); cout << "○○"; cout << "○○"; TextColor(15, 0); cout << "●"; TextColor(0, 0); cout << "○○" << endl;
+			TextColor(15, 0);	cout << "●●●●●"; TextColor(15, 0);	cout << "●●●●●"; TextColor(15, 0);	cout << "●●●●●" << endl;
+
+
+			Sleep(300);
+			system("cls");
+		}
+		break;
+		case 2:
+		{
+			// 2
+			/*cout << "●●●●●" << endl;
+			TextColor(0, 0); cout << "○○○○"; TextColor(15, 0); cout << "●" << endl;
+			TextColor(15, 0); cout << "●●●●●" << endl;
+			cout << "●"; TextColor(0, 0); cout << "○○○○" << endl;
+			TextColor(15, 0); cout << "●●●●●" << endl;
+			*/
+			TextColor(15, 0);
+			cout << "●●●●●"; cout << "●●●●●"; cout << "●●●●●" << endl;
+			TextColor(0, 0); cout << "○○○○"; TextColor(15, 0); cout << "●"; TextColor(0, 0); cout << "○○○○"; TextColor(15, 0); cout << "●"; TextColor(0, 0); cout << "○○○○"; TextColor(15, 0); cout << "●" << endl;
+			TextColor(15, 0); cout << "●●●●●"; TextColor(15, 0); cout << "●●●●●"; TextColor(15, 0); cout << "●●●●●" << endl;
+			cout << "●"; TextColor(0, 0); cout << "○○○○"; cout << "●"; TextColor(0, 0); cout << "○○○○"; cout << "●"; TextColor(0, 0); cout << "○○○○" << endl;
+			TextColor(15, 0); cout << "●●●●●"; TextColor(15, 0); cout << "●●●●●"; TextColor(15, 0); cout << "●●●●●" << endl;
+
+
+			Sleep(350);
+			system("cls");
+
+		}
+		break;
+		case 3:
+		{
+			// 3
+			/*cout << "●●●●●" << endl;
+			TextColor(0, 0); cout << "○○○"; TextColor(15, 0); cout << "●●" << endl;
+			cout << "●●●●●" << endl;
+			TextColor(0, 0); cout << "○○○"; TextColor(15, 0); cout << "●●" << endl;
+			cout << "●●●●●" << endl;
+			*/
+			TextColor(15, 0);
+			cout << "●●●●●"; cout << "●●●●●"; cout << "●●●●●" << endl;
+			TextColor(0, 0); cout << "○○○"; TextColor(15, 0); cout << "●●"; TextColor(0, 0); cout << "○○○"; TextColor(15, 0); cout << "●●"; TextColor(0, 0); cout << "○○○"; TextColor(15, 0); cout << "●●" << endl;
+			cout << "●●●●●"; cout << "●●●●●"; cout << "●●●●●" << endl;
+			TextColor(0, 0); cout << "○○○"; TextColor(15, 0); cout << "●●"; TextColor(0, 0); cout << "○○○"; TextColor(15, 0); cout << "●●"; TextColor(0, 0); cout << "○○○"; TextColor(15, 0); cout << "●●" << endl;
+			cout << "●●●●●"; cout << "●●●●●"; cout << "●●●●●" << endl;
+
+
+			Sleep(400);
+			system("cls");
+		}
+		break;
+		case 4:
+		{
+			// 4
+			TextColor(15, 0); cout << "●"; TextColor(0, 0); cout << "○"; TextColor(15, 0); cout << "●"; TextColor(0, 0); cout << "○○"; TextColor(15, 0); cout << "●"; TextColor(0, 0); cout << "○"; TextColor(15, 0); cout << "●"; TextColor(0, 0); cout << "○○"; TextColor(15, 0); cout << "●"; TextColor(0, 0); cout << "○"; TextColor(15, 0); cout << "●"; TextColor(0, 0); cout << "○○" << endl;
+			TextColor(15, 0);	cout << "●"; TextColor(0, 0); cout << "○"; TextColor(15, 0); cout << "●"; TextColor(0, 0); cout << "○○"; TextColor(15, 0);	cout << "●"; TextColor(0, 0); cout << "○"; TextColor(15, 0); cout << "●"; TextColor(0, 0); cout << "○○"; TextColor(15, 0);	cout << "●"; TextColor(0, 0); cout << "○"; TextColor(15, 0); cout << "●"; TextColor(0, 0); cout << "○○" << endl;
+			TextColor(15, 0); cout << "●●●●●"; TextColor(15, 0); cout << "●●●●●"; TextColor(15, 0); cout << "●●●●●" << endl;
+			TextColor(0, 0); cout << "○○"; TextColor(15, 0); cout << "●"; TextColor(0, 0); cout << "○○"; TextColor(0, 0); cout << "○○"; TextColor(15, 0); cout << "●"; TextColor(0, 0); cout << "○○"; TextColor(0, 0); cout << "○○"; TextColor(15, 0); cout << "●"; TextColor(0, 0); cout << "○○" << endl;
+			cout << "○○"; TextColor(15, 0); cout << "●"; TextColor(0, 0); cout << "○○"; cout << "○○"; TextColor(15, 0); cout << "●"; TextColor(0, 0); cout << "○○"; cout << "○○"; TextColor(15, 0); cout << "●"; TextColor(0, 0); cout << "○○" << endl;
+			TextColor(15, 0);
+			Sleep(450);
+			system("cls");
+		}
+		break;
+		case 5:
+		{
+			// 5
+			/*TextColor(15, 0);
+			cout << "●●●●●" << endl;
+			cout << "●●"; TextColor(0, 0); cout << "○○○" << endl;
+			TextColor(15, 0); cout << "●●●●●" << endl;
+			TextColor(0, 0); cout << "○○○"; TextColor(15, 0); cout << "●●" << endl;
+			cout << "●●●●●" << endl;*/
+
+			TextColor(15, 0);
+			cout << "●●●●●"; cout << "●●●●●"; cout << "●●●●●" << endl;
+			cout << "●●"; TextColor(0, 0); cout << "○○○"; cout << "●●"; TextColor(0, 0); cout << "○○○"; cout << "●●"; TextColor(0, 0); cout << "○○○" << endl;
+			TextColor(15, 0); cout << "●●●●●"; TextColor(15, 0); cout << "●●●●●"; TextColor(15, 0); cout << "●●●●●" << endl;
+			TextColor(0, 0); cout << "○○○"; TextColor(15, 0); cout << "●●"; TextColor(0, 0); cout << "○○○"; TextColor(15, 0); cout << "●●"; TextColor(0, 0); cout << "○○○"; TextColor(15, 0); cout << "●●" << endl;
+			cout << "●●●●●"; cout << "●●●●●"; cout << "●●●●●" << endl;
+
+			Sleep(500);
+			system("cls");
+
+		}
+		break;
+		case 6:
+		{
+			// 6
+			/*TextColor(0, 0); cout << "○○○"; TextColor(15, 0); cout << "●●" << endl;
+			TextColor(0, 0); cout << "○"; TextColor(15, 0); cout << "●●"; TextColor(0, 0); cout << "○○" << endl;
+			cout << "○"; TextColor(15, 0); cout << "●●●"; TextColor(0, 0); cout << "○" << endl;
+			TextColor(15, 0); cout << "●"; TextColor(0, 0); cout << "○○○"; TextColor(15, 0); cout << "●" << endl;
+			TextColor(0, 0); cout << "○"; TextColor(15, 0); cout << "●●●"; TextColor(0, 0); cout << "○" << endl;
+			*/
+
+			TextColor(0, 0); cout << "○○○"; TextColor(15, 0); cout << "●●"; TextColor(0, 0); cout << "○○○"; TextColor(15, 0); cout << "●●"; TextColor(0, 0); cout << "○○○"; TextColor(15, 0); cout << "●●" << endl;
+			TextColor(0, 0); cout << "○"; TextColor(15, 0); cout << "●●"; TextColor(0, 0); cout << "○○"; TextColor(0, 0); cout << "○"; TextColor(15, 0); cout << "●●"; TextColor(0, 0); cout << "○○"; TextColor(0, 0); cout << "○"; TextColor(15, 0); cout << "●●"; TextColor(0, 0); cout << "○○" << endl;
+			cout << "○"; TextColor(15, 0); cout << "●●●"; TextColor(0, 0); cout << "○"; cout << "○"; TextColor(15, 0); cout << "●●●"; TextColor(0, 0); cout << "○"; cout << "○"; TextColor(15, 0); cout << "●●●"; TextColor(0, 0); cout << "○" << endl;
+			TextColor(15, 0); cout << "●"; TextColor(0, 0); cout << "○○○"; TextColor(15, 0); cout << "●"; TextColor(15, 0); cout << "●"; TextColor(0, 0); cout << "○○○"; TextColor(15, 0); cout << "●"; TextColor(15, 0); cout << "●"; TextColor(0, 0); cout << "○○○"; TextColor(15, 0); cout << "●" << endl;
+			TextColor(0, 0); cout << "○"; TextColor(15, 0); cout << "●●●"; TextColor(0, 0); cout << "○"; TextColor(0, 0); cout << "○"; TextColor(15, 0); cout << "●●●"; TextColor(0, 0); cout << "○"; TextColor(0, 0); cout << "○"; TextColor(15, 0); cout << "●●●"; TextColor(0, 0); cout << "○" << endl;
+			TextColor(15, 0);
+
+			Sleep(550);
+			system("cls");
+		}
+		break;
+		case 7:
+		{
+			// 7
+			/*TextColor(15, 0); cout << "●●●●●" << endl;
+			cout << "●"; TextColor(0, 0); cout << "○○○"; TextColor(15, 0); cout << "●" << endl;
+			cout << "●"; TextColor(0, 0); cout << "○○○"; TextColor(15, 0); cout << "●" << endl;
+			TextColor(0, 0); cout << "○○○○"; TextColor(15, 0); cout << "●" << endl;
+			TextColor(0, 0); cout << "○○○○"; TextColor(15, 0); cout << "●" << endl;
+			*/
+
+			TextColor(15, 0); cout << "●●●●●"; TextColor(15, 0); cout << "●●●●●"; TextColor(15, 0); cout << "●●●●●" << endl;
+			cout << "●"; TextColor(0, 0); cout << "○○○"; TextColor(15, 0); cout << "●"; cout << "●"; TextColor(0, 0); cout << "○○○"; TextColor(15, 0); cout << "●"; cout << "●"; TextColor(0, 0); cout << "○○○"; TextColor(15, 0); cout << "●" << endl;
+			cout << "●"; TextColor(0, 0); cout << "○○○"; TextColor(15, 0); cout << "●"; cout << "●"; TextColor(0, 0); cout << "○○○"; TextColor(15, 0); cout << "●"; cout << "●"; TextColor(0, 0); cout << "○○○"; TextColor(15, 0); cout << "●" << endl;
+			TextColor(0, 0); cout << "○○○○"; TextColor(15, 0); cout << "●"; TextColor(0, 0); cout << "○○○○"; TextColor(15, 0); cout << "●"; TextColor(0, 0); cout << "○○○○"; TextColor(15, 0); cout << "●" << endl;
+			TextColor(0, 0); cout << "○○○○"; TextColor(15, 0); cout << "●"; TextColor(0, 0); cout << "○○○○"; TextColor(15, 0); cout << "●"; TextColor(0, 0); cout << "○○○○"; TextColor(15, 0); cout << "●" << endl;
+			TextColor(15, 0);
+
+
+			Sleep(600);
+			system("cls");
+		}
+		break;
+		case 8:
+		{
+			// 8
+			/*TextColor(15, 0); cout << "●●●●●" << endl;
+			cout << "●"; TextColor(0, 0); cout << "○○○"; TextColor(15, 0); cout << "●" << endl;
+			cout << "●●●●●" << endl;
+			cout << "●"; TextColor(0, 0); cout << "○○○"; TextColor(15, 0); cout << "●" << endl;
+			cout << "●●●●●" << endl;
+			*/
+
+			TextColor(15, 0); cout << "●●●●●"; TextColor(15, 0); cout << "●●●●●"; TextColor(15, 0); cout << "●●●●●" << endl;
+			cout << "●"; TextColor(0, 0); cout << "○○○"; TextColor(15, 0); cout << "●"; cout << "●"; TextColor(0, 0); cout << "○○○"; TextColor(15, 0); cout << "●"; cout << "●"; TextColor(0, 0); cout << "○○○"; TextColor(15, 0); cout << "●" << endl;
+			cout << "●●●●●"; cout << "●●●●●"; cout << "●●●●●" << endl;
+			cout << "●"; TextColor(0, 0); cout << "○○○"; TextColor(15, 0); cout << "●"; cout << "●"; TextColor(0, 0); cout << "○○○"; TextColor(15, 0); cout << "●"; cout << "●"; TextColor(0, 0); cout << "○○○"; TextColor(15, 0); cout << "●" << endl;
+			cout << "●●●●●"; cout << "●●●●●"; cout << "●●●●●" << endl;
+			TextColor(15, 0);
+
+
+			Sleep(650);
+			system("cls");
+		}
+		break;
+		case 9:
+		{
+			// 9
+			/*TextColor(15, 0); cout << "●●●●●" << endl;
+			cout << "●"; TextColor(0, 0); cout << "○○○"; TextColor(15, 0); cout << "●" << endl;
+			cout << "●●●●●" << endl;
+			TextColor(0, 0); cout << "○○○○"; TextColor(15, 0); cout << "●" << endl;
+			TextColor(0, 0); cout << "○○○○"; TextColor(15, 0); cout << "●" << endl;
+			*/
+
+			TextColor(15, 0); cout << "●●●●●"; TextColor(15, 0); cout << "●●●●●"; TextColor(15, 0); cout << "●●●●●" << endl;
+			cout << "●"; TextColor(0, 0); cout << "○○○"; TextColor(15, 0); cout << "●"; cout << "●"; TextColor(0, 0); cout << "○○○"; TextColor(15, 0); cout << "●"; cout << "●"; TextColor(0, 0); cout << "○○○"; TextColor(15, 0); cout << "●" << endl;
+			cout << "●●●●●"; cout << "●●●●●"; cout << "●●●●●" << endl;
+			TextColor(0, 0); cout << "○○○○"; TextColor(15, 0); cout << "●"; TextColor(0, 0); cout << "○○○○"; TextColor(15, 0); cout << "●"; TextColor(0, 0); cout << "○○○○"; TextColor(15, 0); cout << "●" << endl;
+			TextColor(0, 0); cout << "○○○○"; TextColor(15, 0); cout << "●"; TextColor(0, 0); cout << "○○○○"; TextColor(15, 0); cout << "●"; TextColor(0, 0); cout << "○○○○"; TextColor(15, 0); cout << "●" << endl;
+			TextColor(15, 0);
+
+
+			Sleep(700);
+			system("cls");
+		}
+		break;
+		default:
+			break;
+		}
+	}
+	DOT::DotSuc(num);
 }
