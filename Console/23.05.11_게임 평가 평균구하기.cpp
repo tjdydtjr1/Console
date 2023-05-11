@@ -26,6 +26,7 @@ void main()
 	const int maxSize = 6;
 	
 	// 값을 입력 x
+	// printf("게임 평가 시작\n");
 	/*for (int i = 0; i < maxSize; ++i)
 	{
 		addNum[i] = rand() % 101;

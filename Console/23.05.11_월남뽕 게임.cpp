@@ -35,7 +35,7 @@ using std::cout;
 using std::cin;
 using std::endl;
 
-#define MAX_SIZE 13
+char Char(int num);
 
 void main()
 {
@@ -45,8 +45,12 @@ void main()
 		- ♥  1 ~13까지의 카드*/
 
 	int cardNum[52] = { 0 };
-	int temp = 0;
 	int count = 0;
+
+	// 임시 저장소
+	int tempA = 0;
+	int tempB = 0;
+	
 
 	// 반복범위 최대 지정
 	const int arrSize = sizeof(cardNum) / sizeof(cardNum[0]);
@@ -71,40 +75,52 @@ void main()
 	int myMoney = 10000;
 
 	// 게임 종료 카운트
-	const int endGame = 18;
+	const int endGame = 51;
 	// 배팅 입력
 	int batMoney = 0;
 
 	count = 0;
 	// 카드 다떨어지거나 소지금 없을 시
-	while (myMoney > 0 && count < endGame)
+	while (myMoney > 0 || count < endGame)
 	{
 		srand(time(NULL));
 		// 카드를 랜덤으로 3장 뽑는다.
-		randNumA = rand() % 52 + 1;
-		randNumB = rand() % 52 + 1;
-		randNumC = rand() % 52 + 1;
-
-		// 중복방지
-		if (randNumA == randNumB)
-		{
-			randNumA = (rand() % 52) + 1;
-		}
-		if (randNumA == randNumB)
-		{
-			randNumC = (rand() % 52) + 1;
-		}
-		if (randNumC == randNumB)
-		{
-			randNumC = (rand() % 52) + 1;
-		}
+		randNumA = rand() % 17 + 1;
+		randNumB = rand() % 18 + 17;
+		randNumC = rand() % 18 + 34;
 		
+		if (cardNum[randNumA] > 14)
+		{
+			randNumA = rand() % 17 + 1;
+		}
+		if (cardNum[randNumA] > 14)
+		{
+			randNumB = rand() % 18 + 17;
+		}
+		if (cardNum[randNumA] > 14)
+		{
+			randNumB = rand() % 18 + 34;
+		}
 
 		if (cardNum[randNumA] < 14 && cardNum[randNumB] < 14 && cardNum[randNumC] < 14)
 		{
+
+			// ♠◆♣♥ 6 16 16
+			// 치트로 먼저 보여주기
+			if(cardNum[randNumA])
+			printf("치트\n");
+			printf("\t      %s                %s                %s\n", (randNumA < 13) ? "♠" : "◆", (randNumB < 26) ? "◆" : "♣", (randNumC < 40) ? "♣" : "♥");
+			cout << "첫번째 카드 : " << Char(cardNum[randNumA]) << ", " << "두번째 카드 : " << Char(cardNum[randNumB]) << ", " << "세번째 카드 : " << Char(cardNum[randNumC]) << endl << endl;
+
+			cout << '\n';
+
 			// 카드 3장중 2장 오픈 1장 덮기
 			// A B 열고 C 덮기
-			printf("첫번째 카드 : %d, 두번째 카드 : %d , 세번째 카드 : ?\n", cardNum[randNumA], cardNum[randNumB]);
+			printf("\t      %s                %s                \n", (randNumA < 13) ? "♠" : "◆", (randNumB < 26) ? "◆" : "♣");
+
+			cout << "첫번째 카드 : " << Char(cardNum[randNumA]) << ", " << "두번째 카드 : " << Char(cardNum[randNumB]) << ", " << "세번째 카드 : ? \n";
+			
+			cout << '\n';
 
 			// 배팅 하기
 			printf("현재 소지금 : %d\n", myMoney);
@@ -114,45 +130,96 @@ void main()
 			cout << '\n';
 
 			// A B C 전부 오픈
-			printf("첫번째 카드 : %d, 두번째 카드 : %d, 세번째 카드 : %d\n", cardNum[randNumA], cardNum[randNumB], cardNum[randNumC]);
+			printf("\t      %s                %s                %s\n", (randNumA < 13) ? "♠" : "◆", (randNumB < 26) ? "◆" : "♣", (randNumC < 40) ? "♣" : "♥");
+			cout << "첫번째 카드 : " << Char(cardNum[randNumA]) << ", " << "두번째 카드 : " << Char(cardNum[randNumB]) << ", " << "세번째 카드 : " << Char(cardNum[randNumC]) << endl;;
 
-			// 게임 결과
-			//if(cardNum[randNumA])
+			cout << '\n';
+
+			// 게임 결과 사이값은 2배 아니면 배팅금액 차감
+			if (cardNum[randNumA] < cardNum[randNumC] < cardNum[randNumB])
+			{
+				printf("정답입니다.\n");
+				printf("%d X2 소지금 증액\n", batMoney);
+				myMoney += batMoney;
+				printf("현재 소지 금액 : %d\n", myMoney);
+
+			}
+			else if (cardNum[randNumB] < cardNum[randNumC] < cardNum[randNumA])
+			{
+				printf("정답입니다.\n");
+				printf("%d X2 소지금 증액\n", batMoney);
+				myMoney += batMoney * 2;
+				printf("현재 소지 금액 : %d\n", myMoney);
+			}
+			else
+			{
+				printf("틀렸습니다.\n");
+				printf("%d 소지금 차감\n", batMoney);
+				myMoney -= batMoney;
+				printf("현재 소지 금액 : %d\n", myMoney);
+
+			}
 
 			// 사용한 카드 제거
 			cardNum[randNumA] = 20;
 			cardNum[randNumB] = 20;
-			cardNum[randNumC] = 20;
+			cardNum[randNumC] = 20;		
 		}
 		else
 		{
-			for (int i = 0; i < arrSize; i++)
-			{
-				temp += cardNum[i];
-			}
-
-			if (temp > 980)
-			{
-				break;
-			}
-
-			temp = 0;
 			continue;
 		}
 
-		Sleep(1000);
+		Sleep(3000);
 		system("cls");
 
 		// 게임횟수 증가
-		++count;
+		count += 3;
 	}
 }
 
-		
+char Char(int num)
+{
 
+	switch (num)
+	{
+	case 1:
+		return 'A';
+		break;
+	case 2:
+		return '2';
+		break;
+	case 3:
+		return '3';
+		break;
+	case 4:
+		return '4';
+		break;
+	case 5:
+		return '5';
+	case 6:
+		return '6';
+	case 7:
+		return '7';
+	case 8:
+		return '8';
+		break;
+	case 9:
+		return '9';
+		break;
+	case 10:
+		return '10';
+		break;
+	case 11:
+		return 'J';
+		break;
+	case 12:
+		return 'Q';
+		break;
+	case 13:
+		return 'K';
+	default:
+		break;
+	}
 	
-
-
-	
-
-
+}
