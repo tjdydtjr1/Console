@@ -52,6 +52,34 @@
     <ClCompile Include="23.05.10_룰렛.cpp">
       <Filter>과제</Filter>
     </ClCompile>
+    <ClCompile Include="도트 숫자.cpp" />
+    <ClCompile Include="Example_10.cpp">
+      <Filter>Lesson\06. 배열</Filter>
+    </ClCompile>
+    <ClCompile Include="main_01.cpp">
+      <Filter>Lesson\06. 배열</Filter>
+    </ClCompile>
+    <ClCompile Include="23.05.11_게임 평가 평균구하기.cpp">
+      <Filter>과제</Filter>
+    </ClCompile>
+    <ClCompile Include="23.05.11_월남뽕 게임.cpp">
+      <Filter>과제</Filter>
+    </ClCompile>
+    <ClCompile Include="Example_11.cpp">
+      <Filter>Lesson\06. 배열</Filter>
+    </ClCompile>
+    <ClCompile Include="23.5.12_과제.cpp">
+      <Filter>과제</Filter>
+    </ClCompile>
+    <ClCompile Include="23.05.12_랜덤값 출력.cpp">
+      <Filter>과제</Filter>
+    </ClCompile>
+    <ClCompile Include="23.05.12_ 복습과제.cpp">
+      <Filter>과제</Filter>
+    </ClCompile>
+    <ClCompile Include="23.05.12_짝맞추기.cpp">
+      <Filter>과제</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Lesson">
@@ -78,5 +106,13 @@
     <Filter Include="연습용">
       <UniqueIdentifier>{0e1db844-06c1-4af7-b646-12a5518782cc}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Lesson\06. 배열">
+      <UniqueIdentifier>{c4a3661a-cc20-4480-9618-ed1baff6abfa}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Example_10.h">
+      <Filter>Lesson\06. 배열</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
