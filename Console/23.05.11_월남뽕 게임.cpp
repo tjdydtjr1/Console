@@ -93,7 +93,6 @@ void main()
 
 			// ♠◆♣♥ 6 16 16
 			// 치트로 먼저 보여주기
-			if(cardNum[randNumA])
 			printf("치트\n");
 			printf("\t      %s                %s                %s\n", (randNumA < 13) ? "♠" : "◆", (randNumB < 26) ? "◆" : "♣", (randNumC < 40) ? "♣" : "♥");
 			cout << "첫번째 카드 : " << Char(cardNum[randNumA]) << ", " << "두번째 카드 : " << Char(cardNum[randNumB]) << ", " << "세번째 카드 : " << Char(cardNum[randNumC]) << endl << endl;
