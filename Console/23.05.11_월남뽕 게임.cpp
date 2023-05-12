@@ -45,25 +45,22 @@ void main()
 		- ♥  1 ~13까지의 카드*/
 
 	int cardNum[52] = { 0 };
-	int count = 0;
 
 	// 임시 저장소
 	int tempA = 0;
-	int tempB = 0;
-	
 
 	// 반복범위 최대 지정
 	const int arrSize = sizeof(cardNum) / sizeof(cardNum[0]);
 
-	for (int i = 1; count < arrSize; ++i)
+	for (int i = 1; tempA < arrSize; ++i)
 	{
 		if (i > 13)
 		{
 			i = 1;
 		}
 
-		cardNum[count] = i;
-		++count;
+		cardNum[tempA] = i;
+		++tempA;
 	}
 
 	// 카드 랜덤으로 뽑을 변수
@@ -75,33 +72,22 @@ void main()
 	int myMoney = 10000;
 
 	// 게임 종료 카운트
-	const int endGame = 51;
+	const int endGame = 980;
 	// 배팅 입력
 	int batMoney = 0;
 
-	count = 0;
+	// 임시값 초기화
+	tempA = 0;
+
 	// 카드 다떨어지거나 소지금 없을 시
-	while (myMoney > 0 || count < endGame)
+	while (myMoney > 0 || tempA < endGame)
 	{
 		srand(time(NULL));
 		// 카드를 랜덤으로 3장 뽑는다.
-		randNumA = rand() % 17 + 1;
-		randNumB = rand() % 18 + 17;
-		randNumC = rand() % 18 + 34;
+		randNumA = rand() % 17 + 1;		// 1 ~ 17
+		randNumB = rand() % 17 + 18;	// 18 ~ 34
+		randNumC = rand() % 17 + 35;	// 35 ~ 51
 		
-		if (cardNum[randNumA] > 14)
-		{
-			randNumA = rand() % 17 + 1;
-		}
-		if (cardNum[randNumA] > 14)
-		{
-			randNumB = rand() % 18 + 17;
-		}
-		if (cardNum[randNumA] > 14)
-		{
-			randNumB = rand() % 18 + 34;
-		}
-
 		if (cardNum[randNumA] < 14 && cardNum[randNumB] < 14 && cardNum[randNumC] < 14)
 		{
 
@@ -135,16 +121,16 @@ void main()
 
 			cout << '\n';
 
+			// c - a < b - a 
 			// 게임 결과 사이값은 2배 아니면 배팅금액 차감
-			if (cardNum[randNumA] < cardNum[randNumC] < cardNum[randNumB])
+			if (cardNum[randNumA] < cardNum[randNumC] && cardNum[randNumC] - cardNum[randNumA] < cardNum[randNumB] - cardNum[randNumA])
 			{
 				printf("정답입니다.\n");
 				printf("%d X2 소지금 증액\n", batMoney);
 				myMoney += batMoney;
 				printf("현재 소지 금액 : %d\n", myMoney);
-
 			}
-			else if (cardNum[randNumB] < cardNum[randNumC] < cardNum[randNumA])
+			else if (cardNum[randNumB] < cardNum[randNumC] && cardNum[randNumC] - cardNum[randNumB] < cardNum[randNumA] - cardNum[randNumB])
 			{
 				printf("정답입니다.\n");
 				printf("%d X2 소지금 증액\n", batMoney);
@@ -159,7 +145,6 @@ void main()
 				printf("현재 소지 금액 : %d\n", myMoney);
 
 			}
-
 			// 사용한 카드 제거
 			cardNum[randNumA] = 20;
 			cardNum[randNumB] = 20;
@@ -172,9 +157,6 @@ void main()
 
 		Sleep(3000);
 		system("cls");
-
-		// 게임횟수 증가
-		count += 3;
 	}
 }
 
