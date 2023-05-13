@@ -68,16 +68,19 @@
     <ClCompile Include="Example_11.cpp">
       <Filter>Lesson\06. 배열</Filter>
     </ClCompile>
-    <ClCompile Include="23.5.12_과제.cpp">
-      <Filter>과제</Filter>
-    </ClCompile>
     <ClCompile Include="23.05.12_랜덤값 출력.cpp">
       <Filter>과제</Filter>
     </ClCompile>
-    <ClCompile Include="23.05.12_ 복습과제.cpp">
+    <ClCompile Include="23.05.12_짝맞추기.cpp">
       <Filter>과제</Filter>
     </ClCompile>
-    <ClCompile Include="23.05.12_짝맞추기.cpp">
+    <ClCompile Include="23.05.12_하이로우세븐.cpp">
+      <Filter>과제</Filter>
+    </ClCompile>
+    <ClCompile Include="23.05.12_과제.cpp">
+      <Filter>과제</Filter>
+    </ClCompile>
+    <ClCompile Include="23.05.12_복습과제.cpp">
       <Filter>과제</Filter>
     </ClCompile>
   </ItemGroup>

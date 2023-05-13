@@ -87,7 +87,6 @@ void main()
 		randNumA = rand() % 17 + 1;		// 1 ~ 17
 		randNumB = rand() % 17 + 18;	// 18 ~ 34
 		randNumC = rand() % 17 + 35;	// 35 ~ 51
-		
 		if (cardNum[randNumA] < 14 && cardNum[randNumB] < 14 && cardNum[randNumC] < 14)
 		{
 
