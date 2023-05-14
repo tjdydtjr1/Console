@@ -3,7 +3,7 @@
 //- ◆ 1 ~13까지의 카드
 //- ♣  1 ~13까지의 카드
 //- ♥  1 ~13까지의 카드
-//
+//♠◆♣♥
 //종류별 13 장->총 52장
 //- 52장의 카드를 최소 한번이상 랜덤으로 섞고 그 후 매턴마다 5장씩 뒤집는다.
 //
@@ -23,109 +23,196 @@ using std::cout;
 using std::cin;
 using std::endl;
 
-char AlterChar(int num);
+// 카드 전체 배열 갯수
+#define SUPPLECARD 52
+
+// 마지막 오픈할 카드 
+#define LASTCARD 5
 
 void main()
 {
 	srand(time(NULL));
 
 	// 카드들의 값
-	/*int cloverNum[13]	= { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 };
-	int diaNum[13]		= { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 };
-	int spaceNum[13]    = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 };
-	int heartNum[13]	= { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 };
-	*/
-	int randNum[52] = { 0 };
-
-	const int arrMax = sizeof(randNum) / sizeof(randNum[0]);
-
-	int idx = 1;
-	for (int i = 0; i < arrMax; ++i)
-	{
-		randNum[i] = idx;
-		if (idx > 13)
-		{
-			idx = 0;
-		}
-		++idx;
-	}
-	// 임시 저장소
-	int openCard[6] = {0};
-	int temp = 0;
-	// 배팅하기
-	int myMoney = 10000;
-	int batMoney = 0;
+	// 10은 짤리니 T로 치환
+	char cloverNum[SUPPLECARD]		= { 'A','2','3','4','5','6','7','8','9','T','J','Q','K','A','2','3','4','5','6','7','8','9','T','J','Q','K','A','2','3','4','5','6','7','8','9','T','J','Q','K','A','2','3','4','5','6','7','8','9','T','J','Q','K' };
+	char diaNum[SUPPLECARD]			= { 'A','2','3','4','5','6','7','8','9','T','J','Q','K','A','2','3','4','5','6','7','8','9','T','J','Q','K','A','2','3','4','5','6','7','8','9','T','J','Q','K','A','2','3','4','5','6','7','8','9','T','J','Q','K' };
+	char spaceNum[SUPPLECARD]		= { 'A','2','3','4','5','6','7','8','9','T','J','Q','K','A','2','3','4','5','6','7','8','9','T','J','Q','K','A','2','3','4','5','6','7','8','9','T','J','Q','K','A','2','3','4','5','6','7','8','9','T','J','Q','K' };
+	char heartNum[SUPPLECARD]		= { 'A','2','3','4','5','6','7','8','9','T','J','Q','K','A','2','3','4','5','6','7','8','9','T','J','Q','K','A','2','3','4','5','6','7','8','9','T','J','Q','K','A','2','3','4','5','6','7','8','9','T','J','Q','K' };
 	
-	while (true)
+	// 배팅하기
+	// 소지금
+	int myMoney = 10000;
+	// 배팅 금액
+	int batMoney = 0;
+	// 결과 선택
+	int choice = 0;
+
+	// 카드 문양 저장
+	int openCard[6] = { 0 };
+	// 문양 선택 후 카드 값 저장
+	char resultCard[6] = { 0 };
+
+	while (myMoney > 0)
 	{
-		printf("하이로우세븐 게임 시작\n\n");
-		
-		// 1. 카드를 섞는다.
-		for (int i = 0; i < arrMax; ++i)
+		printf("하이로우세븐 게임 시작 \n\n");
+		for (int i = 0; i < 6; ++i)
 		{
-			temp = rand() % 51 + 1;
-			if (randNum[temp])
-			{
-				continue;
-			}
-			randNum[temp] = 1;
-			openCard[i] = temp;
+			openCard[i] = rand() % 4;
 		}
+
+		// 뽑을 문양 카드 고른 후 결과 카드에 넣는다.
+		printf("카드 5장을 오픈합니다\n");
+		for (int i = 0; i < 5; ++i)
+		{
+			// clover : 0 dia : 1 space : 2 heart : 3
+			// ♠♥◆♣
+			if (openCard[i] == 0)
+			{
+				printf("♣ ");
+				resultCard[i] = cloverNum[rand() % 52];
+				if (resultCard[i] == 'T')
+				{
+					cout << "10" << '\n';
+				}
+				else
+				{
+					cout << resultCard[i] << '\n';
+				}
+			}
+			else if (openCard[i] == 1)
+			{
+				printf("◆ ");
+				resultCard[i] = diaNum[rand() % 52];
+				if (resultCard[i] == 'T')
+				{
+					cout << "10" << '\n';
+				}
+				else
+				{
+					cout << resultCard[i] << '\n';
+				}
+			}
+			else if (openCard[i] == 2)
+			{
+				printf("♠ ");
+				resultCard[i] = spaceNum[rand() % 52];
+				if (resultCard[i] == 'T')
+				{
+					cout << "10" << '\n';
+				}
+				else
+				{
+					cout << resultCard[i] << '\n';
+				}
+			}
+			else
+			{
+				printf("♥ ");
+				resultCard[i] = heartNum[rand() % 52];
+				if (resultCard[i] == 'T')
+				{
+					cout << "10" << '\n';
+				}
+				else
+				{
+					cout << resultCard[i] << '\n';
+				}
+			}
+		}
+		cout << '\n';
+		// 5장의 카드를 보고 배팅 하기
+		printf("배팅 금액을 입력하세요.\n");
+		cin >> batMoney;
+		cout << '\n';
 		
+		printf("세븐보다 위 아래 같은지 선택\n");
+		printf("위 = 0, 아래 = 1, 같다 = 2\n");
+		cin >> choice;
+		cout << '\n';
+		
+		
+		// 6번째 카드 오픈
+		printf("6번째 카드 오픈\n");
+		if (openCard[LASTCARD] == 0)
+		{
+			printf("♣ ");
+			resultCard[LASTCARD] = cloverNum[rand() % 52];
+			if (resultCard[LASTCARD] == 'T')
+			{
+				cout << "10" << '\n';
+			}
+			else
+			{
+				cout << resultCard[LASTCARD] << '\n';
+			}
+		}
+		else if (openCard[LASTCARD] == 1)
+		{
+			printf("◆ ");
+			resultCard[LASTCARD] = diaNum[rand() % 52];
+			if (resultCard[LASTCARD] == 'T')
+			{
+				cout << "10" << '\n';
+			}
+			else
+			{
+				cout << resultCard[LASTCARD] << '\n';
+			}
+		}
+		else if (openCard[LASTCARD] == 2)
+		{
+			printf("♠ ");
+			resultCard[LASTCARD] = spaceNum[rand() % 52];
+			if (resultCard[LASTCARD] == 'T')
+			{
+				cout << "10" << '\n';
+			}
+			else
+			{
+				cout << resultCard[LASTCARD] << '\n';
+			}
+		}
+		else
+		{
+			printf("♥ ");
+			resultCard[LASTCARD] = heartNum[rand() % 52];
+			if (resultCard[LASTCARD] == 'T')
+			{
+				cout << "10" << '\n';
+			}
+			else
+			{
+				cout << resultCard[LASTCARD] << '\n';
+			}
+		}
 
-		// 2. 5장을 오픈한다.
-		Sleep(1000);
-		// 3. 배팅 금액을 입력 받는다.
-		//printf("배팅 금액 입력 : ");
-		//cin >> batMoney;
-		// 4. 6번째 카드가 세븐보다 높은지 낮은지 같은지 입력받는다.
-		// 5. 6번째 카드의 결과에 따른 배팅 금액 증감하기 세븐이면 13 배 맞추면 배팅금액만큼 증가
+		// 배팅 결과 판별
+		if (resultCard[LASTCARD] != 'A' && choice == 0 && resultCard[LASTCARD] > '7')
+		{
+			printf("맞췄습니다.\n배팅 금액 x2\n\n");
+			myMoney += batMoney * 2;
+		}
+		else if (resultCard[LASTCARD] == 'A' || choice == 1 && resultCard[LASTCARD] < '7')
+		{
+			printf("맞췄습니다.\n배팅 금액 x2\n\n");
+			myMoney += batMoney * 2;
+		}
+		else if (choice == 2 && resultCard[LASTCARD] == '7')
+		{
+			printf("세븐을 맞췄습니다.\n배팅 금액 x12\n\n");
+			myMoney += batMoney * 12;
+		}
+		else
+		{
+			printf("틀렸습니다.\n배팅 금액 차감\n\n");
+			myMoney -= batMoney;
+		}
+		printf("현재 소지 금액 : %d\n", myMoney);
+		Sleep(2000);
+		system("cls");
 	}
-}
-
-
-char AlterChar(int num)
-{
-
-	switch (num)
-	{
-	case 1:
-		return 'A';
-		break;
-	case 2:
-		return '2';
-		break;
-	case 3:
-		return '3';
-		break;
-	case 4:
-		return '4';
-		break;
-	case 5:
-		return '5';
-	case 6:
-		return '6';
-	case 7:
-		return '7';
-	case 8:
-		return '8';
-		break;
-	case 9:
-		return '9';
-		break;
-	case 10:
-		cout << "10";
-		break;
-	case 11:
-		return 'J';
-		break;
-	case 12:
-		return 'Q';
-		break;
-	case 13:
-		return 'K';
-	default:
-		break;
-	}
-
+		
+	
+	printf("게임 종료\n");
 }
