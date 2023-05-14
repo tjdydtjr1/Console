@@ -83,6 +83,9 @@
     <ClCompile Include="23.05.12_복습과제.cpp">
       <Filter>과제</Filter>
     </ClCompile>
+    <ClCompile Include="test.cpp">
+      <Filter>연습용</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Lesson">
