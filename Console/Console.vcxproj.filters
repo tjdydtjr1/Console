@@ -77,14 +77,26 @@
     <ClCompile Include="23.05.12_하이로우세븐.cpp">
       <Filter>과제</Filter>
     </ClCompile>
-    <ClCompile Include="23.05.12_과제.cpp">
-      <Filter>과제</Filter>
-    </ClCompile>
     <ClCompile Include="23.05.12_복습과제.cpp">
       <Filter>과제</Filter>
     </ClCompile>
     <ClCompile Include="test.cpp">
       <Filter>연습용</Filter>
+    </ClCompile>
+    <ClCompile Include="test2.cpp">
+      <Filter>연습용</Filter>
+    </ClCompile>
+    <ClCompile Include="Example_12.cpp">
+      <Filter>Lesson\07. 삼항 연산자 + 문자열</Filter>
+    </ClCompile>
+    <ClCompile Include="main_03.cpp">
+      <Filter>Lesson\07. 삼항 연산자 + 문자열</Filter>
+    </ClCompile>
+    <ClCompile Include="23.05.15_주민번호생성기.cpp">
+      <Filter>과제</Filter>
+    </ClCompile>
+    <ClCompile Include="23.05.15_문자열 뒤집기.cpp">
+      <Filter>과제</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -115,10 +127,16 @@
     <Filter Include="Lesson\06. 배열">
       <UniqueIdentifier>{c4a3661a-cc20-4480-9618-ed1baff6abfa}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Lesson\07. 삼항 연산자 + 문자열">
+      <UniqueIdentifier>{62aa6e56-b405-4880-b589-b39e5d7186a2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Example_10.h">
       <Filter>Lesson\06. 배열</Filter>
+    </ClInclude>
+    <ClInclude Include="Example_12.h">
+      <Filter>Lesson\07. 삼항 연산자 + 문자열</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

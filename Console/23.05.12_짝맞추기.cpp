@@ -40,7 +40,8 @@ void main()
 	char heartB[3] = "♥";
 	char cloverA[3] = "♧";
 	char cloverB[3] = "♣";
-
+	
+	
 	// 카드 배열 숫자
 	int arr[20] = { 0 };
 	const int arrMax = sizeof(arr) / sizeof(arr[0]);
