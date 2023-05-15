@@ -77,21 +77,21 @@ void main()
 	{
 		cin >> day;
 
-		if (month[1] == '2')
+		if (month[0] == '1' && month[1] == '2')
 		{
 			if (day > 31)
 			{
 				continue;
 			}
-			dayCheck = true;
+			dayCheck = false;
 		}
-		else if (month[1] == '1')
+		else if (month[0] == '1' && month[1] == '1')
 		{
 			if (day > 30)
 			{
 				continue;
 			}
-			dayCheck = true;
+			dayCheck = false;
 		}
 		else if (month[1] == '0')
 		{
@@ -99,7 +99,7 @@ void main()
 			{
 				continue;
 			}
-			dayCheck = true;
+			dayCheck = false;
 
 		}
 		else if (month[1] == '9')
@@ -108,7 +108,7 @@ void main()
 			{
 				continue;
 			}
-			dayCheck = true;
+			dayCheck = false;
 
 		}
 		else if (month[1] == '8')
@@ -117,7 +117,7 @@ void main()
 			{
 				continue;
 			}
-			dayCheck = true;
+			dayCheck = false;
 
 		}
 		else if (month[1] == '7')
@@ -126,7 +126,7 @@ void main()
 			{
 				continue;
 			}
-			dayCheck = true;
+			dayCheck = false;
 
 		}
 		else if (month[1] == '6')
@@ -135,7 +135,7 @@ void main()
 			{
 				continue;
 			}
-			dayCheck = true;
+			dayCheck = false;
 
 		}
 		else if (month[1] == '5')
@@ -144,7 +144,7 @@ void main()
 			{
 				continue;
 			}
-			dayCheck = true;
+			dayCheck = false;
 
 		}
 		else if (month[1] == '4')
@@ -153,7 +153,7 @@ void main()
 			{
 				continue;
 			}
-			dayCheck = true;
+			dayCheck = false;
 
 		}
 		else if (month[1] == '3')
@@ -162,7 +162,7 @@ void main()
 			{
 				continue;
 			}
-			dayCheck = true;
+			dayCheck = false;
 
 		}
 		else if (month[1] == '2')
@@ -171,7 +171,7 @@ void main()
 			{
 				continue;
 			}
-			dayCheck = true;
+			dayCheck = false;
 
 		}
 		else if (month[1] == '1')
@@ -180,7 +180,7 @@ void main()
 			{
 				continue;
 			}
-			dayCheck = true;
+			dayCheck = false;
 
 		}
 

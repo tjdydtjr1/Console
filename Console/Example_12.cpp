@@ -52,12 +52,7 @@ namespace EXAMPLE_2
 	float numB = 3.2f;
 	bool numC = true;
 	
-	std::cout << moonja << std::endl;
-
-	std::cout << sizeof(moonja) << " : 바이트 " << std::endl;
-	std::cout << sizeof(numA) << " : 바이트 " << std::endl;
-	std::cout << sizeof(numB) << " : 바이트 " << std::endl;
-	std::cout << sizeof(numC) << " : 바이트 " << std::endl;
+	
 
 	/*
 	=> 주의를 기울여야 할 문자열

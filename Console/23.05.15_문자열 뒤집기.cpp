@@ -33,11 +33,12 @@ void main()
 	}
 
 	// -문자를 입력 받아 입력받은 문자를 거꾸로 출력한다.
-	/*for (int i = 0; i < count; ++i)
+	// 임시 배열에 복사
+	for (int i = 0; i < count; ++i)
 	{
 		tempChar[i] = inputChar[i];
-	}*/
-	//temp = count;
+	}
+	temp = count;
 	
 	/*for (int i = 0; i < count; ++i)
 	{
@@ -47,16 +48,22 @@ void main()
 	cout << inputChar;*/
 
 	// 짝수값 출력
-	//temp = count;
-	//for (int i = 0; i < count; ++i)
-	//{
-	//	if (i % 2)
-	//	{
-	//		inputChar[i] = tempChar[temp - 1];
-	//		--temp;
-	//	}
-	//}
-	//cout << inputChar;
+	temp = count;
+	for (int i = 0; i < count; ++i)
+	{
+		if (i % 2)
+		{
+			// 짝수일 경우
+			if (temp - i - 1 % 2 == 1)
+			{
+				inputChar[i] = tempChar[temp - i];
+			}
+			// 홀수일 경우
+			inputChar[i] = tempChar[temp - i - 1];
+		}
+		
+	}
+	cout << inputChar;
 
 	/*주민번호를 입력하고 - 이 제거된 주민번호로 출력한다.
 		ㄴ EX) 1234567 - 12345678 -> 123456712345678*/
