@@ -15,6 +15,7 @@ namespace DB
 		char m_chGameName[10];
 		int m_nScore;
 		int m_nPrice;
+		char m_chEtc[100];
 	};
 
 	void DataBase()
@@ -30,6 +31,10 @@ namespace DB
 			printf("게임 가격 : ");
 			cin >> game[i].m_nPrice;
 			cout << '\n';
+			printf("특이사항 : ");
+			cin >> game[i].m_chEtc[100];
+			cout << '\n';
+
 		}
 		
 		for (int i = 0; i < 5; ++i)
@@ -38,6 +43,7 @@ namespace DB
 			cout << "게임 이름 : " << game[i].m_chGameName << endl;;
 			cout << "게임 평점 : " << game[i].m_nScore << endl;
 			cout << "게임 가격 : " << game[i].m_nPrice << endl;
+			cout << "특이 사항 : " << game[i].m_chEtc << endl;
 			cout << '\n' << '\n';
 
 		}

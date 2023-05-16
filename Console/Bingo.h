@@ -29,5 +29,6 @@ using std::endl;
 
 namespace BingoGame
 {
+	void Init();
 	void Bingo();
 }

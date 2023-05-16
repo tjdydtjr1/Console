@@ -19,48 +19,207 @@
 
 namespace BingoGame
 {
+
+	const int arrMax = 25;
+	const int endGame = 5;
+	int arrNum[arrMax] = { 0 };
+	int resultNum[arrMax] = { 0 };
+	int tempArr[arrMax] = { 0 };
+	int open = 0;
+	int gamePlay = 0;
+	int temp = 0;
+
+	// 빙고 조건 변수
+	int row = 0;
+	int colrum = 0;
+	int diagonalL = 0;
+	int diagonalR = 0;
+
+	void Init()
+	{
+		// 빙고판 초기화
+		for (int i = 0; i < arrMax; ++i)
+		{
+			// 빙고판 0으로 셋팅
+			arrNum[i] = 0;
+
+			// 0 ~ 24사이의 값 랜덤
+			temp = rand() % 25;
+
+			// 넣은 자리 또 넣게 되면 다시 랜덤
+			if (tempArr[temp] == 1)
+			{
+				--i;
+				continue;
+			}
+			// 넣은 자리 1로 셋팅
+			tempArr[temp] = 1;
+
+			// 랜덤값 배열에 셋팅
+			resultNum[i] = temp;
+		}
+	}
+
 	void Bingo()
 	{
-		const int arrMax = 25;
-		const int endGame = 5;
-		int arrNum[arrMax] = { 0 };
-		int resultNum[arrMax] = { 0 };
-		int open = 0;
-		int gamePlay = 0;
-
+		
 		while (gamePlay < endGame)
 		{
-			for (int i = 0; i < arrMax; ++i)
+
+			Init();
+			
+			while (true)
 			{
-				resultNum[i] = i;
-			}
-			// 빙고판 
-			for (int i = 0; i < arrMax; ++i)
-			{
-				for (int j = 1; j <= arrMax; ++j)
+				// 빙고 조건 초기화
+				row = 0;
+				colrum = 0;
+				diagonalL = 0;
+				diagonalR = 0;
+
+				//치트 빙고 전체 오픈
+				printf("치트 \n");
+				for (int i = 1; i <= arrMax; ++i)
 				{
-					printf("%s\t", (arrNum[j-1] == 0) ? "X" : "O");
-					if (j % 5 == 0)
+					printf("%d\t", resultNum[i - 1]);
+					if (i % 5 == 0)
 					{
 						cout << '\n' << '\n';
 					}
 				}
+				cout << '\n' << '\n';
+
+				printf("=============================================================\n");
+				printf("빙고 게임 시작\n\n");
+
+				// 빙고판 출력
+				for (int i = 1; i <= arrMax; ++i)
+				{
+					printf("%s\t", (arrNum[i - 1] == 0) ? "X" : "O");
+					if (i % 5 == 0)
+					{
+						cout << '\n' << '\n';
+					}
+				}
+				printf("=============================================================\n");
+				// 빙고 완성 조건 가로, 세로, 대각선
+				// 가로
+				for (int i = 0; i < 5; i += 5)
+				{
+					for (int j = 0; j < 5; ++j)
+					{
+						row += arrNum[i + j];
+						if (row == 5)
+						{
+							printf("가로 빙고 완성\n");
+
+							++gamePlay;
+
+							Sleep(3000);
+
+							system("cls");
+							goto REGAME;
+						}
+					}
+					row = 0;
+					
+				}
+
+				// 세로
+				for (int i = 0; i < 5; ++i)
+				{
+					for (int j = 0; j < 21; j += 5)
+					{
+						colrum += arrNum[i + j];
+						if (colrum == 5)
+						{
+							printf("세로 빙고 완성\n");
+
+							++gamePlay;
+							
+							Sleep(3000);
+
+							system("cls");
+							goto REGAME;
+						}
+					}
+					colrum = 0;
+				}
+
+				// 우측에서 좌측아래로 내려오는 대각선
+				for (int i = 1; i < 5; ++i)
+				{
+					diagonalL += arrNum[i * 4];
+					if (diagonalL == 5)
+					{
+						printf("우측에서 좌측 아래 대각선 빙고 완성\n");
+
+						++gamePlay;
+
+						Sleep(3000);
+
+						system("cls");
+						goto REGAME;
+					}
+				}
+
+				for (int i = 0; i < 25; i += 6)
+				{
+
+					diagonalR += arrNum[i];
+					if (diagonalR == 5)
+					{
+						printf("좌측에서 우측 아래 대각선 빙고 완성\n");
+
+						++gamePlay;
+
+						Sleep(3000);
+
+						system("cls");
+						goto REGAME;
+					}
+				}
+
+				// 오픈할 빙고판 위치
 				cin >> open;
 				if (open > 24)
 				{
 					printf("해당하는 빙고판 숫자가 없습니다.\n");
-					--i;
 					system("cls");
 					continue;
 				}
-				system("cls");
-				arrNum[open] = 1;
 
-				
-				
+				system("cls");
+			
+				for (int i = 0; i < arrMax; ++i)
+				{
+					// 치트 번호 맞추기
+					if (resultNum[i] == open)
+					{
+						arrNum[i] = 1;
+					}
+				}
+
 			}
 
-			++gamePlay;
+		REGAME:
+
+			// 랜덤 숫자 임시 배열 초기화
+			for (int i = 0; i < arrMax; ++i)
+			{
+				tempArr[i] = 0;
+			}
+			system("cls");
+
+		}
+
+		printf("게임 종료\n완성 된 빙고판\n");
+		for (int i = 1; i <= arrMax; ++i)
+		{
+			printf("%s\t", (arrNum[i - 1] == 0) ? "X" : "O");
+			if (i % 5 == 0)
+			{
+				cout << '\n' << '\n';
+			}
 		}
 	}
 }

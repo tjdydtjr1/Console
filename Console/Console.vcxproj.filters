@@ -37,9 +37,6 @@
     <ClCompile Include="23.05.09_복습구현화.cpp">
       <Filter>과제</Filter>
     </ClCompile>
-    <ClCompile Include="가위바위보 타임어택 연습.cpp">
-      <Filter>연습용</Filter>
-    </ClCompile>
     <ClCompile Include="Example_08.cpp">
       <Filter>Lesson\05. 함수 + 변/상수 + 전처리기</Filter>
     </ClCompile>
@@ -52,7 +49,6 @@
     <ClCompile Include="23.05.10_룰렛.cpp">
       <Filter>과제</Filter>
     </ClCompile>
-    <ClCompile Include="도트 숫자.cpp" />
     <ClCompile Include="Example_10.cpp">
       <Filter>Lesson\06. 배열</Filter>
     </ClCompile>
@@ -80,12 +76,6 @@
     <ClCompile Include="23.05.12_복습과제.cpp">
       <Filter>과제</Filter>
     </ClCompile>
-    <ClCompile Include="test.cpp">
-      <Filter>연습용</Filter>
-    </ClCompile>
-    <ClCompile Include="test2.cpp">
-      <Filter>연습용</Filter>
-    </ClCompile>
     <ClCompile Include="Example_12.cpp">
       <Filter>Lesson\07. 삼항 연산자 + 문자열</Filter>
     </ClCompile>
@@ -97,6 +87,16 @@
     </ClCompile>
     <ClCompile Include="23.05.15_문자열 뒤집기.cpp">
       <Filter>과제</Filter>
+    </ClCompile>
+    <ClCompile Include="23.05.16_로또 당첨기.cpp" />
+    <ClCompile Include="23.05.16_Database.cpp" />
+    <ClCompile Include="23.05.16_빙고.cpp" />
+    <ClCompile Include="23.05.16_main.cpp" />
+    <ClCompile Include="main_04.cpp">
+      <Filter>Lesson\08. 사용자정의 자료형</Filter>
+    </ClCompile>
+    <ClCompile Include="Example_13.cpp">
+      <Filter>Lesson\08. 사용자정의 자료형</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -121,14 +121,17 @@
     <Filter Include="Lesson\05. 함수 + 변/상수 + 전처리기">
       <UniqueIdentifier>{efd8de7b-3259-4b6b-a344-f911ba791452}</UniqueIdentifier>
     </Filter>
-    <Filter Include="연습용">
-      <UniqueIdentifier>{0e1db844-06c1-4af7-b646-12a5518782cc}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Lesson\06. 배열">
       <UniqueIdentifier>{c4a3661a-cc20-4480-9618-ed1baff6abfa}</UniqueIdentifier>
     </Filter>
     <Filter Include="Lesson\07. 삼항 연산자 + 문자열">
       <UniqueIdentifier>{62aa6e56-b405-4880-b589-b39e5d7186a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Lesson\08. 사용자정의 자료형">
+      <UniqueIdentifier>{7065d02c-5b1f-4701-aa0f-048de008163b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="23.05.16_과제">
+      <UniqueIdentifier>{0e1db844-06c1-4af7-b646-12a5518782cc}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -137,6 +140,12 @@
     </ClInclude>
     <ClInclude Include="Example_12.h">
       <Filter>Lesson\07. 삼항 연산자 + 문자열</Filter>
+    </ClInclude>
+    <ClInclude Include="Bingo.h" />
+    <ClInclude Include="Database.h" />
+    <ClInclude Include="Lotto.h" />
+    <ClInclude Include="Example_13.h">
+      <Filter>Lesson\08. 사용자정의 자료형</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
