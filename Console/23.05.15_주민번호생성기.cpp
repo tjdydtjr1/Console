@@ -81,6 +81,8 @@ void main()
 		{
 			if (day > 31)
 			{
+				printf("해당하는 일자가 없습니다.\n");
+				Sleep(500);
 				continue;
 			}
 			dayCheck = false;
@@ -89,6 +91,8 @@ void main()
 		{
 			if (day > 30)
 			{
+				printf("해당하는 일자가 없습니다.\n");
+				Sleep(500);
 				continue;
 			}
 			dayCheck = false;
@@ -97,6 +101,8 @@ void main()
 		{
 			if (day > 31)
 			{
+				printf("해당하는 일자가 없습니다.\n");
+				Sleep(500);
 				continue;
 			}
 			dayCheck = false;
@@ -106,6 +112,8 @@ void main()
 		{
 			if (day > 30)
 			{
+				printf("해당하는 일자가 없습니다.\n");
+				Sleep(500);
 				continue;
 			}
 			dayCheck = false;
@@ -115,6 +123,8 @@ void main()
 		{
 			if (day > 31)
 			{
+				printf("해당하는 일자가 없습니다.\n");
+				Sleep(500);
 				continue;
 			}
 			dayCheck = false;
@@ -124,6 +134,8 @@ void main()
 		{
 			if (day > 31)
 			{
+				printf("해당하는 일자가 없습니다.\n");
+				Sleep(500);
 				continue;
 			}
 			dayCheck = false;
@@ -133,6 +145,8 @@ void main()
 		{
 			if (day > 30)
 			{
+				printf("해당하는 일자가 없습니다.\n");
+				Sleep(500);
 				continue;
 			}
 			dayCheck = false;
@@ -142,6 +156,8 @@ void main()
 		{
 			if (day > 31)
 			{
+				printf("해당하는 일자가 없습니다.\n");
+				Sleep(500);
 				continue;
 			}
 			dayCheck = false;
@@ -151,6 +167,8 @@ void main()
 		{
 			if (day > 30)
 			{
+				printf("해당하는 일자가 없습니다.\n");
+				Sleep(500);
 				continue;
 			}
 			dayCheck = false;
@@ -160,6 +178,8 @@ void main()
 		{
 			if (day > 31)
 			{
+				printf("해당하는 일자가 없습니다.\n");
+				Sleep(500);
 				continue;
 			}
 			dayCheck = false;
@@ -169,6 +189,8 @@ void main()
 		{
 			if (day > 28)
 			{
+				printf("해당하는 일자가 없습니다.\n");
+				Sleep(500);
 				continue;
 			}
 			dayCheck = false;
@@ -178,6 +200,8 @@ void main()
 		{
 			if (day > 31)
 			{
+				printf("해당하는 일자가 없습니다.\n");
+				Sleep(500);
 				continue;
 			}
 			dayCheck = false;

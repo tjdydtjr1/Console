@@ -54,7 +54,7 @@ void main()
 		if (i % 2)
 		{
 			// 짝수일 경우
-			if (temp - i - 1 % 2 == 1)
+			if ((temp - i - 1) % 2 == 1)
 			{
 				inputChar[i] = tempChar[temp - i];
 			}
