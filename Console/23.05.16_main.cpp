@@ -8,5 +8,6 @@ void main()
 	//Lotto::CreateLotto(); 
 	//데이터베이스 
 	//DB::DataBase();
-	BingoGame::Bingo();
+	//BingoGame::Bingo();
+	BingoGame::UpBingo();
 }

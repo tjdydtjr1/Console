@@ -40,12 +40,12 @@ void main()
 	}
 	temp = count;
 	
-	/*for (int i = 0; i < count; ++i)
+	for (int i = 0; i < count; ++i)
 	{
 		inputChar[i] = tempChar[temp - 1];
 		--temp;
 	}
-	cout << inputChar;*/
+	cout << inputChar;
 
 	// 礎熱高 轎溘
 	temp = count;
@@ -60,8 +60,7 @@ void main()
 			}
 			// �汝鶺� 唳辦
 			inputChar[i] = tempChar[temp - i - 1];
-		}
-		
+		}	
 	}
 	cout << inputChar;
 
@@ -76,9 +75,9 @@ void main()
 	//	{
 	//		continue;
 	//	}
-	//	tempChar[idx] = inputChar[i];
-	//	++idx;
+	//	cout << inputChar[i];
+	//	
 	//}
-	//cout << tempChar;
+	
 
 }

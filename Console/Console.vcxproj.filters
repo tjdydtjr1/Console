@@ -7,14 +7,8 @@
     <ClCompile Include="변수.cpp">
       <Filter>Lesson\02. 자료형 + 변수 + 난수%28C++ 11%29</Filter>
     </ClCompile>
-    <ClCompile Include="23.05.03_나머지연산자 + 도트아트.cpp">
-      <Filter>과제</Filter>
-    </ClCompile>
     <ClCompile Include="반복문.cpp">
       <Filter>Lesson\03. 반복문</Filter>
-    </ClCompile>
-    <ClCompile Include="23.05.04_반복문.cpp">
-      <Filter>과제</Filter>
     </ClCompile>
     <ClCompile Include="Example_04.cpp">
       <Filter>Lesson\04. 조건문</Filter>
@@ -22,20 +16,11 @@
     <ClCompile Include="Example_05.cpp">
       <Filter>Lesson\04. 조건문</Filter>
     </ClCompile>
-    <ClCompile Include="23.05.08_반복문 + 조건문 + 연산자 게임만들기.cpp">
-      <Filter>과제</Filter>
-    </ClCompile>
     <ClCompile Include="Example_06.cpp">
       <Filter>Lesson\05. 함수 + 변/상수 + 전처리기</Filter>
     </ClCompile>
     <ClCompile Include="Example_07.cpp">
       <Filter>Lesson\05. 함수 + 변/상수 + 전처리기</Filter>
-    </ClCompile>
-    <ClCompile Include="23.05.09_배운 것 복습 + 가위바위보.cpp">
-      <Filter>과제</Filter>
-    </ClCompile>
-    <ClCompile Include="23.05.09_복습구현화.cpp">
-      <Filter>과제</Filter>
     </ClCompile>
     <ClCompile Include="Example_08.cpp">
       <Filter>Lesson\05. 함수 + 변/상수 + 전처리기</Filter>
@@ -43,38 +28,14 @@
     <ClCompile Include="Example_09.cpp">
       <Filter>Lesson\05. 함수 + 변/상수 + 전처리기</Filter>
     </ClCompile>
-    <ClCompile Include="23.05.10_숫자 야구.cpp">
-      <Filter>과제</Filter>
-    </ClCompile>
-    <ClCompile Include="23.05.10_룰렛.cpp">
-      <Filter>과제</Filter>
-    </ClCompile>
     <ClCompile Include="Example_10.cpp">
       <Filter>Lesson\06. 배열</Filter>
     </ClCompile>
     <ClCompile Include="main_01.cpp">
       <Filter>Lesson\06. 배열</Filter>
     </ClCompile>
-    <ClCompile Include="23.05.11_게임 평가 평균구하기.cpp">
-      <Filter>과제</Filter>
-    </ClCompile>
-    <ClCompile Include="23.05.11_월남뽕 게임.cpp">
-      <Filter>과제</Filter>
-    </ClCompile>
     <ClCompile Include="Example_11.cpp">
       <Filter>Lesson\06. 배열</Filter>
-    </ClCompile>
-    <ClCompile Include="23.05.12_랜덤값 출력.cpp">
-      <Filter>과제</Filter>
-    </ClCompile>
-    <ClCompile Include="23.05.12_짝맞추기.cpp">
-      <Filter>과제</Filter>
-    </ClCompile>
-    <ClCompile Include="23.05.12_하이로우세븐.cpp">
-      <Filter>과제</Filter>
-    </ClCompile>
-    <ClCompile Include="23.05.12_복습과제.cpp">
-      <Filter>과제</Filter>
     </ClCompile>
     <ClCompile Include="Example_12.cpp">
       <Filter>Lesson\07. 삼항 연산자 + 문자열</Filter>
@@ -82,21 +43,83 @@
     <ClCompile Include="main_03.cpp">
       <Filter>Lesson\07. 삼항 연산자 + 문자열</Filter>
     </ClCompile>
-    <ClCompile Include="23.05.15_주민번호생성기.cpp">
-      <Filter>과제</Filter>
-    </ClCompile>
-    <ClCompile Include="23.05.15_문자열 뒤집기.cpp">
-      <Filter>과제</Filter>
-    </ClCompile>
-    <ClCompile Include="23.05.16_로또 당첨기.cpp" />
-    <ClCompile Include="23.05.16_Database.cpp" />
-    <ClCompile Include="23.05.16_빙고.cpp" />
-    <ClCompile Include="23.05.16_main.cpp" />
     <ClCompile Include="main_04.cpp">
       <Filter>Lesson\08. 사용자정의 자료형</Filter>
     </ClCompile>
     <ClCompile Include="Example_13.cpp">
       <Filter>Lesson\08. 사용자정의 자료형</Filter>
+    </ClCompile>
+    <ClCompile Include="Example_14.cpp">
+      <Filter>Lesson\08. 사용자정의 자료형</Filter>
+    </ClCompile>
+    <ClCompile Include="Example_15.cpp">
+      <Filter>Lesson\09. 포인터</Filter>
+    </ClCompile>
+    <ClCompile Include="23.05.03_나머지연산자 + 도트아트.cpp">
+      <Filter>과제\05.03 ~ 05.15</Filter>
+    </ClCompile>
+    <ClCompile Include="23.05.04_반복문.cpp">
+      <Filter>과제\05.03 ~ 05.15</Filter>
+    </ClCompile>
+    <ClCompile Include="23.05.08_반복문 + 조건문 + 연산자 게임만들기.cpp">
+      <Filter>과제\05.03 ~ 05.15</Filter>
+    </ClCompile>
+    <ClCompile Include="23.05.09_배운 것 복습 + 가위바위보.cpp">
+      <Filter>과제\05.03 ~ 05.15</Filter>
+    </ClCompile>
+    <ClCompile Include="23.05.09_복습구현화.cpp">
+      <Filter>과제\05.03 ~ 05.15</Filter>
+    </ClCompile>
+    <ClCompile Include="23.05.10_룰렛.cpp">
+      <Filter>과제\05.03 ~ 05.15</Filter>
+    </ClCompile>
+    <ClCompile Include="23.05.10_숫자 야구.cpp">
+      <Filter>과제\05.03 ~ 05.15</Filter>
+    </ClCompile>
+    <ClCompile Include="23.05.11_게임 평가 평균구하기.cpp">
+      <Filter>과제\05.03 ~ 05.15</Filter>
+    </ClCompile>
+    <ClCompile Include="23.05.11_월남뽕 게임.cpp">
+      <Filter>과제\05.03 ~ 05.15</Filter>
+    </ClCompile>
+    <ClCompile Include="23.05.12_랜덤값 출력.cpp">
+      <Filter>과제\05.03 ~ 05.15</Filter>
+    </ClCompile>
+    <ClCompile Include="23.05.12_복습과제.cpp">
+      <Filter>과제\05.03 ~ 05.15</Filter>
+    </ClCompile>
+    <ClCompile Include="23.05.12_짝맞추기.cpp">
+      <Filter>과제\05.03 ~ 05.15</Filter>
+    </ClCompile>
+    <ClCompile Include="23.05.12_하이로우세븐.cpp">
+      <Filter>과제\05.03 ~ 05.15</Filter>
+    </ClCompile>
+    <ClCompile Include="23.05.15_문자열 뒤집기.cpp">
+      <Filter>과제\05.03 ~ 05.15</Filter>
+    </ClCompile>
+    <ClCompile Include="23.05.15_주민번호생성기.cpp">
+      <Filter>과제\05.03 ~ 05.15</Filter>
+    </ClCompile>
+    <ClCompile Include="23.05.16_Database.cpp">
+      <Filter>과제\05.16</Filter>
+    </ClCompile>
+    <ClCompile Include="23.05.16_main.cpp">
+      <Filter>과제\05.16</Filter>
+    </ClCompile>
+    <ClCompile Include="23.05.16_로또 당첨기.cpp">
+      <Filter>과제\05.16</Filter>
+    </ClCompile>
+    <ClCompile Include="23.05.16_빙고.cpp">
+      <Filter>과제\05.16</Filter>
+    </ClCompile>
+    <ClCompile Include="과제.cpp">
+      <Filter>과제\05.17</Filter>
+    </ClCompile>
+    <ClCompile Include="05.17_main.cpp">
+      <Filter>과제\05.17</Filter>
+    </ClCompile>
+    <ClCompile Include="05.17_숫자_슬라이드.cpp">
+      <Filter>과제\05.17</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -133,6 +156,18 @@
     <Filter Include="23.05.16_과제">
       <UniqueIdentifier>{0e1db844-06c1-4af7-b646-12a5518782cc}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Lesson\09. 포인터">
+      <UniqueIdentifier>{ef77a993-21de-4ef8-8fad-050860155d9c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="과제\05.03 ~ 05.15">
+      <UniqueIdentifier>{02fcab78-1f93-4dde-8c63-71c2bbf9b57a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="과제\05.16">
+      <UniqueIdentifier>{99ae38f7-8777-4e1d-ba1e-dd7f32480e14}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="과제\05.17">
+      <UniqueIdentifier>{ed7a978c-f00b-4421-b558-aea25e13cff5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Example_10.h">
@@ -141,11 +176,20 @@
     <ClInclude Include="Example_12.h">
       <Filter>Lesson\07. 삼항 연산자 + 문자열</Filter>
     </ClInclude>
-    <ClInclude Include="Bingo.h" />
-    <ClInclude Include="Database.h" />
-    <ClInclude Include="Lotto.h" />
     <ClInclude Include="Example_13.h">
       <Filter>Lesson\08. 사용자정의 자료형</Filter>
+    </ClInclude>
+    <ClInclude Include="Bingo.h">
+      <Filter>과제\05.16</Filter>
+    </ClInclude>
+    <ClInclude Include="Database.h">
+      <Filter>과제\05.16</Filter>
+    </ClInclude>
+    <ClInclude Include="Lotto.h">
+      <Filter>과제\05.16</Filter>
+    </ClInclude>
+    <ClInclude Include="slide.h">
+      <Filter>과제\05.17</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

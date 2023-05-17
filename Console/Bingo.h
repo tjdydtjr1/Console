@@ -31,4 +31,5 @@ namespace BingoGame
 {
 	void Init();
 	void Bingo();
+	void AiBingo();
 }
