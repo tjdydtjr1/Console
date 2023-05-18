@@ -121,6 +121,9 @@
     <ClCompile Include="05.17_숫자_슬라이드.cpp">
       <Filter>과제\05.17_슬라이드</Filter>
     </ClCompile>
+    <ClCompile Include="콘솔_포트폴리오_준비.cpp">
+      <Filter>과제\05.18</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Lesson">
@@ -167,6 +170,9 @@
     </Filter>
     <Filter Include="과제\05.17_슬라이드">
       <UniqueIdentifier>{ed7a978c-f00b-4421-b558-aea25e13cff5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="과제\05.18">
+      <UniqueIdentifier>{69fe4349-00c4-416d-a443-474f2c380d05}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
