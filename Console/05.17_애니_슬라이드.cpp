@@ -22,6 +22,7 @@ void main()
 	char result[arrMax] = { 0 };
 	char temp = 0;
 	int input = 0;
+	int count = 0;
 
 	// 슬라이드 값 넣기
 	for (int i = 1; i < arrMax; ++i)
@@ -35,7 +36,7 @@ void main()
 			charA[i - 1] = '1' +(i % 2);
 		}
 	}
-	//
+	// 애니메이션 효과를 위한 빈 공간
 	for (int i = 0; i < arrMax; ++i)
 	{
 		if (24 < i && i < 50)
@@ -54,40 +55,59 @@ void main()
 	// 우측 하단 시작점
 	charA[174] = 'O';
 	
-	//// 치트 판 생성중
-	//for (int i = 1; i < arrMax; ++i)
-	//{
-	//	if (i % 5 != 0)
-	//	{
-	//		result[i - 1] = ' ';
-	//	}
-	//	else
-	//	{
-	//		result[i - 1] = '1' + (i % 2);
-	//	}
-	//}
-	////
-	//for (int i = 0; i < arrMax; ++i)
-	//{
-	//	if (24 < i && i < 50)
-	//	{
-	//		charA[i] = ' ';
-	//	}
-	//	else if (74 < i && i < 100)
-	//	{
-	//		charA[i] = ' ';
-	//	}
-	//	else if (124 < i && i < 150)
-	//	{
-	//		charA[i] = ' ';
-	//	}
-	//}
-	//charA[174] = 'O';
+	// 치트 판 생성
+	for (int i = 1; i < arrMax; ++i)
+	{
+		if (i % 5 != 0)
+		{
+			result[i - 1] = ' ';
+		}
+		else
+		{
+			result[i - 1] = '1' + (i % 2);
+		}
+	}
+	for (int i = 1; i < arrMax; ++i)
+	{
+		if (i % 5 != 0)
+		{
+			result[i - 1] = ' ';
+		}
+		else
+		{
+			if (result[i - 1] == '1')
+			{
+				result[i - 1] ='2';
+			}
+			else if (result[i - 1] == '2')
+			{
+				result[i - 1] = '1';
+			}
+		}
+	}
+	for (int i = 0; i < arrMax; ++i)
+	{
+		if (24 < i && i < 50)
+		{
+			result[i] = ' ';
+		}
+		else if (74 < i && i < 100)
+		{
+			result[i] = ' ';
+		}
+		else if (124 < i && i < 150)
+		{
+			result[i] = ' ';
+		}
+	}
 
-
-	//
+	result[169] = 'O';
+	result[174] = '2';
+	// 치트 판
+	
 	while (true)
 	{
+		count = 0;
 		// 변화된 값 출력
 		for (int i = 1; i <= arrMax; ++i)
 		{
@@ -101,14 +121,52 @@ void main()
 		
 		printf("LEFT = 1, DOWN = 2, RIGHT = 3, UP = 5, 치트 = 100\n");
 		cin >> input;
+
+		// 치트
 		if (input == 100)
 		{
+			system("cls");
 			printf("치트 하나 빼고 정렬\n");
-			for (int i = 0; i < arrMax - 2; ++i)
+			for (int i = 1; i <= arrMax; ++i)
 			{
-				// 구현예정
+				printf("%c", result[i - 1]);
+
+				if (i % 25 == 0)
+				{
+					cout << '\n' << '\n';
+				}
+			}
+			printf("RIGHT = 3 입력");
+			cin >> input;
+			if (input == 3)
+			{
+				system("cls");
+				result[169] = '2';
+				result[174] = 'O';
+				cout << '\n';
+				for (int i = 1; i <= arrMax; ++i)
+				{
+					printf("%c", result[i - 1]);
+
+					if (i % 25 == 0)
+					{
+						cout << '\n' << '\n';
+					}
+				}
+				cout << '\n';
+				Sleep(1000);
+				system("cls");
+				break;
+					
+			}
+			else
+			{
+				printf("잘못된 키 입력입니다.");
+				Sleep(1000);
+				system("cls");
 			}
 		}
+		// 방향키 입력 이동
 		else
 		{
 			switch (input)
@@ -150,14 +208,14 @@ void main()
 									cout << '\n' << '\n';
 								}
 							}
-							Sleep(150);;
+							Sleep(150);
 							system("cls");
 							break;
 						}
 						else
 						{
 							printf("더 이상 갈 수 없습니다.\n");
-							Sleep(150);;
+							Sleep(150);
 							system("cls");
 							break;
 						}
@@ -311,8 +369,23 @@ void main()
 			}
 				break;
 			}
+			
+			for (int i = 0; i < arrMax; ++i)
+			{
+				if (result[i] = charA[i])
+				{
+					++count;
+					if (count == 175)
+					{
+						break;
+					}
+				}
+			}
+		
 		}
 	}
+	system("cls");
+	printf("게임 종료\n");
 }
 
 
