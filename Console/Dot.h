@@ -1,8 +1,15 @@
 #pragma once
 #include <Windows.h>
-void TextColor(int font, int backGround)
-{
-	int Color = font + backGround * 16;
+#include <iostream>
+using std::cout;
+using std::cin;
+using std::endl;
 
-	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), Color);
-}
+
+void Pixel(int num);
+
+void TextColor(int font, int backGround);
+
+void gotoxy(short x, short y);
+
+void Start();

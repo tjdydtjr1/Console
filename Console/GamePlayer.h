@@ -23,9 +23,6 @@ protected:
 	int m_nArmor;			// 방어구	: 방어력
 	int m_nAccessories;		// 악세사리	: 마법 방어력
 
-	// 물약
-	int m_nPortion;
-
 public:
 	// 접근자, 설정자 함수
 	void setHP(int hp) { m_nHP = hp; }
@@ -41,7 +38,7 @@ public:
 	int getAtk() { return m_nAtk; }
 
 	void setSkillAtk(int skillAtk) { m_nSkillAtk = skillAtk; }
-	int getMP() { return m_nSkillAtk; }
+	int getSkillAtk() { return m_nSkillAtk; }
 
 	void setDef(int def) { m_nDef = def; }
 	int getDef() { return m_nDef; }
@@ -49,11 +46,11 @@ public:
 	void setMDef(int mDef) { m_nMDef = mDef; }
 	int getMDef() { return m_nMDef; }
 
-	void setPortion(int portion) { m_nPortion = portion; }
-	int getMDef() { return m_nPortion; }
-
 	void setLuck(int luck) { m_nLuck = luck; }
 	int getLuck() { return m_nLuck; }
+
+	void setSkill(const char* skill) { skillA = skill; }
+	const char* getSkill() { return skillA; }
 
 };
 

@@ -3,7 +3,7 @@
 PlayerA::PlayerA()
 {
 	name = "플레이어A";
-	skillA = "";
+	skillA = "TEST";
 	skillB = "";
 
 	m_nHP = 100;
@@ -18,10 +18,8 @@ PlayerA::PlayerA()
 	m_nWeapon = 0;
 	m_nArmor = 0;
 	m_nAccessories = 0;
-	
-	m_nPortion = 0;
-}
 
+}
 PlayerA::~PlayerA()
 {
 }

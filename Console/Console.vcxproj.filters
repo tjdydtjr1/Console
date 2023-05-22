@@ -199,7 +199,12 @@
     <ClCompile Include="Accessories_A.cpp">
       <Filter>과제\05.20_자동전투게임\cpp파일</Filter>
     </ClCompile>
-    <ClCompile Include="ItemPortion.cpp" />
+    <ClCompile Include="ItemPortion.cpp">
+      <Filter>과제\05.20_자동전투게임\cpp파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Dot.cpp">
+      <Filter>과제\DOT</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Lesson">
@@ -360,6 +365,8 @@
     <ClInclude Include="Accessories_A.h">
       <Filter>과제\05.20_자동전투게임\헤더파일</Filter>
     </ClInclude>
-    <ClInclude Include="ItemPortion.h" />
+    <ClInclude Include="ItemPortion.h">
+      <Filter>과제\05.20_자동전투게임\헤더파일</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

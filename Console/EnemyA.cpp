@@ -4,7 +4,6 @@ EnemyA::EnemyA()
 {
 	name = "ComputerA";
 	skillA = "";
-	skillB = "";
 
 	m_nHP = 100;
 	m_nMP = 60;
@@ -19,7 +18,6 @@ EnemyA::EnemyA()
 	m_nArmor = 0;
 	m_nAccessories = 0;
 
-	m_nPortion = 0;
 }
 
 EnemyA::~EnemyA()
