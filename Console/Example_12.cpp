@@ -87,15 +87,15 @@ namespace EXAMPLE_2
 
 	*/
 
-	printf("\n");
+	//printf("\n");
 
-	// 문자
-	char strA = 'A';
-	cout << "strA = " << strA << endl;
+	//// 문자
+	//char strA = 'A';
+	//cout << "strA = " << strA << endl;
 
-	// 문자열
-	char strB[4] = "abc";
-	cout << "strB = " << strB << endl;
+	//// 문자열
+	//char strB[4] = "abc";
+	//cout << "strB = " << strB << endl;
 	
 	/*
 	- C/C++ 언어의 문자열 표현 방법

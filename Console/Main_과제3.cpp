@@ -12,7 +12,7 @@ enum
 	DOWN,
 	RIGHT,
 	UP = 5,
-	ATTACK
+	ATTACK = 74
 };
 
 void main()
@@ -21,7 +21,7 @@ void main()
 
 	// 과제1
 	/*UseClass* useClass = new UseClass;
-	
+
 	delete useClass;*/
 	// 과제2
 	/*Family* family = new Family;
@@ -32,6 +32,8 @@ void main()
 	// =====================================================
 	int pixel = 0;
 	int count = 0;
+	char hp[10] = "♥♥♥";
+	int score = 0;
 	const int startArr = 500;
 	const int groundArr = 1000;
 	//const int hpArr = 200;
@@ -54,9 +56,9 @@ void main()
 		7,7,4,4,4,4,4,7,7,7,4,7,7,7,4,7,7,7,4,7,4,7,7,4,4,7,7,7,4,7,7,
 		7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,
 		7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,
-		
+
 		//START
-		
+
 	};
 	int startBtn = 0;
 	int key = 0;
@@ -120,8 +122,8 @@ void main()
 	// 게임 시작
 	while (true)
 	{
-		key = 0;
 		system("cls");
+		printf("HP : %s\t\t\t\t\t\t\t\tScore : %d\n", hp,score);
 		// 맵찍기
 		for (int i = 0; i < groundArr; ++i)
 		{
@@ -132,8 +134,8 @@ void main()
 			}
 		}
 		
+		// 방향키 입력
 		key = _getch();
-		printf("%d\n", key - 48);
 		switch (key - 48)
 		{
 		case LEFT:
@@ -146,6 +148,7 @@ void main()
 					ground[i - 40] = 10;
 					ground[i] = 7;
 				}
+
 				if (ground[i] == 8)
 				{
 					ground[i - 1] = 8;
@@ -161,15 +164,14 @@ void main()
 					ground[i - 1] = 5;
 					ground[i] = 7;
 				}
-				
 			}
 		}
 		break;
 		case DOWN:
 		{
-			for (int i = groundArr - 1; i > 0 ; --i)
+			for (int i = groundArr - 1; i > 0; --i)
 			{
-				
+
 				if (ground[i] == 8)
 				{
 					ground[i + 40] = 8;
@@ -197,7 +199,6 @@ void main()
 		{
 			for (int i = groundArr - 1; i > 0; --i)
 			{
-				
 				if (ground[i] == 8)
 				{
 					ground[i + 1] = 8;
@@ -225,8 +226,13 @@ void main()
 		{
 			for (int i = 0; i < groundArr; ++i)
 			{
-				
-				if (ground[i] == 8)
+
+				if (ground[i] == 10)
+				{
+					ground[i - 40] = 10;
+					ground[i] = 7;
+				}
+				else if (ground[i] == 8)
 				{
 					ground[i - 40] = 8;
 					ground[i] = 7;
@@ -241,11 +247,7 @@ void main()
 					ground[i - 40] = 4;
 					ground[i] = 7;
 				}
-				if (ground[i] == 10)
-				{
-					ground[i - 40] = 10;
-					ground[i] = 7;
-				}
+				
 			}
 		}
 		break;
@@ -263,14 +265,15 @@ void main()
 		default:
 			break;
 		}
+		Sleep(1);
 
 
 
 	}
-	
-	
-	
-	
+
+
+
+
 	//while (true)
 	//{
 	//	pixel = _getch();
@@ -319,7 +322,7 @@ void main()
 	//		cout << '\n';
 	//	}*/
 	//}
-	
+
 }
 
 /*
@@ -455,7 +458,7 @@ void Pixel(int num)
 		cout << "■";
 		TextColor(0, 0);
 		pixelNum = 9;
-		
+
 	}
 	break;
 	case 10:

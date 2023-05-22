@@ -31,7 +31,7 @@ Player::~Player()
 
 void Player::setMoney(int money)
 {
-	this->m_myMoney = money;
+	this->m_myMoney += money;
 }
 
 void Player::setBatMoney(int batMoney)
@@ -65,7 +65,7 @@ void Dot::printCard(int num)
 {
 	switch (num)
 	{
-	case 0:
+	case 1:
 	{
 
 		//
@@ -86,7 +86,7 @@ void Dot::printCard(int num)
 		TextColor(15, 0);
 	}
 	break;
-	case 1:
+	case 0:
 	{
 		//
 		TextColor(0, 0);

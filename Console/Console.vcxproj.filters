@@ -128,22 +128,49 @@
       <Filter>Lesson\10. 클래스</Filter>
     </ClCompile>
     <ClCompile Include="콘솔_포트폴리오_준비.cpp">
-      <Filter>과제\class</Filter>
+      <Filter>과제\test</Filter>
     </ClCompile>
-    <ClCompile Include="Main.cpp">
+    <ClCompile Include="Main_과제1,2,4.cpp">
       <Filter>과제\05.19_</Filter>
     </ClCompile>
     <ClCompile Include="UseClass.cpp">
       <Filter>과제\05.19_</Filter>
     </ClCompile>
     <ClCompile Include="Pixel.cpp">
-      <Filter>과제\class</Filter>
+      <Filter>과제\test</Filter>
     </ClCompile>
     <ClCompile Include="Family.cpp">
       <Filter>과제\05.19_</Filter>
     </ClCompile>
     <ClCompile Include="HandGame.cpp">
       <Filter>과제\05.19_</Filter>
+    </ClCompile>
+    <ClCompile Include="Main_과제3.cpp">
+      <Filter>과제\05.19_</Filter>
+    </ClCompile>
+    <ClCompile Include="Main_06.cpp">
+      <Filter>Lesson\11. 접근자 + 설정자</Filter>
+    </ClCompile>
+    <ClCompile Include="MainGame_02.cpp">
+      <Filter>Lesson\11. 접근자 + 설정자</Filter>
+    </ClCompile>
+    <ClCompile Include="Player_01.cpp">
+      <Filter>Lesson\11. 접근자 + 설정자</Filter>
+    </ClCompile>
+    <ClCompile Include="MainGame_03.cpp">
+      <Filter>Lesson\12. 상속</Filter>
+    </ClCompile>
+    <ClCompile Include="Main_07.cpp">
+      <Filter>Lesson\12. 상속</Filter>
+    </ClCompile>
+    <ClCompile Include="Unit.cpp">
+      <Filter>Lesson\12. 상속</Filter>
+    </ClCompile>
+    <ClCompile Include="Tank.cpp">
+      <Filter>Lesson\12. 상속</Filter>
+    </ClCompile>
+    <ClCompile Include="BattleCruser.cpp">
+      <Filter>Lesson\12. 상속</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -186,20 +213,26 @@
     <Filter Include="과제\05.03 ~ 05.15">
       <UniqueIdentifier>{02fcab78-1f93-4dde-8c63-71c2bbf9b57a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="과제\05.17_슬라이드">
+      <UniqueIdentifier>{ed7a978c-f00b-4421-b558-aea25e13cff5}</UniqueIdentifier>
+    </Filter>
     <Filter Include="과제\05.16 빙고,로또,DB">
       <UniqueIdentifier>{99ae38f7-8777-4e1d-ba1e-dd7f32480e14}</UniqueIdentifier>
     </Filter>
     <Filter Include="Lesson\10. 클래스">
       <UniqueIdentifier>{65909616-2c53-4018-b6b6-e76153ea474f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="과제\class">
-      <UniqueIdentifier>{569af0bb-582d-4ad5-97b2-eb03d83611c7}</UniqueIdentifier>
-    </Filter>
     <Filter Include="과제\05.19_">
       <UniqueIdentifier>{69fe4349-00c4-416d-a443-474f2c380d05}</UniqueIdentifier>
     </Filter>
-    <Filter Include="과제\05.17_슬라이드">
-      <UniqueIdentifier>{ed7a978c-f00b-4421-b558-aea25e13cff5}</UniqueIdentifier>
+    <Filter Include="과제\test">
+      <UniqueIdentifier>{569af0bb-582d-4ad5-97b2-eb03d83611c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Lesson\11. 접근자 + 설정자">
+      <UniqueIdentifier>{b4d18010-a6fb-41e3-b49c-d60bd00b3b77}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Lesson\12. 상속">
+      <UniqueIdentifier>{cc324c00-fabe-4568-a1ab-d922f8de3a73}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -231,13 +264,31 @@
       <Filter>과제\05.19_</Filter>
     </ClInclude>
     <ClInclude Include="Pixel.h">
-      <Filter>과제\class</Filter>
+      <Filter>과제\test</Filter>
     </ClInclude>
     <ClInclude Include="Family.h">
       <Filter>과제\05.19_</Filter>
     </ClInclude>
     <ClInclude Include="HandGame.h">
       <Filter>과제\05.19_</Filter>
+    </ClInclude>
+    <ClInclude Include="MainGame_02.h">
+      <Filter>Lesson\11. 접근자 + 설정자</Filter>
+    </ClInclude>
+    <ClInclude Include="Player_01.h">
+      <Filter>Lesson\11. 접근자 + 설정자</Filter>
+    </ClInclude>
+    <ClInclude Include="MainGame_03.h">
+      <Filter>Lesson\12. 상속</Filter>
+    </ClInclude>
+    <ClInclude Include="Unit.h">
+      <Filter>Lesson\12. 상속</Filter>
+    </ClInclude>
+    <ClInclude Include="Tank.h">
+      <Filter>Lesson\12. 상속</Filter>
+    </ClInclude>
+    <ClInclude Include="BattleCruser.h">
+      <Filter>Lesson\12. 상속</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
