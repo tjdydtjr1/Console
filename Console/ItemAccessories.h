@@ -3,29 +3,25 @@
 class ItemAccessories
 {
 protected:
-	int m_SkillAtk;
-	int m_MDef;
-	int m_Luck;
-	int m_SP;
+	int m_nSkillAtk;
+	int m_nMDef;
+	int m_nLuck;
+	int m_nSP;
 
 public:
 	// 접근자, 설정자 함수
 
-	void setSkillAtk(int skillAtk) { m_SkillAtk = skillAtk; }
-	int getSkillAtk() { return m_SkillAtk; }
+	void setSkillAtk(int skillAtk) { m_nSkillAtk = skillAtk; }
+	int getSkillAtk() { return m_nSkillAtk; }
 
-	void setMDef(int mDef) { m_MDef = mDef; }
-	int getMDef() { return m_MDef; }
+	void setMDef(int mDef) { m_nMDef = mDef; }
+	int getMDef() { return m_nMDef; }
 
-	void setLuck(int luck) { m_Luck = luck; }
-	int getLuck() { return m_Luck; }
+	void setLuck(int luck) { m_nLuck = luck; }
+	int getLuck() { return m_nLuck; }
 
-	void setSP(int sp) { m_SP = sp; }
-	int getSP() { return m_SP; }
-
-public:
-	ItemAccessories();
-	~ItemAccessories();
+	void setSP(int sp) { m_nSP = sp; }
+	int getSP() { return m_nSP; }
 
 };
 

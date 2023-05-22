@@ -127,17 +127,11 @@
     <ClCompile Include="Main_05.cpp">
       <Filter>Lesson\10. 클래스</Filter>
     </ClCompile>
-    <ClCompile Include="콘솔_포트폴리오_준비.cpp">
-      <Filter>과제\test</Filter>
-    </ClCompile>
     <ClCompile Include="Main_과제1,2,4.cpp">
       <Filter>과제\05.19_</Filter>
     </ClCompile>
     <ClCompile Include="UseClass.cpp">
       <Filter>과제\05.19_</Filter>
-    </ClCompile>
-    <ClCompile Include="Pixel.cpp">
-      <Filter>과제\test</Filter>
     </ClCompile>
     <ClCompile Include="Family.cpp">
       <Filter>과제\05.19_</Filter>
@@ -172,6 +166,40 @@
     <ClCompile Include="BattleCruser.cpp">
       <Filter>Lesson\12. 상속</Filter>
     </ClCompile>
+    <ClCompile Include="자동전투게임.cpp">
+      <Filter>과제\05.20_자동전투게임</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerA.cpp">
+      <Filter>과제\05.20_자동전투게임\cpp파일</Filter>
+    </ClCompile>
+    <ClCompile Include="AutoGame.cpp">
+      <Filter>과제\05.20_자동전투게임\cpp파일</Filter>
+    </ClCompile>
+    <ClCompile Include="EnemyA.cpp">
+      <Filter>과제\05.20_자동전투게임\cpp파일</Filter>
+    </ClCompile>
+    <ClCompile Include="GamePlayer.cpp">
+      <Filter>과제\05.20_자동전투게임\부모 클래스</Filter>
+    </ClCompile>
+    <ClCompile Include="ItemAccessories.cpp">
+      <Filter>과제\05.20_자동전투게임\부모 클래스</Filter>
+    </ClCompile>
+    <ClCompile Include="ItemArmor.cpp">
+      <Filter>과제\05.20_자동전투게임\부모 클래스</Filter>
+    </ClCompile>
+    <ClCompile Include="ItemWeapon.cpp">
+      <Filter>과제\05.20_자동전투게임\부모 클래스</Filter>
+    </ClCompile>
+    <ClCompile Include="Weapon_A.cpp">
+      <Filter>과제\05.20_자동전투게임\cpp파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Armor_A.cpp">
+      <Filter>과제\05.20_자동전투게임\cpp파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Accessories_A.cpp">
+      <Filter>과제\05.20_자동전투게임\cpp파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ItemPortion.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Lesson">
@@ -225,14 +253,26 @@
     <Filter Include="과제\05.19_">
       <UniqueIdentifier>{69fe4349-00c4-416d-a443-474f2c380d05}</UniqueIdentifier>
     </Filter>
-    <Filter Include="과제\test">
-      <UniqueIdentifier>{569af0bb-582d-4ad5-97b2-eb03d83611c7}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Lesson\11. 접근자 + 설정자">
       <UniqueIdentifier>{b4d18010-a6fb-41e3-b49c-d60bd00b3b77}</UniqueIdentifier>
     </Filter>
     <Filter Include="Lesson\12. 상속">
       <UniqueIdentifier>{cc324c00-fabe-4568-a1ab-d922f8de3a73}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="과제\DOT">
+      <UniqueIdentifier>{569af0bb-582d-4ad5-97b2-eb03d83611c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="과제\05.20_자동전투게임">
+      <UniqueIdentifier>{ad58c42d-b6ca-4935-8c5b-3cdd363f4921}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="과제\05.20_자동전투게임\헤더파일">
+      <UniqueIdentifier>{9ae4337e-ba37-4603-8f04-7bd92e21ffb5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="과제\05.20_자동전투게임\cpp파일">
+      <UniqueIdentifier>{f1757dd2-d62e-4b3c-9036-01df12919b48}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="과제\05.20_자동전투게임\부모 클래스">
+      <UniqueIdentifier>{e1b7cf19-c99a-45fe-b668-9dccf75238c0}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -263,9 +303,6 @@
     <ClInclude Include="UseClass.h">
       <Filter>과제\05.19_</Filter>
     </ClInclude>
-    <ClInclude Include="Pixel.h">
-      <Filter>과제\test</Filter>
-    </ClInclude>
     <ClInclude Include="Family.h">
       <Filter>과제\05.19_</Filter>
     </ClInclude>
@@ -290,5 +327,39 @@
     <ClInclude Include="BattleCruser.h">
       <Filter>Lesson\12. 상속</Filter>
     </ClInclude>
+    <ClInclude Include="Dot.h">
+      <Filter>과제\DOT</Filter>
+    </ClInclude>
+    <ClInclude Include="AutoGame.h">
+      <Filter>과제\05.20_자동전투게임\헤더파일</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerA.h">
+      <Filter>과제\05.20_자동전투게임\헤더파일</Filter>
+    </ClInclude>
+    <ClInclude Include="EnemyA.h">
+      <Filter>과제\05.20_자동전투게임\헤더파일</Filter>
+    </ClInclude>
+    <ClInclude Include="GamePlayer.h">
+      <Filter>과제\05.20_자동전투게임\부모 클래스</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemAccessories.h">
+      <Filter>과제\05.20_자동전투게임\부모 클래스</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemArmor.h">
+      <Filter>과제\05.20_자동전투게임\부모 클래스</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemWeapon.h">
+      <Filter>과제\05.20_자동전투게임\부모 클래스</Filter>
+    </ClInclude>
+    <ClInclude Include="Weapon_A.h">
+      <Filter>과제\05.20_자동전투게임\헤더파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Armor_A.h">
+      <Filter>과제\05.20_자동전투게임\헤더파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Accessories_A.h">
+      <Filter>과제\05.20_자동전투게임\헤더파일</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemPortion.h" />
   </ItemGroup>
 </Project>
