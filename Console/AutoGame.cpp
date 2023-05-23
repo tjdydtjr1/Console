@@ -23,6 +23,12 @@ AutoGame::AutoGame()
 	system("mode con:cols=100 lines=100");
 	system("title Game_01");
 
+	// console 커서 제거
+	CONSOLE_CURSOR_INFO cursorInfo = { 0, };
+	cursorInfo.bVisible = FALSE; 
+	SetConsoleCursorInfo(GetStdHandle(STD_OUTPUT_HANDLE), &cursorInfo);
+	//
+
 	playerA = new PlayerA;
 	enemyA = new EnemyA;
 	weaponA = new Weapon_A;
@@ -36,7 +42,7 @@ AutoGame::AutoGame()
 	int startBtn = 0;
 	int count = 0;
 	const int arrX = 50;
-	const int arrY = 30;
+	const int arrY = 50;
 	int ground[arrY][arrX] = { 0 };
 	int backGround[arrY][arrX] = { 0 };
 
@@ -53,10 +59,10 @@ AutoGame::AutoGame()
 		}
 
 	}
-	// 시작 위치
-	ground[29][25] = 11;
+	// 플레이어 시작 위치
+	ground[49][25] = 11;
 
-	// 백그라운드 복사
+	// 백그라운드 복사하기
 	for (int i = 0; i < arrY; ++i)
 	{
 		for (int j = 0; j < arrX; ++j)
@@ -68,10 +74,17 @@ AutoGame::AutoGame()
 	Start();
 	printf("시작하려면 아무 키나 누르세요.\n");
 	startBtn = _getch();
+	
+	// 스타트게임 제거
+	system("cls");
+
+
 	while (true)
 	{
 		system("title Game_01");
+		gotoxy(0, 0);
 
+		// 변경사항 데이터 옮기기
 		for (int i = 0; i < arrY; ++i)
 		{
 			for (int j = 0; j < arrX; ++j)
@@ -79,32 +92,27 @@ AutoGame::AutoGame()
 				backGround[i][j] = ground[i][j];
 			}
 		}
-		//system("cls");
 		printf("\n");
+		// 변경 사항 출력
 		for (int i = 0; i < arrY; ++i)
 		{
 			for (int j = 0; j < arrX; ++j)
 			{
-				Pixel(backGround[i][j]);		
+				Pixel(backGround[i][j]);
 			}
-
 			cout << '\n';
 		}
 
 		// 하단 정보 표시
 		printf("HP : %d MP : %d\tSP : %d\n", playerA->getHP(), playerA->getMP(), playerA->getSP());
 		printf("포션 N : %d , R : %d, U : %d\n", portionN[0], portionN[1], portionN[2]);
-		printf("Skil : %s \n", playerA->getSkill());
+		printf("Skill_01 : %s\tSkill_02 : %s\n", playerA->getSkill_01(), playerA->getSkill_02());
 
 		// =====================================================================================
 		// 적 생성
-		//if (count == 5)
-		//{
-			ground[1][rand() % 20 + 5] = 12;
-		//	count = 0;
-		//}
-
-		// 키 입력
+		
+		
+		// 키 입력 받기
 		if (_kbhit())
 		{
 			keyInput = _getch();
@@ -138,13 +146,7 @@ AutoGame::AutoGame()
 						ground[i][j] = 0;
 						ground[i][j - 1] = 11;
 					}
-					/*if (ground[i][j] == 10)
-					{
-						ground[i - 1][j] = 10;
-						ground[i][j] = 0;
-					}*/
 				}
-
 			}
 		}
 		break;
@@ -158,17 +160,9 @@ AutoGame::AutoGame()
 					{
 						ground[i][j] = 0;
 						ground[i + 1][j] = 11;
-						
 					}
-					/*if (ground[i][j] == 10)
-					{
-						ground[i - 1][j] = 10;
-						ground[i][j] = 0;
-					}*/
 				}
-
 			}
-		
 		}
 		break;
 		case 'd':
@@ -183,13 +177,7 @@ AutoGame::AutoGame()
 						ground[i][j + 1] = 11;
 						break;
 					}
-					/*if (ground[i][j] == 10)
-					{
-						ground[i - 1][j] = 10;
-						ground[i][j] = 0;
-					}*/
 				}
-
 			}
 		}
 		break;
@@ -205,7 +193,6 @@ AutoGame::AutoGame()
 						ground[i - 1][j] = 10;
 					}
 				}
-
 			}
 		}
 		break;
@@ -217,7 +204,9 @@ AutoGame::AutoGame()
 				// 스킬 사용후 감소
 				printf("TEST 스킬 사용\n");
 				playerA->setSP(playerA->getSP() - 50);
-
+				
+				// 보류
+				
 			}
 			else
 			{
@@ -228,8 +217,8 @@ AutoGame::AutoGame()
 		default:
 			break;
 		}
-		
-		// 공격시 계속 진행
+
+		// 총알 공격시 계속 진행
 		for (int i = 0; i < arrY; ++i)
 		{
 			for (int j = 0; j < arrX; ++j)
@@ -245,9 +234,9 @@ AutoGame::AutoGame()
 					ground[i + 1][j] = 12;
 				}
 			}
-
 		}
 
+		// 물약이 있다면 자동으로 물약 먹기
 		if (portionN[0] > 0 || portionN[1] > 0 || portionN[2] > 0)
 		{	
 			// 일정 피 이하 일 때 물약 복용
@@ -270,9 +259,7 @@ AutoGame::AutoGame()
 
 		// 매턴마다 SP 1 씩 증가
 		playerA->setSP(playerA->getSP() + 1);
-		gotoxy(0, 0);
-		Sleep(500);
-		//system("cls");
+		Sleep(10);
 		++count;
 	}
 	

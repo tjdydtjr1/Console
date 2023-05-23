@@ -49,8 +49,11 @@ public:
 	void setLuck(int luck) { m_nLuck = luck; }
 	int getLuck() { return m_nLuck; }
 
-	void setSkill(const char* skill) { skillA = skill; }
-	const char* getSkill() { return skillA; }
+	void setSkill_01(const char* skill) { skillA = skill; }
+	const char* getSkill_01() { return skillA; }
+
+	void setSkill_02(const char* skill) { skillB = skill; }
+	const char* getSkill_02() { return skillB; }
 
 };
 

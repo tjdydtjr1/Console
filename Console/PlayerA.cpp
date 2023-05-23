@@ -3,8 +3,8 @@
 PlayerA::PlayerA()
 {
 	name = "플레이어A";
-	skillA = "TEST";
-	skillB = "";
+	skillA = "스킬_01";
+	skillB = "스킬_02";
 
 	m_nHP = 100;
 	m_nMP = 60;
