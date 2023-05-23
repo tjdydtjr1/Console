@@ -25,7 +25,7 @@ Unit::~Unit()
 	//! Do Nothing
 }
 
-void Unit::attack(char* myName, char* enemyName)
+void Unit::attack(const char* myName,const char* enemyName)
 {
 	cout << myName << " 이" << enemyName << " 을 공격한다." << endl;
 }

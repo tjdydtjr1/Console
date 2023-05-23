@@ -205,6 +205,21 @@
     <ClCompile Include="Dot.cpp">
       <Filter>과제\DOT</Filter>
     </ClCompile>
+    <ClCompile Include="MainGame_04.cpp">
+      <Filter>Lesson\13. 가상 함수</Filter>
+    </ClCompile>
+    <ClCompile Include="Main_08.cpp">
+      <Filter>Lesson\13. 가상 함수</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseBall.cpp" />
+    <ClCompile Include="숫자 야구.cpp">
+      <Filter>과제\05.21_숫자 야구 클래스</Filter>
+    </ClCompile>
+    <ClCompile Include="Jujgment.cpp" />
+    <ClCompile Include="Print.cpp" />
+    <ClCompile Include="BaseBall2.cpp">
+      <Filter>과제\05.21_숫자 야구 클래스</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Lesson">
@@ -236,9 +251,6 @@
     </Filter>
     <Filter Include="Lesson\08. 사용자정의 자료형">
       <UniqueIdentifier>{7065d02c-5b1f-4701-aa0f-048de008163b}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="23.05.16_과제">
-      <UniqueIdentifier>{0e1db844-06c1-4af7-b646-12a5518782cc}</UniqueIdentifier>
     </Filter>
     <Filter Include="Lesson\09. 포인터">
       <UniqueIdentifier>{ef77a993-21de-4ef8-8fad-050860155d9c}</UniqueIdentifier>
@@ -278,6 +290,12 @@
     </Filter>
     <Filter Include="과제\05.20_자동전투게임\부모 클래스">
       <UniqueIdentifier>{e1b7cf19-c99a-45fe-b668-9dccf75238c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Lesson\13. 가상 함수">
+      <UniqueIdentifier>{ea7bf012-bc45-49f1-9e2a-4ed7576c58e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="과제\05.21_숫자 야구 클래스">
+      <UniqueIdentifier>{8c44648a-6006-4075-afef-6d2a5cee6b8b}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -367,6 +385,15 @@
     </ClInclude>
     <ClInclude Include="ItemPortion.h">
       <Filter>과제\05.20_자동전투게임\헤더파일</Filter>
+    </ClInclude>
+    <ClInclude Include="MainGame_04.h">
+      <Filter>Lesson\13. 가상 함수</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseBall.h" />
+    <ClInclude Include="Jujgment.h" />
+    <ClInclude Include="Print.h" />
+    <ClInclude Include="BaseBall2.h">
+      <Filter>과제\05.21_숫자 야구 클래스</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

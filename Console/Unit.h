@@ -77,7 +77,7 @@ public:
 
 
 	*/
-	void attack(char* myName, char* enemyName);
+	void attack(const char* myName,const char* enemyName);
 	void attack(int atk, int enemyHP);
 	void attack(bool enemyDie);
 
