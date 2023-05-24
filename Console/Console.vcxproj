@@ -285,7 +285,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="VectorStore.cpp" />
-    <ClCompile Include="벡터상점.cpp" />
+    <ClCompile Include="vector+벡터상점.cpp" />
     <ClCompile Include="숫자 야구.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>

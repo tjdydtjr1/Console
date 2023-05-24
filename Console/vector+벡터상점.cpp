@@ -11,10 +11,37 @@ struct STDataA
 void main()
 {
 	vector<STData> test;
-	vector<int> test3;
+	STData st;
 	
-	test.push_back(test.);
+	st.m_nValue = 1;
+	st.m_oString = "A";
+	test.push_back(st);
 	
+	st.m_nValue = 2;
+	st.m_oString = "B";
+	test.push_back(st);
+
+
+	cout << test[0].m_nValue << endl;
+	cout << test[0].m_oString << endl;
+	
+	cout << test[1].m_nValue << endl;
+	cout << test[1].m_oString << endl;
+
+	
+	st.m_nValue = 3;
+	st.m_oString = "C";
+	test.insert(test.begin(), st);
+
+	cout << test[0].m_nValue << endl;
+	cout << test[0].m_oString << endl;
+
+	test.at(1);
+
+	//cout << test.at();
+	
+	// test.at(0);
+	//test.front();
 	Func_01 test2;
 	
 	test2.sampleSTVector(test);

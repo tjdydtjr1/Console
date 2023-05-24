@@ -238,7 +238,7 @@
     <ClCompile Include="Func_01.cpp">
       <Filter>과제\05.24_ 함수+벡터상점</Filter>
     </ClCompile>
-    <ClCompile Include="벡터상점.cpp">
+    <ClCompile Include="vector+벡터상점.cpp">
       <Filter>과제\05.24_ 함수+벡터상점</Filter>
     </ClCompile>
   </ItemGroup>
