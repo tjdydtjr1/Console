@@ -1,6 +1,6 @@
 #include "PlayerA.h"
 
-PlayerA::PlayerA()
+Player::Player()
 {
 	name = "플레이어A";
 	skillA = "스킬_01";
@@ -20,6 +20,6 @@ PlayerA::PlayerA()
 	m_nAccessories = 0;
 
 }
-PlayerA::~PlayerA()
+Player::~Player()
 {
 }

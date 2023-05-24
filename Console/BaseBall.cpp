@@ -16,7 +16,7 @@ BaseBall::BaseBall()
 	
 	int num = 0;
 	// User 숫자 3개 입력
-	printf("숫자 야구 게임 시작\n");
+	printf("클래스 8개 숫자 야구 게임 시작\n");
 
 	// Com 숫자 3개 랜덤 입력
 	com->setFirstNum(rand() % 9 + 1);

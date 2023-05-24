@@ -30,7 +30,7 @@ AutoGame::AutoGame()
 	SetConsoleCursorInfo(GetStdHandle(STD_OUTPUT_HANDLE), &cursorInfo);
 	//
 
-	playerA = new PlayerA;
+	playerA = new Player;
 	enemyA = new EnemyA;
 	weaponA = new Weapon_A;
 	armorA = new Armor_A;

@@ -211,14 +211,35 @@
     <ClCompile Include="Main_08.cpp">
       <Filter>Lesson\13. 가상 함수</Filter>
     </ClCompile>
-    <ClCompile Include="BaseBall.cpp" />
     <ClCompile Include="숫자 야구.cpp">
       <Filter>과제\05.21_숫자 야구 클래스</Filter>
     </ClCompile>
-    <ClCompile Include="Jujgment.cpp" />
-    <ClCompile Include="Print.cpp" />
     <ClCompile Include="BaseBall2.cpp">
       <Filter>과제\05.21_숫자 야구 클래스</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseBall.cpp">
+      <Filter>과제\05.21_숫자 야구 클래스</Filter>
+    </ClCompile>
+    <ClCompile Include="Jujgment.cpp">
+      <Filter>과제\05.21_숫자 야구 클래스</Filter>
+    </ClCompile>
+    <ClCompile Include="Print.cpp">
+      <Filter>과제\05.21_숫자 야구 클래스</Filter>
+    </ClCompile>
+    <ClCompile Include="Main_09.cpp">
+      <Filter>Lesson\14. STL vector</Filter>
+    </ClCompile>
+    <ClCompile Include="MainGame_05.cpp">
+      <Filter>Lesson\14. STL vector</Filter>
+    </ClCompile>
+    <ClCompile Include="VectorStore.cpp">
+      <Filter>과제\05.24_ 함수+벡터상점</Filter>
+    </ClCompile>
+    <ClCompile Include="Func_01.cpp">
+      <Filter>과제\05.24_ 함수+벡터상점</Filter>
+    </ClCompile>
+    <ClCompile Include="벡터상점.cpp">
+      <Filter>과제\05.24_ 함수+벡터상점</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -296,6 +317,12 @@
     </Filter>
     <Filter Include="과제\05.21_숫자 야구 클래스">
       <UniqueIdentifier>{8c44648a-6006-4075-afef-6d2a5cee6b8b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Lesson\14. STL vector">
+      <UniqueIdentifier>{d8f52710-0ccd-4c94-94dc-f7dba626915e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="과제\05.24_ 함수+벡터상점">
+      <UniqueIdentifier>{50605013-313d-4198-809f-e0411366fb2c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -389,11 +416,26 @@
     <ClInclude Include="MainGame_04.h">
       <Filter>Lesson\13. 가상 함수</Filter>
     </ClInclude>
-    <ClInclude Include="BaseBall.h" />
-    <ClInclude Include="Jujgment.h" />
-    <ClInclude Include="Print.h" />
     <ClInclude Include="BaseBall2.h">
       <Filter>과제\05.21_숫자 야구 클래스</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseBall.h">
+      <Filter>과제\05.21_숫자 야구 클래스</Filter>
+    </ClInclude>
+    <ClInclude Include="Jujgment.h">
+      <Filter>과제\05.21_숫자 야구 클래스</Filter>
+    </ClInclude>
+    <ClInclude Include="Print.h">
+      <Filter>과제\05.21_숫자 야구 클래스</Filter>
+    </ClInclude>
+    <ClInclude Include="MainGame_05.h">
+      <Filter>Lesson\14. STL vector</Filter>
+    </ClInclude>
+    <ClInclude Include="VectorStore.h">
+      <Filter>과제\05.24_ 함수+벡터상점</Filter>
+    </ClInclude>
+    <ClInclude Include="Func_01.h">
+      <Filter>과제\05.24_ 함수+벡터상점</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

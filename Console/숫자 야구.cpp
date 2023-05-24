@@ -18,13 +18,29 @@
 - STL + 자료 구조 + 스택 + 큐 + 트리 + 벡터
   + 리스트 + 맵 + 반복자 + 컨테이너
 */
+#pragma once
 #include "BaseBall.h"
+#include "BaseBall2.h"
 
 void main()
 {
-	BaseBall* Game = new BaseBall;
+	int select = 0;
+	printf("클래스 8개    = 1번 숫자 야구 게임 시작\n");
+	printf("가상화 클래스 = 2번 숫자 야구 게임 시작\n");
+	
+	cin >> select;
 
-	delete Game;
+	if (select == 1)
+	{
+		BaseBall* Game = new BaseBall;
+
+		delete Game;
+	}
+	else
+	{
+		BaseBall2* game2 = new BaseBall2;
+		delete game2;
+	}
 
 
 }

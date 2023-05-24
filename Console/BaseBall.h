@@ -25,6 +25,7 @@ public:
 	int getSecondNum() { return m_nSecondNum; }
 	int getThirdNum() { return m_nThirdNum; }
 
+
 };
 
 class User : public Player
@@ -65,23 +66,19 @@ public:
 class BaseBall
 {
 private:
-	PlayerA* player;
-	PlayerA* com;
+	Player* player;
+	Player* com;
 	Jujgment* vs;
 	CountGame* count;
 	Print* print;
 	EndGame* game;
 	Temp* temp;
 
-	//
-	BaseBall2* baseBall;
+	
 
 public:
 	BaseBall();
-	
 	~BaseBall();
-	
-
 };
 
 

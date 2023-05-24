@@ -2,10 +2,10 @@
 // 부모 클래스
 #include "GamePlayer.h"
 
-class PlayerA : public GamePlayer
+class Player : public GamePlayer
 {
 public:
-	PlayerA();
-	~PlayerA();
+	Player();
+	~Player();
 };
 

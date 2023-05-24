@@ -19,7 +19,7 @@ using std::endl;
 class AutoGame
 {
 private:
-	PlayerA*		playerA;
+	Player*		playerA;
 	EnemyA*			enemyA;
 	Weapon_A*		weaponA;
 	Armor_A*		armorA;
