@@ -94,11 +94,16 @@ MainGame_06::MainGame_06()
 	{
 		char szKey[MAX_PATH] = "";
 
+		// szKey -> key_1... 넣는다.
 		sprintf_s(szKey, "Key_%d", i + 1);
 
+		// szKey(문자열), 정수 = pair로 묶어서 넣는다.
 		ValueList.insert(std::make_pair(szKey, i + 1));
+		// decltype타입 명시(ValueList의 타입으로):: 문자열, 정수를 넣는다.
 		ValueList.insert(decltype(ValueList)::value_type(szKey, i + 1));
+		// map<문자열, 정수>의 타입으로 문자열, 정수를 넣는다.
 		ValueList.insert(std::map<std::string, int>::value_type(szKey, i + 1));
+		
 	}
 	//
 }
