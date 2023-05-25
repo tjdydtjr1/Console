@@ -8,7 +8,7 @@ MainGame_05::MainGame_05()
 	/*
 	- STL 벡터에서 자주 사용하는 기능
 	1. push_back()				 : 데이터를 뒤에서 부터 추가한다. (값)
-	- emplace_back				 : 데이터를 뒤에서부터 추가한다. (값)
+	- emplace_back				 : 데이터를 뒤에서 부터 추가한다. (값)
 	2. pop_back()			   	 : 데이터 뒤에서부터 값을 삭제
 	
 	3. size()					 : 벡터의 크기 (갯수)

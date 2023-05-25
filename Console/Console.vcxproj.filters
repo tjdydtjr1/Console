@@ -232,14 +232,29 @@
     <ClCompile Include="MainGame_05.cpp">
       <Filter>Lesson\14. STL vector</Filter>
     </ClCompile>
-    <ClCompile Include="VectorStore.cpp">
+    <ClCompile Include="Main_vector+벡터상점.cpp">
       <Filter>과제\05.24_ 함수+벡터상점</Filter>
+    </ClCompile>
+    <ClCompile Include="VectorStore.cpp">
+      <Filter>과제\05.24_ 함수+벡터상점\VectorStore</Filter>
     </ClCompile>
     <ClCompile Include="Func_01.cpp">
-      <Filter>과제\05.24_ 함수+벡터상점</Filter>
+      <Filter>과제\05.24_ 함수+벡터상점\VectorFunc</Filter>
     </ClCompile>
-    <ClCompile Include="vector+벡터상점.cpp">
-      <Filter>과제\05.24_ 함수+벡터상점</Filter>
+    <ClCompile Include="MainGame_06.cpp">
+      <Filter>Lesson\15. Map</Filter>
+    </ClCompile>
+    <ClCompile Include="Main_10.cpp">
+      <Filter>Lesson\15. Map</Filter>
+    </ClCompile>
+    <ClCompile Include="InvenVec.cpp">
+      <Filter>과제\05.24_ 함수+벡터상점\VectorStore</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerVec.cpp">
+      <Filter>과제\05.24_ 함수+벡터상점\VectorStore</Filter>
+    </ClCompile>
+    <ClCompile Include="StoreMain.cpp">
+      <Filter>과제\05.24_ 함수+벡터상점\VectorStore</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -323,6 +338,15 @@
     </Filter>
     <Filter Include="과제\05.24_ 함수+벡터상점">
       <UniqueIdentifier>{50605013-313d-4198-809f-e0411366fb2c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="과제\05.24_ 함수+벡터상점\VectorStore">
+      <UniqueIdentifier>{1cbcd25c-1b2f-4f65-afa1-cecc7ec67a88}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="과제\05.24_ 함수+벡터상점\VectorFunc">
+      <UniqueIdentifier>{671fc981-3e50-4e12-bdcd-e20c276e9537}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Lesson\15. Map">
+      <UniqueIdentifier>{89234952-11de-4b61-aaa5-4d19acd24c2b}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -432,10 +456,22 @@
       <Filter>Lesson\14. STL vector</Filter>
     </ClInclude>
     <ClInclude Include="VectorStore.h">
-      <Filter>과제\05.24_ 함수+벡터상점</Filter>
+      <Filter>과제\05.24_ 함수+벡터상점\VectorStore</Filter>
     </ClInclude>
     <ClInclude Include="Func_01.h">
-      <Filter>과제\05.24_ 함수+벡터상점</Filter>
+      <Filter>과제\05.24_ 함수+벡터상점\VectorFunc</Filter>
+    </ClInclude>
+    <ClInclude Include="MainGame_06.h">
+      <Filter>Lesson\15. Map</Filter>
+    </ClInclude>
+    <ClInclude Include="InvenVec.h">
+      <Filter>과제\05.24_ 함수+벡터상점\VectorStore</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerVec.h">
+      <Filter>과제\05.24_ 함수+벡터상점\VectorStore</Filter>
+    </ClInclude>
+    <ClInclude Include="StoreMain.h">
+      <Filter>과제\05.24_ 함수+벡터상점\VectorStore</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
