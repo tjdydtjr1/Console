@@ -4,17 +4,18 @@
 class InvenVec
 {
 public:
-	Weapon* m_weaponA;
-	Weapon* m_weaponB;
+	vector<Weapon> m_weaponInven;
+	vector<Weapon>::iterator m_weaponIter;
 
-	Armor* m_armorA;
-	Armor* m_armorB;
+	vector<Armor> m_armorInven;
+	vector<Armor>::iterator m_armorIter;
 
-	Acce* m_acceA;
-	Acce* m_acceB;
+	vector<Acce> m_acceInven;
+	vector<Acce>::iterator m_acceIter;
 
-	Fortion* m_fortion;
-	
+	vector<Fortion> m_fortionInven;
+	vector<Fortion>::iterator m_fortionIter;
+
 
 public:
 	InvenVec() {}

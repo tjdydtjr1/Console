@@ -96,7 +96,7 @@ class MainGame_06
 private:
     map<string, int> _mData;
     map<string, int>::iterator _miData;
-
+    map<std::string, int>::iterator test;
     // multimap 사용시 map으로 묶어주자.
     //1.
     multimap <map<vector<MainGame_06*>, set<vector<float>>>,

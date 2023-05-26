@@ -90,6 +90,7 @@ MainGame_06::MainGame_06()
 	// 한줄 조사. decltype
 	// 아래 맵의 의도를 파악해 온다.
 	map<std::string, int> ValueList;
+	
 	for (int i = 0; i < 10; ++i)
 	{
 		char szKey[MAX_PATH] = "";
@@ -104,7 +105,13 @@ MainGame_06::MainGame_06()
 		// map<문자열, 정수>의 타입으로 문자열, 정수를 넣는다.
 		ValueList.insert(std::map<std::string, int>::value_type(szKey, i + 1));
 		
+	} 
+
+	for (test = ValueList.begin(); test != ValueList.end(); ++test)
+	{
+		cout << test->first << ", " << test->second << endl;
 	}
+
 	//
 }
 

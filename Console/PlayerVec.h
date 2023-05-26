@@ -35,13 +35,13 @@ public:
 	virtual int getMatk() = 0;
 	virtual int getLv() = 0;
 	virtual int getPhysicalDef() = 0;
-	virtual int setMagicDef() = 0;
+	virtual int getMagicDef() = 0;
 };
 
 class UserA : public PlayerVec
 {
-private:
-
+public:
+	InvenVec m_inven;
 public:
 	void setName(const char* name) { m_name = name; }
 	void setAtk(int atk) { m_atk = atk; }
@@ -55,11 +55,18 @@ public:
 	int getMatk() { return m_mAtk; }
 	int getLv() { return m_level; }
 	int getPhysicalDef() { return m_physicalDef; }
-	int setMagicDef() { return m_magicDef; }
-
+	int getMagicDef() { return m_magicDef; }
 
 public:
-	UserA() {}
+	UserA() 
+	{
+		setName("플레이어");
+		setAtk(100);
+		setMatk(100);
+		setLv(1);
+		setPhysicalDef(100);
+		setMagicDef(100);
+	}
 	~UserA() {}
 
 };

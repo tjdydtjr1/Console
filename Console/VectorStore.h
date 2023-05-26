@@ -1,6 +1,9 @@
 #pragma once
 #include <iostream>
 #include <vector>
+#include <Windows.h>
+#include <conio.h>
+#include "Dot.h"
 
 using std::cout;
 using std::cin;
@@ -11,6 +14,7 @@ using std::vector;
 
 struct Weapon
 {
+	const char*		m_name;
 	// 물리 공격력
 	int				m_nAtk;
 	// 마법 공격력
@@ -25,6 +29,8 @@ struct Weapon
 
 struct Armor
 {
+	const char* m_name;
+
 	// 물리 방어력 
 	int			m_nPhysicalDef;
 	// 마법 방어력
@@ -39,6 +45,8 @@ struct Armor
 
 struct Acce
 {
+	const char* m_name;
+
 	// 물리 방어력
 	int			m_nPhysicalDef;
 	// 마법 방어력
@@ -59,21 +67,51 @@ struct Fortion
 	int			m_nUpperFortion;
 };
 
+class Item
+{
+public:
+	Weapon weaponA;
+	Armor armorA;
+	Acce acceA;
+	Fortion fortion;
+
+	Weapon weaponB;
+	Armor armorB;
+	Acce acceB;
+
+public:
+	Item();
+	~Item(){}
+
+};
+
+
 class VectorStore
 {
 public:
-	vector<Weapon> 	m_weaponA;
-	vector<Weapon> 	m_weaponB;
+	//Weapon						m_weapon;
+	vector<Weapon> 				m_weaponVec;
+	vector<Weapon>::iterator	m_weaponIter;
+	//vector<Weapon> 	m_weaponB;
 
-	vector<Armor>	m_armorA;
-	vector<Armor>	m_armorB;
+	//Armor						m_armor;
+	vector<Armor>				m_armorVec;
+	vector<Armor>::iterator		m_armorIter;
 
-	vector<Acce>	m_acceA;
-	vector<Acce>	m_acceB;
+	//vector<Armor>	m_armorB;
 
-	vector<Fortion>	m_fortion;
+	//Acce						m_acce;
+	vector<Acce>				m_acceVec;
+	vector<Acce>::iterator		m_acceIter;
+	//vector<Acce>	m_acceB;
+
+	//Fortion						m_fortion;
+	vector<Fortion>				m_fortionVec;
 
 public:
+
+
+
 	VectorStore() {}
 	~VectorStore() {}
 

@@ -256,6 +256,12 @@
     <ClCompile Include="StoreMain.cpp">
       <Filter>과제\05.24_ 함수+벡터상점\VectorStore</Filter>
     </ClCompile>
+    <ClCompile Include="Main_11.cpp">
+      <Filter>Lesson\16. 템플릿</Filter>
+    </ClCompile>
+    <ClCompile Include="MainGame_07.cpp">
+      <Filter>Lesson\16. 템플릿</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Lesson">
@@ -347,6 +353,9 @@
     </Filter>
     <Filter Include="Lesson\15. Map">
       <UniqueIdentifier>{89234952-11de-4b61-aaa5-4d19acd24c2b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Lesson\16. 템플릿">
+      <UniqueIdentifier>{68255741-9e0b-4b6b-85a5-0811b22882b5}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -472,6 +481,12 @@
     </ClInclude>
     <ClInclude Include="StoreMain.h">
       <Filter>과제\05.24_ 함수+벡터상점\VectorStore</Filter>
+    </ClInclude>
+    <ClInclude Include="MainGame_07.h">
+      <Filter>Lesson\16. 템플릿</Filter>
+    </ClInclude>
+    <ClInclude Include="Template.h">
+      <Filter>Lesson\16. 템플릿</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -1,8 +1,13 @@
 #include "Func_01.h"
 #include "VectorStore.h"
+#include "StoreMain.h"
 
 void main()
 {
+
+	StoreMain* game = new StoreMain;
+
+	delete game;
 	//vector<STData> test;
 	//STData st;
 	//

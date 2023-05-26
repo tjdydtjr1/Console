@@ -5,9 +5,9 @@
 class StoreMain
 {
 private:
-	VectorStore* m_store;
-	UserA* m_player;
-
+	VectorStore m_store;
+	UserA m_player;
+	Item item;
 public:
 	StoreMain();
 	~StoreMain();

@@ -13,3 +13,9 @@ void TextColor(int font, int backGround);
 void gotoxy(short x, short y);
 
 void Start();
+
+void PrintAcce();
+
+void PrintArmor();
+
+void PrintWeapon();
