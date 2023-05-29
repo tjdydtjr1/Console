@@ -247,9 +247,9 @@ void Pixel(int num)
 	case 10:
 	{
 		// π‡¿∫ √ ∑œ
-		/*TextColor(10, 10);
-		cout << "°·";
-		TextColor(0, 0);*/
+		///*TextColor(10, 10);
+		//cout << "°·";
+		//TextColor(0, 0);*/
 		// √—æÀ
 		TextColor(4, 0);
 		cout << "°‹";
@@ -328,3 +328,69 @@ void Pixel(int num)
 	}
 }
 	
+
+void GalagaPlayer()
+{
+	int plane[25] = 
+	{
+		0, 0, 4, 0, 0,
+		0, 7, 7, 7, 0,
+		4, 7, 7, 7, 4,
+		0, 7, 5, 7, 0,
+		0, 0, 6, 0, 0
+	};
+
+	for (int i = 0; i < 25; ++i)
+	{
+		Pixel(plane[i]);
+		if ((i + 1) % 5 == 0)
+		{
+			cout << endl;
+		}
+	}
+	
+}
+
+void GalagaEnemy()
+{
+	int enemy[25] = 
+	{
+		0, 0, 0, 0, 0,
+		0, 1, 1, 1, 0,
+		1, 1, 1, 1, 1,
+		1, 1, 1, 1, 1,
+		0, 1, 1, 1, 0
+	};
+
+	for (int i = 0; i < 25; ++i)
+	{
+		Pixel(enemy[i]);
+		if ((i + 1) % 5 == 0)
+		{
+			cout << endl;
+		}
+		
+	}
+}
+
+void GalagaEnemyA()
+{
+	int enemyA[25] =
+	{
+		0, 0, 0, 0, 0,
+		0, 1, 1, 1, 0,
+		1, 1, 1, 1, 1,
+		1, 1, 1, 1, 1,
+		0, 1, 1, 1, 0
+	};
+
+	for (int i = 0; i < 25; ++i)
+	{
+		Pixel(enemyA[i]);
+		if ((i + 1) % 5 == 0)
+		{
+			cout << endl;
+		}
+
+	}
+}

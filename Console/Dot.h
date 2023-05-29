@@ -19,3 +19,7 @@ void PrintAcce();
 void PrintArmor();
 
 void PrintWeapon();
+
+void GalagaPlayer();
+
+void GalagaEnemy();
