@@ -1,5 +1,8 @@
 #include "Dot.h"
 
+//°ËÁ¤0 ÆÄ¶û1 ÃÊ·Ï2 ÇÏ´Ã3 »¡°­4 º¸¶ó5
+//³ë¶û6 Èò»ö7 È¸»ö8 ÆÄ¶û9
+
 void TextColor(int font, int backGround)
 {
 	int Color = font + backGround * 16;
@@ -327,21 +330,120 @@ void Pixel(int num)
 		break;
 	}
 }
-	
 
+void PixelChar(int num)
+{
+	int pixel[500] = {0};
+	switch (num - 48)
+	{
+	case 0:
+	{
+		// °ËÀº»ö
+		TextColor(0, 0);
+		cout << "¡á";
+		TextColor(7, 0);
+	}
+	break;
+	case 1:
+	{
+		// ÆÄ¶û»ö
+		TextColor(1, 1);
+		cout << "¡á";
+		TextColor(7, 0);
+
+	}
+	break;
+	case 2:
+	{
+		// ÃÊ·Ï»ö
+		TextColor(2, 2);
+		cout << "¡á";
+		TextColor(7, 0);
+	}
+	break;
+	case 3:
+	{
+		// ÇÏ´Ã»ö
+		TextColor(3, 3);
+		cout << "¡á";
+		TextColor(7, 0);
+	}
+	break;
+	case 4:
+	{
+		// »¡°­»ö
+		TextColor(4, 4);
+		cout << "¡á";
+		TextColor(7, 0);
+	}
+	break;
+	case 5:
+	{
+		// º¸¶ó»ö
+		TextColor(5, 5);
+		cout << "¡á";
+		TextColor(7, 0);
+	}
+	break;
+	case 6:
+	{
+		// ³ë¶û»ö
+		TextColor(6, 6);
+		cout << "¡á";
+		TextColor(7, 0);
+	}
+	break;
+	case 7:
+	{
+		// Èò»ö
+		TextColor(7, 7);
+		cout << "¡á";
+		TextColor(7, 0);
+	}
+	break;
+	case 8:
+	{
+		// È¸»ö
+		TextColor(8, 8);
+		cout << "¡á";
+		TextColor(7, 0);
+	}
+	break;
+	case 9:
+	{
+		// ¹àÀº ÆÄ¶û
+		TextColor(9, 9);
+		cout << "¡á";
+		TextColor(0, 0);
+
+	}
+	break;
+	default:
+	{
+		for (int i = 0; i < 500; ++i)
+		{
+			cout << pixel[i];
+		}
+	}
+		break;
+	}
+}
+//°ËÁ¤0 ÆÄ¶û1 ÃÊ·Ï2 ÇÏ´Ã3 »¡°­4 º¸¶ó5
+//³ë¶û6 Èò»ö7 È¸»ö8 ÆÄ¶û9
 void GalagaPlayer()
 {
 	int plane[25] = 
 	{
 		0, 0, 4, 0, 0,
 		0, 7, 7, 7, 0,
-		4, 7, 7, 7, 4,
-		0, 7, 5, 7, 0,
-		0, 0, 6, 0, 0
+		4, 7, 4, 7, 4,
+		0, 4, 7, 4, 0,
+		0, 0, 7, 0, 0
 	};
 
 	for (int i = 0; i < 25; ++i)
 	{
+		
 		Pixel(plane[i]);
 		if ((i + 1) % 5 == 0)
 		{

@@ -203,7 +203,7 @@
       <Filter>과제\05.20_자동전투게임\cpp파일</Filter>
     </ClCompile>
     <ClCompile Include="Dot.cpp">
-      <Filter>과제\DOT</Filter>
+      <Filter>DOT</Filter>
     </ClCompile>
     <ClCompile Include="MainGame_04.cpp">
       <Filter>Lesson\13. 가상 함수</Filter>
@@ -262,6 +262,18 @@
     <ClCompile Include="MainGame_07.cpp">
       <Filter>Lesson\16. 템플릿</Filter>
     </ClCompile>
+    <ClCompile Include="GalagaGameMain.cpp">
+      <Filter>Portfolio</Filter>
+    </ClCompile>
+    <ClCompile Include="GalagaObject.cpp">
+      <Filter>Portfolio</Filter>
+    </ClCompile>
+    <ClCompile Include="GalagaMain.cpp">
+      <Filter>Portfolio</Filter>
+    </ClCompile>
+    <ClCompile Include="doubleBuff.cpp">
+      <Filter>Portfolio</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Lesson">
@@ -318,9 +330,6 @@
     <Filter Include="Lesson\12. 상속">
       <UniqueIdentifier>{cc324c00-fabe-4568-a1ab-d922f8de3a73}</UniqueIdentifier>
     </Filter>
-    <Filter Include="과제\DOT">
-      <UniqueIdentifier>{569af0bb-582d-4ad5-97b2-eb03d83611c7}</UniqueIdentifier>
-    </Filter>
     <Filter Include="과제\05.20_자동전투게임">
       <UniqueIdentifier>{ad58c42d-b6ca-4935-8c5b-3cdd363f4921}</UniqueIdentifier>
     </Filter>
@@ -356,6 +365,12 @@
     </Filter>
     <Filter Include="Lesson\16. 템플릿">
       <UniqueIdentifier>{68255741-9e0b-4b6b-85a5-0811b22882b5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Portfolio">
+      <UniqueIdentifier>{3dccddf4-ce39-4de2-a869-2c0ef47a3f35}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DOT">
+      <UniqueIdentifier>{569af0bb-582d-4ad5-97b2-eb03d83611c7}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -411,7 +426,7 @@
       <Filter>Lesson\12. 상속</Filter>
     </ClInclude>
     <ClInclude Include="Dot.h">
-      <Filter>과제\DOT</Filter>
+      <Filter>DOT</Filter>
     </ClInclude>
     <ClInclude Include="AutoGame.h">
       <Filter>과제\05.20_자동전투게임\헤더파일</Filter>
@@ -487,6 +502,12 @@
     </ClInclude>
     <ClInclude Include="Template.h">
       <Filter>Lesson\16. 템플릿</Filter>
+    </ClInclude>
+    <ClInclude Include="GalagaGameMain.h">
+      <Filter>Portfolio</Filter>
+    </ClInclude>
+    <ClInclude Include="GalagaObject.h">
+      <Filter>Portfolio</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

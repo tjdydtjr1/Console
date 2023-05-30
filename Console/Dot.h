@@ -1,12 +1,15 @@
 #pragma once
 #include <Windows.h>
 #include <iostream>
+
 using std::cout;
 using std::cin;
 using std::endl;
 
 
 void Pixel(int num);
+
+void PixelChar(int num);
 
 void TextColor(int font, int backGround);
 
@@ -23,3 +26,5 @@ void PrintWeapon();
 void GalagaPlayer();
 
 void GalagaEnemy();
+
+void GalagaEnemyA();  
