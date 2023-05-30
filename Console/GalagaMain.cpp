@@ -1,6 +1,8 @@
 #include "GalagaGameMain.h"
 
 
+
+
 void main()
 {
 	system("mode con:cols=300 lines=80");
@@ -20,7 +22,7 @@ void main()
 	int backGround[arrY][arrX] = { 0 };
 	
 	int count = 0;
-
+	int score = 0;
 	// 초기 x값
 	short x = 45;
 	// 초기 y값
@@ -49,6 +51,8 @@ void main()
 		0, 1, 1, 1, 0
 	};
 
+
+
 	// 초기맵
 	for (int i = 0; i < arrY; ++i)
 	{
@@ -71,8 +75,9 @@ void main()
 		}
 	}
 
-	gotoxy(0, 20);
-	Start();
+	//gotoxy(0, 20);
+	//Start();
+
 	printf("시작하려면 아무 키나 누르세요.\n");
 	startBtn = _getch();
 
@@ -103,37 +108,40 @@ void main()
 
 	while (true)
 	{
-		gotoxy(150, 10);
+		// 우측 도트 띄우기
+		gotoxy(105, 8);
+		printf("Score : %d",score);
+		gotoxy(105, 9);
 		printf("TestTestTestTestTestTestTest");
-		gotoxy(150, 11);
-		printf("TestTestTestTestTestTestTest");
+		GalagaPlayer();
+		GalagaPlayer();
+		GalagaPlayer();
 
+
+		gotoxy(152, 8);
+		printf("조작키\t\t\t\t공격키");
 		system("title Galaga_Game");
-		
-		// 게임 테두리
-	/*	for (int i = 0; i < 70; ++i)
-		{
-			gotoxy(100, i);
-			printf("%s", "■");
-			gotoxy(1, i);
-			printf("%s", "■");
-		}*/
-		if (count == 30)
-		{
-			enemyX = rand() % 30;
-			enemyY = rand() % 4;
-			for (int i = 0; i < 5; ++i)
-			{
-				gotoxy(enemyX, enemyY + i);
-				for (int j = 0; j < 5; ++j)
-				{
-					Pixel(enemy[i][j]);
-				}
+		// 조작키
+		ArrowUp();
+		ArrowRight();
+		ArrowLeft();
+		ArrowDown();
+		ZKey();
+		//
 
+		enemyX = rand() % 30;
+		enemyY = rand() % 4;
+		for (int i = 0; i < 5; ++i)
+		{
+			gotoxy(enemyX, enemyY + i);
+			for (int j = 0; j < 5; ++j)
+			{
+				Pixel(enemy[i][j]);
 			}
-			count = 0;
+
 		}
 		
+		enemyX++;
 		// 키 입력 받기
 		if (_kbhit())
 		{
@@ -145,6 +153,8 @@ void main()
 		case UP:
 		{
 			y -= 1;
+			ArrowUpW();
+		
 			// goto
 			for (int i = 0; i < 5; ++i)
 			{
@@ -160,6 +170,7 @@ void main()
 		case LEFT:
 		{
 			x -= 1;
+			ArrowLeftW();
 			// goto
 			for (int i = 0; i < 5; ++i)
 			{
@@ -175,6 +186,8 @@ void main()
 		case DOWN:
 		{
 			y += 1;
+			ArrowDownW();
+
 			// goto
 			for (int i = 0; i < 5; ++i)
 			{
@@ -191,6 +204,8 @@ void main()
 		case RIGHT:
 		{
 			x += 1;
+			ArrowRightW();
+
 			// goto
 			for (int i = 0; i < 5; ++i)
 			{
@@ -202,9 +217,13 @@ void main()
 			}
 		}
 		break;
-		case '1':
+		case 'z':
 		{
-			
+			gotoxy(x, y - 1);
+			backGround[y][x] = 0;
+			backGround[y - 1][x] = 10;
+			ZKeyW();
+			continue;
 		}
 		break;
 		case '2':

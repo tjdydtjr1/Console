@@ -27,4 +27,28 @@ void GalagaPlayer();
 
 void GalagaEnemy();
 
-void GalagaEnemyA();  
+
+
+
+// 방향키 도트
+void ArrowUp();
+
+void ArrowDown();
+
+void ArrowRight();
+
+void ArrowLeft();
+
+void ArrowUpW();
+
+void ArrowDownW();
+
+void ArrowRightW();
+
+void ArrowLeftW();
+
+void ZKey();
+
+void ZKeyW();
+
+void DrawTexta();
