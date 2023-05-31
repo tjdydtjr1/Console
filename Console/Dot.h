@@ -52,4 +52,5 @@ void ZKey();
 
 void ZKeyW();
 
-void DrawTexta();
+
+void Effect(int x,int y);

@@ -40,6 +40,7 @@ public:
 	}
 };
 
+//     파생클래스             부모클래스
 class GalagaPlayerA : public GalagaObject
 {
 public:
@@ -224,6 +225,22 @@ public:
 	void printObject(const int& x,const int& y)
 	{
 		//
+		int boss[7][7] =
+		{
+			0, 1, 1, 1, 1, 1, 0,
+			1, 1, 5 ,1, 5, 1, 1,
+			1, 1, 4, 4, 4, 1, 1,
+			1, 1, 1, 1, 1, 1, 1,
+			1, 0, 3, 0, 3, 0, 1
+		};
+		for (int i = 0; i < 7; ++i)
+		{
+			gotoxy(x, y + i);
+			for (int j = 0; j < 7; ++j)
+			{
+				Pixel(boss[i][j]);
+			}
+		}
 	}
 	GalagaBoss() {}
 	~GalagaBoss() {}
@@ -285,15 +302,41 @@ public:
 class Bullet
 {
 public:
+	int m_x;
 	int m_y;
+	bool m_fire;
 public:
-	Bullet() {};
-	void createBullet(int x,int y)
+	Bullet()
+		: m_x(0)
+		, m_y(0)
+		, m_fire(false)
 	{
-		gotoxy(x, y);
+	}
+	void createBullet(const int x ,const int y)
+	{
+		if (m_fire)
+		{
+			return;
+		}
+
+		m_x = x;
+		m_y = y - 1;
+
+		m_fire = true;
+	}
+	
+	void Bullet::printBullet()
+	{
+		m_y--;
+
+		if (m_y < -1)
+		{
+			m_fire = false;
+		}
+
+		gotoxy(m_x, m_y + 1);
 		Pixel(0);
-		
-		gotoxy(x, y - 1);
+		gotoxy(m_x, m_y);
 		Pixel(10);
 	}
 	~Bullet()

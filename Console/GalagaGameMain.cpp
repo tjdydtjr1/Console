@@ -105,26 +105,36 @@ GalagaGameMain::GalagaGameMain()
 		{
 			keyInput = _getch();
 		}
-		temp = 'z';
 		
-		int tempX = m_player->getX();
-		int tempY = m_player->getY();
-		int count = 0;
 
 		if (keyInput == 'z')
 		{
 			// 총알 생성
-			m_bullet->createBullet(tempX, tempY - count);
+			m_bullet->createBullet(m_player->getX(),m_player->getY());
 
 			ZKeyW();
-			time(NULL);
+			//time(NULL);
 		}
-		m_bullet->createBullet(tempX, tempY--);
+		if (m_bullet->m_fire)
+		{
+			m_bullet->printBullet();
+		}
+
 		// 플레이어 움직임
 		m_player->movePlayer(keyInput, m_player->getX(), m_player->getY());
 		
+		// 적 맞출 시 점수 증가 및 삭제
+		if (m_bullet->m_y == m_enemyB->getY() && m_bullet->m_x == m_enemyB->getX())
+		{
+			score += 1000;
+		}
 
-		Sleep(25);
+		//test
+		//gotoxy(0, 0);
+		//Effect();
+		//Sleep(5000);
+
+		Sleep(10);
 	}
 	system("cls");
 	// 도트 찍기
