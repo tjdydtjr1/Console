@@ -203,7 +203,7 @@
       <Filter>과제\05.20_자동전투게임\cpp파일</Filter>
     </ClCompile>
     <ClCompile Include="Dot.cpp">
-      <Filter>DOT</Filter>
+      <Filter>Portfolio\DOT</Filter>
     </ClCompile>
     <ClCompile Include="MainGame_04.cpp">
       <Filter>Lesson\13. 가상 함수</Filter>
@@ -265,13 +265,7 @@
     <ClCompile Include="GalagaGameMain.cpp">
       <Filter>Portfolio</Filter>
     </ClCompile>
-    <ClCompile Include="GalagaObject.cpp">
-      <Filter>Portfolio</Filter>
-    </ClCompile>
     <ClCompile Include="GalagaMain.cpp">
-      <Filter>Portfolio</Filter>
-    </ClCompile>
-    <ClCompile Include="doubleBuff.cpp">
       <Filter>Portfolio</Filter>
     </ClCompile>
   </ItemGroup>
@@ -369,7 +363,7 @@
     <Filter Include="Portfolio">
       <UniqueIdentifier>{3dccddf4-ce39-4de2-a869-2c0ef47a3f35}</UniqueIdentifier>
     </Filter>
-    <Filter Include="DOT">
+    <Filter Include="Portfolio\DOT">
       <UniqueIdentifier>{569af0bb-582d-4ad5-97b2-eb03d83611c7}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -426,7 +420,7 @@
       <Filter>Lesson\12. 상속</Filter>
     </ClInclude>
     <ClInclude Include="Dot.h">
-      <Filter>DOT</Filter>
+      <Filter>Portfolio\DOT</Filter>
     </ClInclude>
     <ClInclude Include="AutoGame.h">
       <Filter>과제\05.20_자동전투게임\헤더파일</Filter>

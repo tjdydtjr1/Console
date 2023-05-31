@@ -27,8 +27,9 @@ void GalagaPlayer();
 
 void GalagaEnemy();
 
+void GalagaEnemyA();
 
-
+void PrintBaseMap();
 
 // 방향키 도트
 void ArrowUp();
