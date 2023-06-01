@@ -16,7 +16,7 @@ void TextColor(int font, int backGround);
 void gotoxy(short x, short y);
 
 void Start();
-
+void StartGame();
 void PrintAcce();
 
 void PrintArmor();
@@ -30,6 +30,8 @@ void GalagaEnemy();
 void GalagaEnemyA();
 
 void PrintBaseMap();
+
+void testA();
 
 // 방향키 도트
 void ArrowUp();
@@ -53,4 +55,8 @@ void ZKey();
 void ZKeyW();
 
 
-void Effect(int x,int y);
+void Effect(const int x,const int y);
+//void DeleteEffect(const int& x,const int& y);
+
+void End();
+

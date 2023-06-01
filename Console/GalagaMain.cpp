@@ -2,7 +2,7 @@
 
 void main()
 {
-	system("mode con:cols=150 lines=60");
+	system("mode con:cols=400 lines=150");
 	system("title Galaga_Game");
 
 	// console 커서 제거
