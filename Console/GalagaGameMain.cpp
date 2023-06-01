@@ -89,11 +89,18 @@ GalagaGameMain::GalagaGameMain()
 		//==================================================================
 		// =====우측 도트=====
 		gotoxy(185, 8);
-		TextColor(7, 0);
-		printf("Score : %d", score);
-		gotoxy(185, 9);
-		TextColor(7, 0);
-		printf("테스트 count : %d",count);
+		ScoreS();
+		ScoreC();
+		ScoreO();
+		ScoreR();
+		ScoreE();
+		gotoxy(185, 10);
+		printf("%d", score);
+		//TextColor(7, 0);
+		//printf("Score : %d", score);
+		//gotoxy(185, 9);
+		//TextColor(7, 0);
+		//("테스트 count : %d",count);
 		// 목숨 플레이어 도트
 		GalagaPlayer();
 
@@ -156,7 +163,8 @@ GalagaGameMain::GalagaGameMain()
 		
 		//==================================================================
 		// 적 맞출 시 점수 증가 및 삭제
-		if (m_bullet->m_x == m_enemyB->getX() + 3)
+		if (m_bullet->m_y == m_enemyB->getY() && m_bullet->m_x >= m_enemyB->getX() && m_bullet->m_x < m_enemyB->getX() + 6)
+		//if (m_bullet->m_x == m_enemyB->getX() + 3)
 		{
 			// 맞으면 제거
 			m_enemyB->deleteObject(m_enemyB->getX(), m_enemyB->getY());
@@ -166,7 +174,8 @@ GalagaGameMain::GalagaGameMain()
 			Effect(m_enemyB->getX(),m_enemyB->getY());
 			score += 1000;
 		}
-		if (m_bullet->m_x == m_enemyC->getX() + 3)
+		if (m_bullet->m_y == m_enemyC->getY() && m_bullet->m_x >= m_enemyC->getX() && m_bullet->m_x < m_enemyC->getX() + 6)
+		//if (m_bullet->m_x == m_enemyC->getX() + 3)
 		{
 			// 맞으면 제거
 			m_enemyC->deleteObject(m_enemyC->getX(), m_enemyC->getY());

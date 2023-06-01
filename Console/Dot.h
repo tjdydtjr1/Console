@@ -60,3 +60,13 @@ void Effect(const int x,const int y);
 
 void End();
 
+void ScoreS();
+void ScoreC();
+void ScoreO();
+void ScoreR();
+void ScoreE();
+
+
+//void DotNumber(int num);
+
+
