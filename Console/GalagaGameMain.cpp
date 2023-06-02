@@ -4,24 +4,45 @@
 
 GalagaGameMain::GalagaGameMain()
 {
-	m_player	= new GalagaPlayerA;
-	m_enemyB	= new GalagaEnemyB;
-	m_enemyC	= new GalagaEnemyC;
-	m_boss		= new GalagaBoss;
-	m_bullet	= new Bullet;
-	
+	m_player		= new GalagaPlayerA;
+	m_enemyB1		= new GalagaEnemyB;
+	m_enemyB2		= new GalagaEnemyB;
+	m_enemyB3		= new GalagaEnemyB;
+	m_enemyC1		= new GalagaEnemyC;
+	m_enemyC2		= new GalagaEnemyC;
+	m_boss			= new GalagaBoss;
+	m_bullet		= new Bullet;
+	m_enemyBulletC1	= new EnemyBullet;
+	m_enemyBulletC2 = new EnemyBullet;
+
+
 	// ===================
 	// 기본 좌표 세팅
 	m_player->setX(45);
 	m_player->setY(49);
 
-	m_enemyB->setX(3);
-	m_enemyB->setY(2);
+	m_enemyB1->setX(30);
+	m_enemyB1->setY(2);
+	m_enemyB2->setX(170);
+	m_enemyB2->setY(60);
+	m_enemyB3->setX(30);
+	m_enemyB3->setY(60);
 
-	m_enemyC->setX(3);
-	m_enemyC->setY(8);
+	m_enemyC1->setX(3);
+	m_enemyC1->setY(8);
+	m_enemyC2->setX(10);
+	m_enemyC2->setY(40);
 	// ===================
-	
+	// 리스폰 시간
+	m_enemyB1->setRespon(10);
+	m_enemyB2->setRespon(10);
+	m_enemyB3->setRespon(10);
+	// ===================
+
+	// 플레이어 시작 목숨
+	m_player->setHP(3);
+	// ===================
+
 	int count = 0;
 	char keyInput = 0;
 	int score = 0;
@@ -35,49 +56,11 @@ GalagaGameMain::GalagaGameMain()
 	// 게임 스타트 제거
 	system("cls");
 
-	// 기본맵 출력
-	//PrintBaseMap();
-	/*const int arrX = 300;
-	const int arrY = 400;
-	int ground[arrY][arrX] = { 0 };*/
-	
-	//int backGround[arrY][arrX] = { 0 };
-	
-	// 초기맵
-	//for (int i = 0; i < arrY; ++i)
-	//{
-	//	for (int j = 0; j < arrX; ++j)
-	//	{
-	//		ground[i][j] = 0;
-	//		if (j % 499 == 0)
-	//		{
-	//			ground[i][j] = 7;
-	//		}
-	//	}
-	//}
-	////// 백그라운드 복사하기
-	////for (int i = 0; i < arrY; ++i)
-	////{
-	////	for (int j = 0; j < arrX; ++j)
-	////	{
-	////		backGround[i][j] = ground[i][j];
-	////	}
-	////}
-	//// 기본맵 출력
-	//for (int i = 0; i < arrY; ++i)
-	//{
-	//	for (int j = 0; j < arrX; ++j)
-	//	{
-	//		Pixel(ground[i][j]);
-	//	}
-	//	cout << '\n';
-	//}
-
 	// 게임 경계선
 	for (int i = 0; i < 100; ++i)
 	{
 		gotoxy(180, i);
-		Pixel(7);
+		Pixel(2);
 	}
 
 	// 초기 위치 플레이어 출력
@@ -85,25 +68,33 @@ GalagaGameMain::GalagaGameMain()
 
 	while (true)
 	{
-		
 		//==================================================================
 		// =====우측 도트=====
-		gotoxy(185, 8);
 		ScoreS();
 		ScoreC();
 		ScoreO();
 		ScoreR();
 		ScoreE();
-		gotoxy(185, 10);
+		gotoxy(190, 10);
 		printf("%d", score);
-		//TextColor(7, 0);
-		//printf("Score : %d", score);
-		//gotoxy(185, 9);
-		//TextColor(7, 0);
-		//("테스트 count : %d",count);
-		// 목숨 플레이어 도트
-		GalagaPlayer();
-
+		// 목숨 플레이어 종료 조건
+		if (m_player->getHP() == 3)
+		{
+			GalagaPlayer3();
+		}
+		else if (m_player->getHP() == 2)
+		{
+			GalagaPlayer2();
+		}
+		else if (m_player->getHP() == 1)
+		{
+			GalagaPlayer1();
+		}
+		else
+		{
+			goto END;
+		}
+		//==================================================================
 		// 조작키 도트
 		ArrowUp();
 		ArrowRight();
@@ -113,32 +104,41 @@ GalagaGameMain::GalagaGameMain()
 		// =====우측 도트=====
 		//==================================================================
 		// 적 생성
-		/*if (count > 100 && m_enemyB->getDie())
+		if (m_enemyB1->getDie())
 		{
-			count = 0;
-			m_enemyB->setDie(false);
-			m_enemyB->setX(3);
-			m_enemyB->setY(2);
-			m_enemyB->printObject(m_enemyB->getX(), m_enemyB->getY());
+			m_enemyB1->setDie(false);
+			m_enemyB1->setX(3);
+			m_enemyB1->setY(2);
+			m_enemyB1->printObject(m_enemyB1->getX(), m_enemyB1->getY());
 
-			m_enemyC->setDie(false);
-			m_enemyC->setX(3);
-			m_enemyC->setY(8);
-			m_enemyC->printObject(m_enemyB->getX(), m_enemyB->getY());
-		}*/
-		//==================================================================
-		// 적 움직이게
-		if (!m_enemyB->getDie())
-		{
-			m_enemyB->moveObject(m_enemyB->getX(), m_enemyB->getY());
-		}
-		if (!m_enemyC->getDie())
-		{
-			m_enemyC->moveObject(m_enemyC->getX(), m_enemyC->getY());
+			m_enemyC1->setDie(false);
+			m_enemyC1->setX(3);
+			m_enemyC1->setY(8);
+			m_enemyC1->printObject(m_enemyB1->getX(), m_enemyB1->getY());
 		}
 		//==================================================================
-		// 키 입력안해도 반복
+		// 적 움직이기 위한 조건 : 리스폰 만들기
+		m_enemyB2->moveObjectRight(m_enemyB2->getX(), m_enemyB2->getY());
+		m_enemyB3->moveObjectLeft(m_enemyB3->getX(), m_enemyB3->getY());
+		m_enemyB1->moveObject(m_enemyB1->getX(), m_enemyB1->getY());
+		m_enemyC1->moveObject(m_enemyC1->getX(), m_enemyC1->getY());
+		m_enemyC2->moveObjectLeft(m_enemyC2->getX(), m_enemyC2->getY());
 
+		//==================================================================
+		// 움직이는 위치에 총알 생성
+		m_enemyBulletC1->createBullet(m_enemyC1->getX(), m_enemyC1->getY());
+		m_enemyBulletC2->createBullet(m_enemyC2->getX(), m_enemyC2->getY());
+
+		if (m_enemyBulletC1->m_fire)
+		{
+			m_enemyBulletC1->printBullet();
+		}
+		if (m_enemyBulletC2->m_fire)
+		{
+			m_enemyBulletC2->printBullet();
+		}
+		//==================================================================
+		// 키 입력없을 경우 반복
 		if (_kbhit())
 		{
 			keyInput = _getch();
@@ -160,68 +160,74 @@ GalagaGameMain::GalagaGameMain()
 		// 플레이어 움직임
 		m_player->moveObject(keyInput, m_player->getX(), m_player->getY());
 		
-		
 		//==================================================================
 		// 적 맞출 시 점수 증가 및 삭제
-		if (m_bullet->m_y == m_enemyB->getY() && m_bullet->m_x >= m_enemyB->getX() && m_bullet->m_x < m_enemyB->getX() + 6)
-		//if (m_bullet->m_x == m_enemyB->getX() + 3)
+		if(m_bullet->collisionCheck(m_bullet->m_x, m_enemyB1->getX(), m_bullet->m_y, m_enemyB1->getY()))
 		{
+			m_enemyB1->setHP(m_enemyB1->getHP() - 1);
 			// 맞으면 제거
-			m_enemyB->deleteObject(m_enemyB->getX(), m_enemyB->getY());
-			m_enemyB->setDie(true);
-		
-			// 폭발 이펙트
-			Effect(m_enemyB->getX(),m_enemyB->getY());
-			score += 1000;
+			if (m_enemyB1->getHP() == 0)
+			{
+				m_enemyB1->deleteObject(m_enemyB1->getX(), m_enemyB1->getY());
+
+				m_enemyB1->setDie(true);
+
+				// 폭발 이펙트
+				Effect(m_enemyB1->getX(), m_enemyB1->getY());
+				// 점수 증가
+				score += 1000;
+			}
 		}
-		if (m_bullet->m_y == m_enemyC->getY() && m_bullet->m_x >= m_enemyC->getX() && m_bullet->m_x < m_enemyC->getX() + 6)
-		//if (m_bullet->m_x == m_enemyC->getX() + 3)
+		if (m_bullet->collisionCheck(m_bullet->m_x, m_enemyC1->getX(), m_bullet->m_y, m_enemyC1->getY()))
 		{
-			// 맞으면 제거
-			m_enemyC->deleteObject(m_enemyC->getX(), m_enemyC->getY());
-			m_enemyC->setDie(true);
+			m_enemyC1->setHP(m_enemyC1->getHP() - 1);
 			
-			// 폭발 이펙트
-			Effect(m_enemyC->getX(), m_enemyC->getY());
-			score += 1000;
+			// 맞으면 제거
+			if (m_enemyC1->getHP() == 0)
+			{
+				m_enemyC1->deleteObject(m_enemyC1->getX(), m_enemyC1->getY());
+
+				m_enemyC1->setDie(true);
+
+				// 폭발 이펙트
+				Effect(m_enemyC1->getX(), m_enemyC1->getY());
+				// 점수 증가
+				score += 1000;
+			}
 		}
 		//==================================================================
-		// 적생성 test
+		// 적생성 카운트
 		++count;
 		//==================================================================
-		Sleep(5);
+		Sleep(20);
 		//==================================================================
 		// 폭발 이펙트 제거
-		if (m_enemyB->getDie()) 
+		if (m_enemyB1->getDie()) 
 		{
-			m_enemyB->deleteObject(m_enemyB->getX(), m_enemyB->getY());
-			
+			m_enemyB1->deleteObject(m_enemyB1->getX(), m_enemyB1->getY());
 		}
-		if (m_enemyC->getDie())
+		if (m_enemyC1->getDie())
 		{
-			m_enemyC->deleteObject(m_enemyC->getX(), m_enemyC->getY());
-			
+			m_enemyC1->deleteObject(m_enemyC1->getX(), m_enemyC1->getY());
 		}
 		//==================================================================
-		// 메뉴에서 게임종료
-		if (m_player->m_end == DOWN && keyInput == ENTER)
+		// 메뉴에서 게임종료 선택시 끝
+		if (m_player->getDie() && keyInput == ENTER)
 		{
 			goto END;
 		}
 	}
-
 	END:
 	system("cls");
 	// 게임 종료
 	End();
-	
 }
 
 GalagaGameMain::~GalagaGameMain()
 {
 	delete	m_player;
-	delete	m_enemyB;
-	delete	m_enemyC;
+	delete	m_enemyB1;
+	delete	m_enemyC1;
 	delete	m_boss;
 	delete	m_bullet;
 }

@@ -23,7 +23,10 @@ void PrintArmor();
 
 void PrintWeapon();
 
-void GalagaPlayer();
+void GalagaPlayer3();
+void GalagaPlayer2();
+void GalagaPlayer1();
+
 
 void GalagaEnemy();
 
