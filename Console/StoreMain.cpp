@@ -183,9 +183,7 @@ StoreMain::StoreMain()
 				cout << "특수 효과 : " << m_player.m_inven.m_weaponIter->m_chSpecial << endl;
 				cout << "아이템 설명 : " << m_player.m_inven.m_weaponIter->m_chExplanation << endl;
 
-				// 여기서부터
-				gotoxy(100, 10);
-				printf("●\n");
+				
 
 				//Pixel(1);
 				//PrintWeapon();

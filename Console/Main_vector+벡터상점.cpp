@@ -4,11 +4,9 @@
 
 void main()
 {
-	GalagaPlayer();
-	GalagaEnemy();
-	//StoreMain* game = new StoreMain;
+	StoreMain* game = new StoreMain;
 
-	//delete game;
+	delete game;
 	//vector<STData> test;
 	//STData st;
 	//
